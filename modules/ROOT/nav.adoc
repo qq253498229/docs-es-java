@@ -1,0 +1,2 @@
+* xref:section1.adoc[Section1]
+* xref:section2.adoc[Section2]

@@ -1,0 +1,6 @@
+name: document1
+title: Document1
+version: develop
+start_page: ROOT:section1.adoc
+nav:
+  - modules/ROOT/nav.adoc
