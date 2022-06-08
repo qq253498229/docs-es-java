@@ -48,7 +48,7 @@ dependencies {
 
 === 使用方法
 
-如 <<java-rest-low-usage-initialization>> 所示，在 `RestClient` 实例被创建后，就可以将 `嗅探` 功能与之相关联了。
+如 <<./usage.adoc#java-rest-low-usage-initialization,初始化>> 所示，在 `RestClient` 实例被创建后，就可以将 `嗅探` 功能与之相关联了。
 `嗅探` 功能将会利用 `RestClient` 定期（默认情况下每5分钟）从集群中获取的当前节点列表，
 然后调用 `RestClient#setNodes` 方法对其进行更新。
 

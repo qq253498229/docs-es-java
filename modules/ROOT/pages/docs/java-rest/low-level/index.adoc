@@ -16,15 +16,4 @@
 
 * 追踪请求和响应的日志
 
-* 可选的嗅探功能： <<sniffer,自动发现集群节点>>
-
-:doc-tests: {elasticsearch-root}/client/rest/src/test/java/org/elasticsearch/client/documentation
-include::usage.adoc[]
-include::configuration.adoc[]
-
-:doc-tests: {elasticsearch-root}/client/sniffer/src/test/java/org/elasticsearch/client/sniff/documentation
-include::sniffer.adoc[]
-
-include::../license.adoc[]
-
-:doc-tests!:
+* 可选的嗅探功能： <<./sniffer.adoc#sniffer,自动发现集群节点>>

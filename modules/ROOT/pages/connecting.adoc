@@ -16,7 +16,7 @@
 include::{doc-tests}/ConnectingTest.java[tag=create-client]
 --------------------------------------------------
 
-<<java-rest-low>> 这里可以管理身份认证。 有关身份认证的更多配置信息，请参阅 <<basic-authentication,这篇文档>>。
+<<docs/java-rest/low-level/index.adoc#java-rest-low,Java 底层 REST 客户端>> 这里可以管理身份认证。 有关身份认证的更多配置信息，请参阅 <<docs/java-rest/low-level/configuration.adoc#basic-authentication,这篇文档>>。
 
 [discrete]
 == 发送第一个请求
@@ -24,7 +24,7 @@ include::{doc-tests}/ConnectingTest.java[tag=create-client]
 下面的代码片中我们会搜索 “product” 索引，并找到 name 匹配 “bicycle” 的所有对象，然后将他们封装为 `Product` 这个应用业务类返回。
 
 这段代码向我们演示了，如何使用 fluent 函数式构造器，以 DSL 这样的更简洁的方式编写查询语句。
-<<api-conventions>> 中对此有更详细的解释。
+<<api-conventions.adoc#api-conventions>> 中对此有更详细的解释。
 
 ["source","java",indent=0]
 --------------------------------------------------

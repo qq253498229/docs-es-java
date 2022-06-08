@@ -2,7 +2,7 @@
 == 常用配置
 :doc-tests: {elasticsearch-root}/client/rest/src/test/java/org/elasticsearch/client/documentation
 
-如 <<java-rest-low-usage-initialization>> 中所述，`RestClientBuilder` 同时支持提供 `RequestConfigCallback` 和 `HttpClientConfigCallback`，允许 Apache Async Http Client 暴露的任何自定义内容。
+如 <<./usage.adoc#java-rest-low-usage-initialization,初始化>> 中所述，`RestClientBuilder` 同时支持提供 `RequestConfigCallback` 和 `HttpClientConfigCallback`，允许 Apache Async Http Client 暴露的任何自定义内容。
 这些回调可以在不覆盖 `RestClient` 初始化配置的前提下，使修改客户端的特定行为成为可能。
 本章节表述了一些需要为底层Java Rest客户端进行额外配置的常见场景。
 
