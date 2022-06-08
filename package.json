@@ -1,0 +1,17 @@
+{
+  "name": "docs-root-study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "version": "npx antora -v",
+    "build": "npx antora --fetch antora-playbook.yml"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@antora/cli": "3.0.1",
+    "@antora/site-generator": "3.0.1"
+  }
+}
