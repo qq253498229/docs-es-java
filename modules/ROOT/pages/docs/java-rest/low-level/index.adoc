@@ -1,0 +1,30 @@
+
+[[java-rest-low]]
+= Java 底层 REST 客户端
+
+底层客户端的功能包括：
+
+* 最小化依赖
+
+* 跨节点的负载均衡
+
+* 在节点故障以及特定响应代码之间进行故障切换
+
+* 连接失败后的重试机制（对失败节点的重试取决于其连接失败的次数； 失败次数越多，客户端在再次尝试重连该节点之前所等待的时间就越长）
+
+* 长连接
+
+* 追踪请求和响应的日志
+
+* 可选的嗅探功能： <<sniffer,自动发现集群节点>>
+
+:doc-tests: {elasticsearch-root}/client/rest/src/test/java/org/elasticsearch/client/documentation
+include::usage.adoc[]
+include::configuration.adoc[]
+
+:doc-tests: {elasticsearch-root}/client/sniffer/src/test/java/org/elasticsearch/client/sniff/documentation
+include::sniffer.adoc[]
+
+include::../license.adoc[]
+
+:doc-tests!:

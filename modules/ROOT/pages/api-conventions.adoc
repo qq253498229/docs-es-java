@@ -1,0 +1,225 @@
+[[api-conventions]]
+= API 规约
+
+{java-client} 使用一致性非常强的代码结构，使用这种现代化的编码模式，可以更容易的编写复杂的请求，也可以更容易的处理更加复杂的响应。
+本章会向你详细解释，让您快速上手。
+
+[discrete]
+== 包结构和命名空间下的客户端
+
+{es} API 很庞大，它们被按功能分成多个组，可以在 {ref}/rest-apis.html[{es} API 文档] 中查看。
+
+{java-client} 遵循这种结构：名为 “命名空间“ 的功能分组，还有所有命名空间都被放在 `co.elastic.clients.elasticsearch` 子包下。
+
+命名空间下的每个客户端都可以在顶级 {es} 客户端下被访问。
+唯一例外的是 “search” 和 “document” API， 它们放在 `core` 子包下，并可以在主 {es} 客户端对象中被访问。
+
+下面的代码片段展示了如何使用 indices 命名空间客户端来创建 index（lambda 语法 <<builder-lambdas, 解释在这里>> ）：
+
+["source","java",indent=0]
+--------------------------------------------------
+// Create the "products" index
+ElasticsearchClient client = ...
+client.indices().create(c -> c.index("products"));
+--------------------------------------------------
+
+命名空间客户端是一个运行时创建的非常轻量级的对象。
+
+
+[discrete]
+== 方法命名规约
+
+{java-client} 中的类包含两种方法和属性：
+
+* 方法和属性作为 API 的一部分，比如 `ElasticsearchClient.search()` 或 `SearchResponse.maxScore()` ，
+它们使用标准 Java `驼峰` 规约从 {es} JSON API 中各自的名称中派生而来。
+
+* 方法和属性作为构建 Java API 客户端框架的一部分，比如 `Query._kind()` ，
+这些方法使用下划线作为前缀，来避免与 API 的名称发生冲突，作为区分 API 和框架的简单方法。
+
+
+[discrete]
+[[builder-lambdas]]
+== 不可变对象、构造器以及构造器的 lambda 表达式用法
+
+{java-client} 中的所有数据类型都是不可变的。
+对象的创建使用 https://www.informit.com/articles/article.aspx?p=1216151&seqNum=2[构造器模式]，
+该模式于 2008 年出版的 *Effective Java* 一书中被广泛推广。
+
+["source","java",indent=0]
+--------------------------------------------------
+ElasticsearchClient client = ...
+include::{doc-tests}/ApiConventionsTest.java[tag=builders]
+--------------------------------------------------
+
+需要注意的是，在 `build()` 方法被调用后，该构造器就不应该被再次使用了。
+
+虽然它可以正常执行，但是不难发现，实例化构造器并调用 `build()` 方法的代码稍微有点冗长。
+因此，{java-client} 中每个属性的 setter 方法也可以传递一个 lambda 表达式，这个表达式会使用新创建的构造器作为参数，并返回处理后的构造器。
+所以上面的代码片段也可以这样写：
+
+["source","java",indent=0]
+--------------------------------------------------
+ElasticsearchClient client = ...
+include::{doc-tests}/ApiConventionsTest.java[tag=builder-lambdas]
+--------------------------------------------------
+
+这种方法可以以更简洁的代码，并且还能避开了导入类（甚至连它们的名字都不需要记住），因为这个类型是从方法参数签名中推断出来的。
+
+请注意，上面的示例代码中，构造器变量仅仅是为了链式调用所使用。
+因此这些变量的名称就不是很重要了，于是我们就可以缩短变量的命名来提高可读性：
+
+["source","java",indent=0]
+--------------------------------------------------
+ElasticsearchClient client = ...
+include::{doc-tests}/ApiConventionsTest.java[tag=builder-lambdas-short]
+--------------------------------------------------
+
+
+构造器的 lambda 对复杂嵌套查询语句很有用，比如下面的查询代码，它取自
+{ref}/query-dsl-intervals-query.html[intervals query API 文档]。
+
+这个示例还强调了在编写深层嵌套结构中，一个很有用的构造器参数命名规约。
+对于只有一个参数的 lambda 表达式，Kotlin 提供了一个隐式的 `it` 参数，并且 Scala 也允许使用 `_`。
+在 Java 中，可以使用下划线前缀，后面跟上代表深度级别的数字（例如 `_0` 、 `_1` 等等）。
+这样做不仅避免了多次命名一次性变量，而且也能极大地提高代码可读性。
+还有正确的缩进也可以突出查询语句的层级结构。
+
+["source","java",indent=0]
+--------------------------------------------------
+ElasticsearchClient client = ...
+include::{doc-tests}/ApiConventionsTest.java[tag=builder-intervals]
+--------------------------------------------------
+<1> 查询结果会映射到 `SomeApplicationData` 示例，以便应用随时使用。
+
+[discrete]
+== Lists 和 maps
+
+[discrete]
+=== 构造器的链式方法
+
+对象构造器将 `List` 和 `Map` 的属性以链式添加的方法暴露出来，这些方法通过向 lists 或 maps 添加新元素（或替换现有元素）来更新其属性值。
+
+对象构造器会创建一个不可变对象，并且在调用构造函数的时候同样应用到 list 和 map 属性。
+
+["source","java",indent=0]
+--------------------------------------------------
+include::{doc-tests}/ApiConventionsTest.java[tag=collections-list]
+--------------------------------------------------
+
+[discrete]
+=== List 和 map 的值从不为 `null`
+
+{es} API 有很多可选属性。对于单独一个值的属性，{java-client} 默认设置其为 `null`。因此，应用在使用之前必须对其进行非空校验。
+
+但是对于 lists 和 maps，应用一般只会关心它们里面有没有包含值，甚至会对它们的内容进行迭代，这时如果使用 `null` 就很麻烦。
+为了避免这种情况，{java-client} 的集合属性从不为 `null`，未设置的值会作为空集合返回。
+
+如果你想要区分一个集合是缺省的（未定义的）还是 {es} 正常返回空集合，可以使用 `ApiTypeHelper` 类，该类提供了一个非常使用的方法来区分它们：
+
+["source","java",indent=0]
+--------------------------------------------------
+include::{doc-tests}/ApiConventionsTest.java[tag=optional-collections]
+--------------------------------------------------
+
+
+[discrete]
+== 可变类型
+
+{es} API 有很多可变类型：查询（queries）、聚合（aggregations）、字段映射（field mappings）、分析器（analyzers）等等。
+在这么多的名字中找到正确的类名可能是一个挑战。
+
+{java-client} 构造器简化了这一过程：可变类型（如 `Query`）的构造器拥有其所有可用的方法。
+我们已经在上面代码中的 `intervals` （一种查询语句）和 `allOf` 、 `match` 以及 `anyOf`（各种类型的 intervals） 中看到这一点。
+
+这是因为 {java-client} 中的可变对象是 “标签联合“（tagged union） 的实现：它们包含了变量的 id（或标签）以及该变量的值。
+例如，`Query`（查询）对象就包含 `IntervalsQuery`（`intervals` 方法）、`TermQuery`（`term` 方法）等等。
+使用这种方法可以快速流畅地编写代码，让IDE自动提示的功能帮助您构建复杂的嵌套结构：
+
+所有可用的方法，可变类型的构造器都有其调用方法。
+它们与常规属性使用了相同的约定，并接受 lambda 表达式和内置的可变类型参数。
+下面是一个构造查询条件语句的例子：
+
+["source","java",indent=0]
+--------------------------------------------------
+include::{doc-tests}/ApiConventionsTest.java[tag=variant-creation]
+--------------------------------------------------
+<1> 使用 `term` 可变类型来构建条件语句。
+<2> 通过 lambda 表达式构建一个查询语句。
+<3> 构建 `Query`，其中包含一个 `term` 类型的 `TermQuery` 对象。
+
+可变对象对所有可用的实现都有getter方法。这些方法会检测对象是否拥有该类型的可变类型，并返回正确的类型。
+否则会抛出 `IllegalStateException` 异常。使用这种方法可以更流畅的编写代码来遍历可变对象。
+
+["source","java",indent=0]
+--------------------------------------------------
+include::{doc-tests}/ApiConventionsTest.java[tag=variant-navigation]
+--------------------------------------------------
+
+可变对象还保存它们中变体类型的信息：
+
+* 所有可变类型都有其 `is` 方法： `isTerm()`、 `isIntervals()`、 `isFuzzy()` 等。
+
+* 带有 `Kind` 嵌套枚举的可变类型定义。
+
+在检查它们的实际类型后，可以使用这些信息找到指定的可变对象：
+
+["source","java",indent=0]
+--------------------------------------------------
+include::{doc-tests}/ApiConventionsTest.java[tag=variant-kind]
+--------------------------------------------------
+<1> 判断可变对象是指定类型。
+<2> 判断可变对象的可变类型定义。
+<3> 获取可变对象的 Kind 以及值。
+
+[discrete]
+=== 阻塞式客户端以及异步客户端
+
+API客户端有两种风格：阻塞式以及异步式。
+异步客户端的所有方法都会返回标准的 `CompletableFuture`。
+
+你可以根据你的需要选择你喜欢的方式，它们使用相同的传输对象：
+
+["source","java",indent=0]
+--------------------------------------------------
+ElasticsearchTransport transport = ...
+
+include::{doc-tests}/ApiConventionsTest.java[tag=blocking-and-async]
+--------------------------------------------------
+
+[discrete]
+== 异常
+
+客户端方法会抛出下面两种类型的异常：
+
+* {es} 服务器接受但是拒绝的请求（比如验证错误、服务器内部超市等）会抛出 `ElasticsearchException` 异常。
+这个异常是由 {es} 提供的，其中包含错误的详情。
+
+* 没有发送到服务器的请求（网络错误、服务器无法访问等）会抛出 `TransportException` 这种异常，这个异常是底层实现方法抛出的。
+对于 `RestClientTransport` ，会包含底层HTTP响应的 `ResponseException`。
+
+[discrete]
+== 对象的生命周期
+
+{java-client} 对象有五种不同的生命周期：
+
+
+**Object mapper**::
+无状态并且线程安全，但其创建所消耗的资源很高。
+通常在应用程序启动时会创建一个单例，用于传输层(transport)的创建。
+
+**Transport**::
+线程安全，通过底层的HTTP客户端持有网络资源。
+Transport（传输对象）与 {es} 集群相关联，必须显式地将其关闭来释放底层资源，例如网络连接。
+
+**Clients**::
+不可变、无状态以及线程安全。
+是非常轻量级的对象，其中包含传输层并提供API接口的调用方法。
+
+**Builders**::
+可变的、非线程安全。
+Builders（构造器）是临时对象，在调用 `build()` 方法后就不应该再重用了。
+
+**Requests & other API objects**::
+不可变、线程安全。
+如果应用来来回回反复的使用相同的请求或请求的相同不分，则可以提前将这部分对象准备出来，并通过不同的传输对象来在多个客户端之间调用时进行重用。

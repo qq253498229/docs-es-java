@@ -1,2 +1,6 @@
-* xref:section1.adoc[Section1]
-* xref:section2.adoc[Section2]
+* xref:introduction.adoc[]
+* xref:installation.adoc[]
+* xref:connecting.adoc[]
+* xref:migrate.adoc[]
+* xref:api-conventions.adoc[]
+* xref:docs/java-rest/low-level/index.adoc[]

@@ -1,0 +1,115 @@
+
+[[sniffer]]
+== 嗅探
+:doc-tests: {elasticsearch-root}/client/sniffer/src/test/java/org/elasticsearch/client/sniff/documentation
+
+嗅探功能就是一个从运行中的Elasticsearch集群中自动发现节点，并将其设置为现有的 `RestClient` 实例的最小化库。
+默认情况下，它使用节点信息api来查询集群的节点，然后使用jackson来解析其所获得的json响应。
+
+与Elasticsearch 2.x及以上版本兼容。
+
+[[java-rest-sniffer-javadoc]]
+=== Javadoc
+
+有关REST客户端嗅探功能的javadoc可以在 {rest-client-sniffer-javadoc}/index.html 找到。
+
+=== Maven 仓库
+
+REST客户端嗅探功能的发布周期与Elasticsearch相同。
+可以使用Elasticsearch的版本号替换所需的嗅探功能版本号，嗅探功能第一个发布的版本是 `5.0.0-alpha4`。
+嗅探功能的版本和与客户端通信的Elasticsearch版本之前没有关系。
+嗅探功能支持从Elasticsearch 2.x及以上的版本中获取节点列表。
+
+如果你想找SNAPSHOT版本，可以在Elastic Maven Snapshot仓库 https://snapshots.elastic.co/maven/ 中找到。
+
+==== Maven 配置
+
+以下内容展示了如何在使用maven作为依赖包管理器的时候配置依赖项。将下面的内容添加到 `pom.xml` 文件中：
+
+["source","xml",subs="attributes+",indent=0]
+--------------------------------------------------
+<dependency>
+    <groupId>org.elasticsearch.client</groupId>
+    <artifactId>elasticsearch-rest-client-sniffer</artifactId>
+    <version>{version}</version>
+</dependency>
+--------------------------------------------------
+
+==== Gradle 配置
+
+以下内容展示了如何在使用gradle作为依赖包管理器的时候配置依赖项。将下面的内容添加到 `build.gradle` 文件中：
+
+["source","groovy",subs="attributes+",indent=0]
+--------------------------------------------------
+dependencies {
+    compile 'org.elasticsearch.client:elasticsearch-rest-client-sniffer:{version}'
+}
+--------------------------------------------------
+
+=== 使用方法
+
+如 <<java-rest-low-usage-initialization>> 所示，在 `RestClient` 实例被创建后，就可以将 `嗅探` 功能与之相关联了。
+`嗅探` 功能将会利用 `RestClient` 定期（默认情况下每5分钟）从集群中获取的当前节点列表，
+然后调用 `RestClient#setNodes` 方法对其进行更新。
+
+["source","java",subs="attributes+,callouts,macros",indent=0]
+--------------------------------------------------
+include::{doc-tests}/SnifferDocumentation.java[tag=sniffer-init]
+--------------------------------------------------
+
+在不使用 `嗅探` 功能的时候，将其关闭很重要，这样它的后台线程才可以正常关闭，其占用的所有资源才能被释放。
+`嗅探` 对象的生命周期与 `RestClient` 相同，并在客户端关闭之前关闭：
+
+["source","java",subs="attributes+,callouts,macros",indent=0]
+--------------------------------------------------
+include::{doc-tests}/SnifferDocumentation.java[tag=sniffer-close]
+--------------------------------------------------
+
+默认情况下，`嗅探` 功能每5分钟更新一次节点。
+在此期间可以通过下面的方式对其（以毫秒为单位）进行自定义：
+
+["source","java",subs="attributes+,callouts,macros",indent=0]
+--------------------------------------------------
+include::{doc-tests}/SnifferDocumentation.java[tag=sniffer-interval]
+--------------------------------------------------
+
+也可以启动故障嗅探模式，在每次发生故障后，节点会立刻更新，而不是在接下来的常规嗅探中进行更新。
+这种情况下，需要先创建 `SniffOnFailureListener`，并在 `RestClient` 创建时提供。
+此外，在 `Sniffer` 实例被创建后，它需要与 `SniffOnFailureListener` 实例相关联，该实例在每次失败后收到通知，
+并使用 `嗅探` 功能执行一次如前面所描述的额外嗅探。
+
+["source","java",subs="attributes+,callouts,macros",indent=0]
+--------------------------------------------------
+include::{doc-tests}/SnifferDocumentation.java[tag=sniff-on-failure]
+--------------------------------------------------
+<1> 为 `RestClient` 实例配置故障监听
+<2> 当嗅探功能出现故障时，不仅节点会立刻更新，而且下一次嗅探也会比正常情况下提前进行，
+默认情况下实在故障发生1分钟之后，如果情况恢复正常，我们希望尽快监测到。
+这个间隔可以在创建 `Sniffer` 的时候通过 `setSniffAfterFailureDelayMillis` 方法进行自定义。
+注意如果没有启用故障嗅探功能，那么这个配置参数将不起作用。
+<3> 为故障监听器配置 `Sniffer` 实例
+
+Elasticsearch节点信息api在连接到节点时不返回要使用的协议，而是只返回它们的 `host:port` 键值对，因此默认情况下使用 `http` 协议。
+如果想使用 `https` 协议，则必须手动创建 `ElasticsearchNodesSniffer` 实例，并按下面的方式提供：
+
+["source","java",subs="attributes+,callouts,macros",indent=0]
+--------------------------------------------------
+include::{doc-tests}/SnifferDocumentation.java[tag=sniffer-https]
+--------------------------------------------------
+
+同样的，也可以自定义 `sniffRequestTimeout` ，默认为1秒。
+`timeout` 可以在调用节点信息api的时候，作为查询字符串参数来提供，因此在超时参数在服务器端过期时，
+仍然会返回有效的响应信息，尽管它可能只包含属于集群的一部分节点的子集，即再次之前已经响应的节点。
+
+["source","java",subs="attributes+,callouts,macros",indent=0]
+--------------------------------------------------
+include::{doc-tests}/SnifferDocumentation.java[tag=sniff-request-timeout]
+--------------------------------------------------
+
+此外，还可以为可能需要从外部源而非Elasticsearch获取的节点特殊用例，提供一个自定义的 `节点嗅探` 实现：
+
+["source","java",subs="attributes+,callouts,macros",indent=0]
+--------------------------------------------------
+include::{doc-tests}/SnifferDocumentation.java[tag=custom-nodes-sniffer]
+--------------------------------------------------
+<1> 从外部源获取 hosts

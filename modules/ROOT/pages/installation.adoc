@@ -1,0 +1,51 @@
+[[installation]]
+= 安装
+
+要求:
+
+* Java 8 或更高的版本。
+* 需要一个 JSON 对象映射库来让应用类与 Elasticsearch API 进行无缝的集成。
+Java 客户端支持 https://github.com/FasterXML/jackson[Jackson] 或者是其它的 http://json-b.net/[JSON-B]库，例如
+https://github.com/eclipse-ee4j/yasson[Eclipse Yasson]。
+
+Release 版本托管在 https://search.maven.org/search?q=g:co.elastic.clients[Maven 中央仓库中]。
+如果你想找 SNAPSHOT 版本，可以在 Elastic Maven Snapshot 仓库中找到 https://snapshots.elastic.co/maven/ 。
+
+
+[discrete]
+[[gradle]]
+== 在 Gradle 项目中安装并使用 Jackson
+
+["source","groovy",subs="attributes+",indent=0]
+--------------------------------------------------
+dependencies {
+    implementation 'co.elastic.clients:elasticsearch-java:{version}'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.3'
+}
+--------------------------------------------------
+
+[discrete]
+[[maven]]
+== 在 Maven 项目中安装并使用 Jackson
+
+在项目的 `pom.xml` 文件中，添加下面的依赖：
+
+["source","xml",subs="attributes+",indent=0]
+--------------------------------------------------
+<project>
+
+  <dependencies>
+    <dependency>
+      <groupId>co.elastic.clients</groupId>
+      <artifactId>elasticsearch-java</artifactId>
+      <version>{version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.12.3</version>
+    </dependency>
+  </dependencies>
+
+</project>
+--------------------------------------------------

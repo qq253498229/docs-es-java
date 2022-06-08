@@ -1,6 +1,17 @@
-name: document1
-title: Document1
-version: develop
-start_page: ROOT:section1.adoc
+name: docs-es-java
+title: ES Java API Client
+version: '7.16.0'
+start_page: ROOT:introduction.adoc
 nav:
   - modules/ROOT/nav.adoc
+asciidoc:
+  attributes:
+    es: Elasticsearch
+    java-client: Java API Client
+    version: 7.16.2
+    doc-tests: partial$java-client/src/test/java/co/elastic/clients/documentation@
+    elasticsearch-root: partial$elasticsearch-root
+    ref: https://www.elastic.co/guide/en/elasticsearch/reference/master # 这里的master是branch参数
+    rest-client-javadoc: https://artifacts.elastic.co/javadoc/org/elasticsearch/client/elasticsearch-rest-client/7.16.3
+    rest-client-sniffer-javadoc: https://artifacts.elastic.co/javadoc/org/elasticsearch/client/elasticsearch-rest-client-sniffer/7.16.3
+
