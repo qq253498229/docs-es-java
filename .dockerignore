@@ -1,0 +1,11 @@
+node_modules/
+build/
+Dockerfile
+README.md
+.idea/
+*.iml
+.dockerignore
+.DS_Store
+.git
+docker-compose.yml
+
