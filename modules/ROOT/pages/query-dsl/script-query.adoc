@@ -1,0 +1,38 @@
+[[java-query-dsl-script-query]]
+==== Script Query
+
+查看 {ref}/query-dsl-script-query.html[Script Query]
+
+["source","java"]
+--------------------------------------------------
+scriptQuery(
+        new Script("doc['num1'].value > 1") <1>
+    );
+--------------------------------------------------
+<1> 定义脚本
+
+
+如果数据节点上已经存储了脚本，例如叫 `myscript.painless` :
+
+[source,painless]
+--------------------------------------------------
+doc['num1'].value > params.param1
+--------------------------------------------------
+
+你就可以这样使用它:
+
+["source","java"]
+--------------------------------------------------
+Map<String, Object> parameters = new HashMap<>();
+parameters.put("param1", 5);
+scriptQuery(new Script(
+        ScriptType.STORED, <1>
+        null, <2>
+        "myscript", <3>
+        singletonMap("param1", 5))); <4>
+--------------------------------------------------
+<1> Script type: either `ScriptType.FILE`, `ScriptType.INLINE` or `ScriptType.INDEXED`
+<2> Scripting engine
+<3> Script name
+<4> Parameters as a `Map<String, Object>`
+

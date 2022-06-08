@@ -1,0 +1,74 @@
+[[java-aggs-bucket-datehistogram]]
+==== Date Histogram Aggregation
+
+请查看
+{ref}/search-aggregations-bucket-datehistogram-aggregation.html[Date Histogram Aggregation]
+。
+
+
+===== Prepare aggregation request
+
+这里有一个创建聚合请求的例子:
+
+[source,java]
+--------------------------------------------------
+AggregationBuilder aggregation =
+        AggregationBuilders
+                .dateHistogram("agg")
+                .field("dateOfBirth")
+                .dateHistogramInterval(DateHistogramInterval.YEAR);
+--------------------------------------------------
+
+如果你想设置10天间隔:
+
+[source,java]
+--------------------------------------------------
+AggregationBuilder aggregation =
+        AggregationBuilders
+                .dateHistogram("agg")
+                .field("dateOfBirth")
+                .dateHistogramInterval(DateHistogramInterval.days(10));
+--------------------------------------------------
+
+
+===== Use aggregation response
+
+导入聚合定义类:
+
+[source,java]
+--------------------------------------------------
+import org.elasticsearch.search.aggregations.bucket.histogram.Histogram;
+--------------------------------------------------
+
+[source,java]
+--------------------------------------------------
+// sr is here your SearchResponse object
+Histogram agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (Histogram.Bucket entry : agg.getBuckets()) {
+    DateTime key = (DateTime) entry.getKey();    // Key
+    String keyAsString = entry.getKeyAsString(); // Key as String
+    long docCount = entry.getDocCount();         // Doc count
+
+    logger.info("key [{}], date [{}], doc_count [{}]", keyAsString, key.getYear(), docCount);
+}
+--------------------------------------------------
+
+一般会返回如下结果:
+
+[source,text]
+--------------------------------------------------
+key [1942-01-01T00:00:00.000Z], date [1942], doc_count [1]
+key [1945-01-01T00:00:00.000Z], date [1945], doc_count [1]
+key [1946-01-01T00:00:00.000Z], date [1946], doc_count [1]
+...
+key [2005-01-01T00:00:00.000Z], date [2005], doc_count [1]
+key [2007-01-01T00:00:00.000Z], date [2007], doc_count [2]
+key [2008-01-01T00:00:00.000Z], date [2008], doc_count [3]
+--------------------------------------------------
+
+===== Order
+
+支持与 <<java-aggs-bucket-terms,`Terms Aggregation`>> 相同的排序功能。
+

@@ -1,0 +1,155 @@
+[[java-docs-index]]
+=== 对JSON文档建立索引
+
+Index API 可以在指定的index中将一个结构化的JSON文档建立索引，并使其可以被查询到。
+
+[[java-docs-index-generate]]
+==== 生成JSON格式的文档
+
+一般有下面几种方式来生成一个JSON文档:
+
+* 手动使用 `byte[]` 或 `String` 类型拼接一个JSON
+* 使用 `Map` 类型会自动转换成对应的JSON
+* 使用第三方库将你的Bean序列化成Json格式，例如 https://github.com/FasterXML/jackson[Jackson] 库等
+* 使用内置的 XContentFactory.jsonBuilder() 生成JSON
+
+在内部，所有类型最终都会转换成 `byte[]` 类型（所以String类型最后也会转成 `byte[]` 类型）。
+因此，如果你的对象已经是 `byte[]` 类型了，那么就直接使用它吧。
+当然官方内置的 `jsonBuilder` 是一个高度优化后的工具，你可以使用它来直接构造 `byte[]` 。
+
+[[java-docs-index-generate-diy]]
+===== 手动拼接
+
+没什么困难的，唯一需要注意的是通过
+{ref}/mapping-date-format.html[Date Format]
+对日期进行格式化。
+
+[source,java]
+--------------------------------------------------
+String json = "{" +
+        "\"user\":\"kimchy\"," +
+        "\"postDate\":\"2013-01-30\"," +
+        "\"message\":\"trying out Elasticsearch\"" +
+    "}";
+--------------------------------------------------
+
+
+[[java-docs-index-generate-using-map]]
+===== 使用 Map
+
+Map是一个键值对的集合，它可以等价于一个JSON结构:
+
+[source,java]
+--------------------------------------------------
+Map<String, Object> json = new HashMap<String, Object>();
+json.put("user","kimchy");
+json.put("postDate",new Date());
+json.put("message","trying out Elasticsearch");
+--------------------------------------------------
+
+
+[[java-docs-index-generate-beans]]
+===== 序列化 JavaBean
+
+你可以使用 https://github.com/FasterXML/jackson[Jackson] 将你的Bean序列化成JSON。
+请将 http://search.maven.org/#search%7Cga%7C1%7Cjackson-databind[Jackson Databind] 加入你的项目中。
+然后你就可以使用 `ObjectMapper` 来序列化你的Bean了:
+
+[source,java]
+--------------------------------------------------
+import com.fasterxml.jackson.databind.*;
+
+// 实例化一个 json mapper
+ObjectMapper mapper = new ObjectMapper(); // 只创建一次，重复使用
+
+// 生成 json
+byte[] json = mapper.writeValueAsBytes(yourbeaninstance);
+--------------------------------------------------
+
+
+[[java-docs-index-generate-helpers]]
+===== 使用 Elasticsearch 助手
+
+Elasticsearch 提供了一个内置的助手来帮助你生成JSON内容。
+
+[source,java]
+--------------------------------------------------
+import static org.elasticsearch.common.xcontent.XContentFactory.*;
+
+XContentBuilder builder = jsonBuilder()
+    .startObject()
+        .field("user", "kimchy")
+        .field("postDate", new Date())
+        .field("message", "trying out Elasticsearch")
+    .endObject()
+--------------------------------------------------
+
+
+注意，你也可以使用 `startArray(String)` 和 `endArray()` 方法来添加一个数组。
+顺便说一下，`field` 方法可以接受很多对象类型。
+你可以直接传一些 number，date 或者是其它 XContentBuilder 对象。
+
+如果你想查看生成的JSON内容，可以使用 `Strings.toString()` 方法。
+
+[source,java]
+--------------------------------------------------
+import org.elasticsearch.common.Strings;
+
+String json = Strings.toString(builder);
+--------------------------------------------------
+
+
+[[java-docs-index-doc]]
+==== 对文档建立索引
+
+下面就是将一个JSON文档建立索引的例子，其中index为twitter，type为 `_doc` ，id的值是1:
+
+[source,java]
+--------------------------------------------------
+import static org.elasticsearch.common.xcontent.XContentFactory.*;
+
+IndexResponse response = client.prepareIndex("twitter", "_doc", "1")
+        .setSource(jsonBuilder()
+                    .startObject()
+                        .field("user", "kimchy")
+                        .field("postDate", new Date())
+                        .field("message", "trying out Elasticsearch")
+                    .endObject()
+                  )
+        .get();
+--------------------------------------------------
+
+注意，你也可以对一个JSON字符串类型的文档建立索引，并且 ID 也不是必须的:
+
+[source,java]
+--------------------------------------------------
+String json = "{" +
+        "\"user\":\"kimchy\"," +
+        "\"postDate\":\"2013-01-30\"," +
+        "\"message\":\"trying out Elasticsearch\"" +
+    "}";
+
+IndexResponse response = client.prepareIndex("twitter", "_doc")
+        .setSource(json, XContentType.JSON)
+        .get();
+--------------------------------------------------
+
+结果可以在 `IndexResponse` 中查看:
+
+[source,java]
+--------------------------------------------------
+// Index 名称
+String _index = response.getIndex();
+// Type 名称
+String _type = response.getType();
+// Document ID (generated or not)
+String _id = response.getId();
+// Version (如果你是新建的这个文档，会得到1)
+long _version = response.getVersion();
+// 当前实例的存储状态
+RestStatus status = response.status();
+--------------------------------------------------
+
+有关index操作的更多信息，请查看 REST {ref}/docs-index_.html[index] 。
+
+

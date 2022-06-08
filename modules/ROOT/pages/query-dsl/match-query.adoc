@@ -1,0 +1,14 @@
+[[java-query-dsl-match-query]]
+==== Match Query
+
+查看 {ref}/query-dsl-match-query.html[Match Query]
+
+["source","java"]
+--------------------------------------------------
+matchQuery(
+        "name", <1>
+        "kimchy elasticsearch"); <2>
+--------------------------------------------------
+<1> field
+<2> text
+

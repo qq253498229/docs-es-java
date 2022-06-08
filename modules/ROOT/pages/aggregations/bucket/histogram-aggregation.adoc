@@ -1,0 +1,49 @@
+[[java-aggs-bucket-histogram]]
+==== Histogram Aggregation
+
+请查看
+{ref}/search-aggregations-bucket-histogram-aggregation.html[Histogram Aggregation]
+。
+
+
+===== Prepare aggregation request
+
+这里有一个创建聚合请求的例子:
+
+[source,java]
+--------------------------------------------------
+AggregationBuilder aggregation =
+        AggregationBuilders
+                .histogram("agg")
+                .field("height")
+                .interval(1);
+--------------------------------------------------
+
+
+===== Use aggregation response
+
+导入聚合定义类:
+
+[source,java]
+--------------------------------------------------
+import org.elasticsearch.search.aggregations.bucket.histogram.Histogram;
+--------------------------------------------------
+
+[source,java]
+--------------------------------------------------
+// sr is here your SearchResponse object
+Histogram agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (Histogram.Bucket entry : agg.getBuckets()) {
+    Number key = (Number) entry.getKey();   // Key
+    long docCount = entry.getDocCount();    // Doc count
+
+    logger.info("key [{}], doc_count [{}]", key, docCount);
+}
+--------------------------------------------------
+
+===== Order
+
+支持与 <<java-aggs-bucket-terms,`Terms Aggregation`>> 相同的排序功能。
+

@@ -1,0 +1,29 @@
+[[stored-scripts]]
+==== Stored Scripts API
+
+Stored Scripts API 允许用户与存储在 Elasticsearch 中的 scripts 和 templates 进行交互。
+它可用于 create, update, get, 和 delete 存储的 scripts 和 templates。
+
+[source,java]
+--------------------------------------------------
+PutStoredScriptResponse response = client.admin().cluster().preparePutStoredScript()
+                .setId("script1")
+                .setContent(new BytesArray("{\"script\": {\"lang\": \"painless\", \"source\": \"_score * doc['my_numeric_field'].value\"} }"), XContentType.JSON)
+                .get();
+
+GetStoredScriptResponse response = client().admin().cluster().prepareGetStoredScript()
+                .setId("script1")
+                .get();
+
+DeleteStoredScriptResponse response = client().admin().cluster().prepareDeleteStoredScript()
+                .setId("script1")
+                .get();
+--------------------------------------------------
+
+要存储模板，只需使用 "mustache" 作为脚本语言。
+
+===== Script Language
+
+Put stored script API 允许用户设置 stored script 的语言。
+如果未提供，将使用默认脚本语言。
+

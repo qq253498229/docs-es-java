@@ -1,0 +1,17 @@
+[[java-admin-cluster]]
+=== Cluster Administration
+
+想要访问集群 Java API ，你需要从 <<java-admin,`AdminClient`>> 类中调用 `cluster()` :
+
+[source,java]
+--------------------------------------------------
+ClusterAdminClient clusterAdminClient = client.admin().cluster();
+--------------------------------------------------
+
+[NOTE]
+在这篇文档的其余部分中，我们使用 `client.admin()` 来获取。
+
+include::health.adoc[leveloffset=-2]
+
+include::stored-scripts.adoc[leveloffset=-2]
+

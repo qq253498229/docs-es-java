@@ -1,0 +1,115 @@
+[[java-docs-update]]
+=== 更新文档
+
+你可以创建一个 `UpdateRequest` 并发送给client:
+
+[source,java]
+--------------------------------------------------
+UpdateRequest updateRequest = new UpdateRequest();
+updateRequest.index("index");
+updateRequest.type("_doc");
+updateRequest.id("1");
+updateRequest.doc(jsonBuilder()
+        .startObject()
+            .field("gender", "male")
+        .endObject());
+client.update(updateRequest).get();
+--------------------------------------------------
+
+或者也可以使用 `prepareUpdate()` 方法:
+
+[source,java]
+--------------------------------------------------
+client.prepareUpdate("ttl", "doc", "1")
+        .setScript(new Script(
+            "ctx._source.gender = \"male\"", <1>
+            ScriptService.ScriptType.INLINE, null, null))
+        .get();
+
+client.prepareUpdate("ttl", "doc", "1")
+        .setDoc(jsonBuilder() <2>
+            .startObject()
+                .field("gender", "male")
+            .endObject())
+        .get();
+--------------------------------------------------
+<1> 你的脚本。它也可以是存储中本地文件中，这种情况下，需要使用 `ScriptService.ScriptType.FILE`
+<2> 将要和已有文档合并的文档。
+
+Note that you can't provide both `script` and `doc`.
+
+[[java-docs-update-api-script]]
+==== 通过脚本更新
+
+Update API 允许通过一个脚本来更新文档:
+
+[source,java]
+--------------------------------------------------
+UpdateRequest updateRequest = new UpdateRequest("ttl", "doc", "1")
+        .script(new Script("ctx._source.gender = \"male\""));
+client.update(updateRequest).get();
+--------------------------------------------------
+
+
+[[java-docs-update-api-merge-docs]]
+==== 合并文档
+
+Update API 也可以传入一部分文档，并将之合并(简单的递归合并，对象的内部合并，替换键值对和数组)到一个已存在的文档中。
+例如:
+
+[source,java]
+--------------------------------------------------
+UpdateRequest updateRequest = new UpdateRequest("index", "type", "1")
+        .doc(jsonBuilder()
+            .startObject()
+                .field("gender", "male")
+            .endObject());
+client.update(updateRequest).get();
+--------------------------------------------------
+
+
+[[java-docs-update-api-upsert]]
+==== 更新并插入
+
+Update API 也支持 `upsert` 。如果该文档不存在，则会对该文档建立索引:
+
+[source,java]
+--------------------------------------------------
+IndexRequest indexRequest = new IndexRequest("index", "type", "1")
+        .source(jsonBuilder()
+            .startObject()
+                .field("name", "Joe Smith")
+                .field("gender", "male")
+            .endObject());
+UpdateRequest updateRequest = new UpdateRequest("index", "type", "1")
+        .doc(jsonBuilder()
+            .startObject()
+                .field("gender", "male")
+            .endObject())
+        .upsert(indexRequest); <1>
+client.update(updateRequest).get();
+--------------------------------------------------
+<1> 如果文档不存在， `indexRequest` 中的元素就会被建立索引
+
+如果 `index/_doc/1` 这个文档已经存在了，在这个操作之后我们会有一个这样的文档:
+
+[source,js]
+--------------------------------------------------
+{
+    "name"  : "Joe Dalton",
+    "gender": "male" <1>
+}
+--------------------------------------------------
+// NOTCONSOLE
+<1> 这个字段是通过 update request 添加的
+
+如果不存在，我们会得到一个新的文档：
+
+[source,js]
+--------------------------------------------------
+{
+    "name" : "Joe Smith",
+    "gender": "male"
+}
+--------------------------------------------------
+// NOTCONSOLE

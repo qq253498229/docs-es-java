@@ -1,0 +1,28 @@
+
+[[preface]]
+== 前言
+
+本节介绍由Elasticsearch提供的Java API。
+所有的Elasticsearch操作都使用 <<client,Client>> 对象来执行。
+所有操作默认就是异步的（可以使用listener监听，也可以直接返回结果）。
+
+
+此外，也可以使用 <<java-docs-bulk,Bulk>> 在client中批量的执行一系列操作。
+
+请注意，所有的API都是通过Java API调用的（实际上，内部也是使用Java API执行的）
+
+[WARNING]
+===================================
+我们计划在ElasticSearch 7.0中弃用 `TransportClient` ，并在8.0中完全删除它。
+作为替代，您应该使用 {java-rest}/java-rest-high.html[Java High Level REST Client] ，
+它执行的是HTTP请求而不是序列化之后的Java请求。
+{java-rest}/java-rest-high-level-migration.html[迁移指南] 中介绍了迁移所需的所有步骤。
+
+JavaHighLevelClient 现在支持了更多常用的接口，但还有许多需要添加。
+点击 https://github.com/elastic/elasticsearch/issues/27205[完善 Java high-level REST client]
+通知我们您的应用需要哪些缺失的接口，帮助我们共同完善Elasticsearch。
+
+所有缺失的接口也可以通过使用带有JSON请求体的
+{java-rest}/java-rest-low.html[low level Java REST Client]
+来实现并获取结果。
+===================================

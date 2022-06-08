@@ -1,0 +1,124 @@
+
+[[maven-repository]]
+== Maven仓库
+
+ElasticSearch已经托管在 http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.elasticsearch.client%22[Maven Central] 上。
+
+举个例子，您可以这样在 `pom.xml` 文件中定义最新版本：
+
+[source,xml]
+--------------------------------------------------
+<dependency>
+    <groupId>org.elasticsearch</groupId>
+    <artifactId>elasticsearch</artifactId>
+    <version>{version}</version>
+</dependency>
+--------------------------------------------------
+
+[source,xml]
+--------------------------------------------------
+<dependency>
+    <groupId>org.elasticsearch.client</groupId>
+    <artifactId>transport</artifactId>
+    <version>{version}</version>
+</dependency>
+--------------------------------------------------
+
+[source,xml]
+--------------------------------------------------
+<dependency>
+    <groupId>org.elasticsearch.client</groupId>
+    <artifactId>elasticsearch-rest-high-level-client</artifactId>
+    <version>{version}</version>
+</dependency>
+--------------------------------------------------
+
+[[java-transport-usage-maven-lucene]]
+=== Lucene Snapshot 仓库
+
+有时候主要版本(如beta版)的第一个版本可能建立在Lucene的快照版本之上，这时候您可能无法解决Lucene的依赖问题。
+
+例如，如果您使用的是Elasticsearch `6.0.0-beta1` 版本，它依赖的是 `7.0.0-snapshot-00142c9` 版本的Lucene，这时候就需要定义以下仓库.
+
+对于 Maven:
+
+["source","xml"]
+--------------------------------------------------
+<repository>
+    <id>elastic-lucene-snapshots</id>
+    <name>Elastic Lucene Snapshots</name>
+    <url>https://s3.amazonaws.com/download.elasticsearch.org/lucenesnapshots/00142c9</url>
+    <releases><enabled>true</enabled></releases>
+    <snapshots><enabled>false</enabled></snapshots>
+</repository>
+--------------------------------------------------
+
+对于 Gradle:
+
+["source","groovy"]
+--------------------------------------------------
+maven {
+    name "lucene-snapshots"
+    url 'https://s3.amazonaws.com/download.elasticsearch.org/lucenesnapshots/00142c9'
+}
+--------------------------------------------------
+
+[[log4j-2]]
+=== Log4j 2 日志
+
+你需要加入log4j2的依赖:
+
+["source","xml"]
+--------------------------------------------------
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.11.1</version>
+</dependency>
+--------------------------------------------------
+
+加入log4j2的配置文件。
+举个例子，你可以在项目中的 `src/main/resources` 目录加入 `log4j2.properties` 文件，示例内容如下：
+
+["source","properties"]
+--------------------------------------------------
+appender.console.type = Console
+appender.console.name = console
+appender.console.layout.type = PatternLayout
+appender.console.layout.pattern = [%d{ISO8601}][%-5p][%-25c] %marker%m%n
+
+rootLogger.level = info
+rootLogger.appenderRef.console.ref = console
+--------------------------------------------------
+
+[[use-other-log]]
+=== 使用其它的日志
+
+如果您想使用其它日志而不是log4j2，则可以用 http://www.slf4j.org/[SLF4J] 规范下的实现来代替:
+
+["source","xml"]
+--------------------------------------------------
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-to-slf4j</artifactId>
+    <version>2.11.1</version>
+</dependency>
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.7.24</version>
+</dependency>
+--------------------------------------------------
+
+http://www.slf4j.org/manual.html[这个页面] 列出了可以使用的实现。
+选择你喜欢的日志添加依赖即可。
+举个例子我想使用 `slf4j-simple` 日志就可以添加如下依赖:
+
+["source","xml"]
+--------------------------------------------------
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>1.7.21</version>
+</dependency>
+--------------------------------------------------

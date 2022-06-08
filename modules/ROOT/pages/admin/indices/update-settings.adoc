@@ -1,0 +1,16 @@
+[[java-admin-indices-update-settings]]
+==== Update Indices Settings
+
+你可以通过调用以下代码来修改 index :
+
+[source,java]
+--------------------------------------------------
+client.admin().indices().prepareUpdateSettings("twitter") <1>
+        .setSettings(Settings.builder() <2>
+                .put("index.number_of_replicas", 0)
+        )
+        .get();
+--------------------------------------------------
+<1> 要更新的 index
+<2> 设置
+

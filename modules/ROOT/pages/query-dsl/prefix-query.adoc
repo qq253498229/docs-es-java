@@ -1,0 +1,14 @@
+[[java-query-dsl-prefix-query]]
+==== Prefix Query
+
+查看 {ref}/query-dsl-prefix-query.html[Prefix Query]
+
+["source","java"]
+--------------------------------------------------
+prefixQuery(
+        "brand", <1>
+        "heine"); <2>
+--------------------------------------------------
+<1> field
+<2> prefix
+

@@ -1,0 +1,19 @@
+[[java-query-dsl-nested-query]]
+==== Nested Query
+
+查看 {ref}/query-dsl-nested-query.html[Nested Query]
+
+["source","java"]
+--------------------------------------------------
+nestedQuery(
+        "obj1", <1>
+        boolQuery() <2>
+                .must(matchQuery("obj1.name", "blue"))
+                .must(rangeQuery("obj1.count").gt(5)),
+        ScoreMode.Avg); <3>
+--------------------------------------------------
+<1> 嵌套文档的路径
+<2> 查询中使用的所有字段都必须使用完整路径
+<3> 评分模式支持: `ScoreMode.Max`, `ScoreMode.Min`, `ScoreMode.Total`, `ScoreMode.Avg` 或 `ScoreMode.None`
+
+

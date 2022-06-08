@@ -1,0 +1,53 @@
+[[java-admin-indices-put-mapping]]
+==== Put Mapping
+
+你可以在创建index的时候添加映射:
+
+You can add mappings at index creation time:
+
+["source","java"]
+--------------------------------------------------
+client.admin().indices().prepareCreate("twitter") <1>
+        .addMapping("_doc", "message", "type=text") <2>
+        .get();
+--------------------------------------------------
+<1> <<java-admin-indices-create-index,Creates an index>> 名字是 `twitter`
+<2> 添加名为 `message` 类型为 `_doc` 的字段，该字段的数据类型为 `text`
+
+上面的 `addMapping` 方法有几种变体，有些采用 `XContentBuilder` 或带有映射定义的 `Map` 作为参数。
+请在阅读javadocs后再选择适合你的最简单的方法。
+
+PUT mapping API还允许在创建 index 后更新映射。
+在这种情况下，您可以提供一个类似于REST API语法的String映射:
+
+["source","java"]
+--------------------------------------------------
+client.admin().indices().preparePutMapping("twitter") <1>
+.setType("_doc")
+.setSource("{\n" +
+        "  \"properties\": {\n" +
+        "    \"name\": {\n" + <2>
+        "      \"type\": \"text\"\n" +
+        "    }\n" +
+        "  }\n" +
+        "}", XContentType.JSON)
+.get();
+
+// You can also provide the type in the source document
+client.admin().indices().preparePutMapping("twitter")
+.setType("_doc")
+.setSource("{\n" +
+        "    \"_doc\":{\n" + <3>
+        "        \"properties\": {\n" +
+        "            \"name\": {\n" +
+        "                \"type\": \"text\"\n" +
+        "            }\n" +
+        "        }\n" +
+        "    }\n" +
+        "}", XContentType.JSON)
+.get();
+--------------------------------------------------
+<1> 修改名为 `twitter` 的 index 的映射
+<2> 向映射中添加一个名为 `name` 的新字段
+<3> 这中方式也可以在source中提供
+

@@ -1,0 +1,14 @@
+[[java-query-dsl-multi-match-query]]
+==== Multi Match Query
+
+查看 {ref}/query-dsl-multi-match-query.html[Multi Match Query]
+
+["source","java"]
+--------------------------------------------------
+multiMatchQuery(
+        "kimchy elasticsearch", <1>
+        "user", "message"); <2>
+--------------------------------------------------
+<1> text
+<2> fields
+

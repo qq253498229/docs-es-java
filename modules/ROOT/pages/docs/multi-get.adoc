@@ -1,0 +1,28 @@
+[[java-docs-multi-get]]
+=== 获取多个文档
+
+Multi get API 允许通过 `index` 和  `id` 获取多个文档:
+
+[source,java]
+--------------------------------------------------
+MultiGetResponse multiGetItemResponses = client.prepareMultiGet()
+    .add("twitter", "_doc", "1") <1>
+    .add("twitter", "_doc", "2", "3", "4") <2>
+    .add("another", "_doc", "foo") <3>
+    .get();
+
+for (MultiGetItemResponse itemResponse : multiGetItemResponses) { <4>
+    GetResponse response = itemResponse.getResponse();
+    if (response.isExists()) { <5>
+        String json = response.getSourceAsString(); <6>
+    }
+}
+--------------------------------------------------
+<1> 通过单独的id获取
+<2> 在同一个index中，可以通过多个id获取
+<3> 也可以从其它的index中获取文档
+<4> 遍历结果集
+<5> 查看文档是否存在
+<6> 获取 `_source` 字段
+
+有关Multi get操作的更多信息，请查看REST {ref}/docs-multi-get.html[multi get]。

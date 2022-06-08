@@ -1,0 +1,16 @@
+[[java-query-dsl-span-containing-query]]
+==== Span Containing Query
+
+查看 {ref}/query-dsl-span-containing-query.html[Span Containing Query]
+
+["source","java"]
+--------------------------------------------------
+spanContainingQuery(
+        spanNearQuery(spanTermQuery("field1","bar"), 5) <1>
+            .addClause(spanTermQuery("field1","baz"))
+            .inOrder(true),
+        spanTermQuery("field1","foo")); <2>
+--------------------------------------------------
+<1> `大` 的部分
+<2> `小` 的部分
+

@@ -1,0 +1,14 @@
+[[java-query-dsl-term-query]]
+==== Term Query
+
+查看 {ref}/query-dsl-term-query.html[Term Query]
+
+["source","java"]
+--------------------------------------------------
+termQuery(
+        "name", <1>
+        "kimchy"); <2>
+--------------------------------------------------
+<1> field
+<2> text
+

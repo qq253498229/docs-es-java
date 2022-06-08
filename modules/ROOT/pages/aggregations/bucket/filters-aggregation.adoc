@@ -1,0 +1,51 @@
+[[java-aggs-bucket-filters]]
+==== Filters Aggregation
+
+请查看
+{ref}/search-aggregations-bucket-filters-aggregation.html[Filters Aggregation]
+。
+
+
+===== Prepare aggregation request
+
+这里有一个创建聚合请求的例子:
+
+[source,java]
+--------------------------------------------------
+AggregationBuilder aggregation =
+    AggregationBuilders
+        .filters("agg",
+            new FiltersAggregator.KeyedFilter("men", QueryBuilders.termQuery("gender", "male")),
+            new FiltersAggregator.KeyedFilter("women", QueryBuilders.termQuery("gender", "female")));
+--------------------------------------------------
+
+
+===== Use aggregation response
+
+导入聚合定义类:
+
+[source,java]
+--------------------------------------------------
+import org.elasticsearch.search.aggregations.bucket.filters.Filters;
+--------------------------------------------------
+
+[source,java]
+--------------------------------------------------
+// sr is here your SearchResponse object
+Filters agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (Filters.Bucket entry : agg.getBuckets()) {
+    String key = entry.getKeyAsString();            // bucket key
+    long docCount = entry.getDocCount();            // Doc count
+    logger.info("key [{}], doc_count [{}]", key, docCount);
+}
+--------------------------------------------------
+
+一般会返回如下结果:
+
+[source,text]
+--------------------------------------------------
+key [men], doc_count [4982]
+key [women], doc_count [5018]
+--------------------------------------------------

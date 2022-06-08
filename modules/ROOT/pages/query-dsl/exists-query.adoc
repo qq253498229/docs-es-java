@@ -1,0 +1,11 @@
+[[java-query-dsl-exists-query]]
+==== Exists Query
+
+查看 {ref}/query-dsl-exists-query.html[Exists Query].
+
+["source","java"]
+--------------------------------------------------
+existsQuery("name"); <1>
+--------------------------------------------------
+<1> field
+

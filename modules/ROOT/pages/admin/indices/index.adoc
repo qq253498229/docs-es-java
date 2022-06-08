@@ -1,0 +1,23 @@
+[[java-admin-indices]]
+=== Indices Administration
+
+要想访问indices JavaAPI，你需要从 <<java-admin,`AdminClient`>> 类中调用 `indices()` 方法:
+
+[source,java]
+--------------------------------------------------
+IndicesAdminClient indicesAdminClient = client.admin().indices();
+--------------------------------------------------
+
+[NOTE]
+在这篇文档的其余部分中，我们使用 `client.admin()` 来获取。
+
+include::create-index.adoc[leveloffset=-2]
+
+include::put-mapping.adoc[leveloffset=-2]
+
+include::refresh.adoc[leveloffset=-2]
+
+include::get-settings.adoc[leveloffset=-2]
+
+include::update-settings.adoc[leveloffset=-2]
+

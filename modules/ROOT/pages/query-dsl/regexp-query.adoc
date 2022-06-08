@@ -1,0 +1,14 @@
+[[java-query-dsl-regexp-query]]
+==== Regexp Query
+
+查看 {ref}/query-dsl-regexp-query.html[Regexp Query]
+
+["source","java"]
+--------------------------------------------------
+regexpQuery(
+        "name.first", <1>
+        "s.*y"); <2>
+--------------------------------------------------
+<1> field
+<2> 正则表达式
+

@@ -1,0 +1,16 @@
+[[java-query-dsl-span-within-query]]
+==== Span Within Query
+
+See {ref}/query-dsl-span-within-query.html[Span Within Query]
+
+["source","java"]
+--------------------------------------------------
+spanWithinQuery(
+        spanNearQuery(spanTermQuery("field1", "bar"), 5) <1>
+            .addClause(spanTermQuery("field1", "baz"))
+            .inOrder(true),
+        spanTermQuery("field1", "foo")); <2>
+--------------------------------------------------
+<1> `大` 的部分
+<2> `小` 的部分
+

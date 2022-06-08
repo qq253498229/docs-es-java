@@ -1,0 +1,108 @@
+[[client]]
+== Client
+
+有很多种使用 *Java client* 的方式供你选择:
+
+* 在集群中执行标准的 <<java-docs-index,index>>, <<java-docs-get,get>>,
+  <<java-docs-delete,delete>> 和 <<java-search,search>> 操作
+* 在运行中的集群下执行管理员任务
+
+在Elasticsearch中获取 `Client` 很简单。
+最常用的方法就是创建一个 <<transport-client,`TransportClient`>> 连接到集群中，并获取client。
+
+[IMPORTANT]
+==============================
+
+所有集群中的client节点必须使用相同的major版本(例如 `2.x` 或 `5.x`)。
+但是不同minor版本的client却都可以连接到集群，只是有些新版本的特性在旧版本下可能会不支持。
+所以最理想的状态就是集群中所有client的版本号都相同。
+
+==============================
+
+[WARNING]
+===================================
+
+我们计划在ElasticSearch 7.0中弃用 `TransportClient` ，并在8.0中完全删除它。
+作为替代，您应该使用 {java-rest}/java-rest-high.html[Java High Level REST Client] ，
+它执行的是HTTP请求而不是序列化之后的Java请求。
+{java-rest}/java-rest-high-level-migration.html[迁移指南] 中介绍了迁移所需的所有步骤。
+
+JavaHighLevelClient 现在支持了更多常用的接口，但还有许多需要添加。
+点击 https://github.com/elastic/elasticsearch/issues/27205[完善 Java high-level REST client]
+通知我们您的应用需要哪些缺失的接口，帮助我们共同完善Elasticsearch。
+
+所有缺失的接口也可以通过使用带有JSON请求体的
+{java-rest}/java-rest-low.html[low level Java REST Client]
+来实现并获取结果。
+
+===================================
+
+[[transport-client]]
+=== Transport Client
+
+`TransportClient` 使用 transport模块远程连接到Elasticsearch集群。
+它并不是加入到集群中，而只是获取一个或多个初始传输地址，在操作的时候以循环的方式与之进行通信(大部分操作可能都是 "two hop" 操作):
+
+[source,java]
+--------------------------------------------------
+// on startup
+
+TransportClient client = new PreBuiltTransportClient(Settings.EMPTY)
+        .addTransportAddress(new TransportAddress(InetAddress.getByName("host1"), 9300))
+        .addTransportAddress(new TransportAddress(InetAddress.getByName("host2"), 9300));
+
+// on shutdown
+
+client.close();
+--------------------------------------------------
+
+注意如果你的集群名称不是 "elasticsearch" 的话，你需要设置成你自己的:
+
+[source,java]
+--------------------------------------------------
+Settings settings = Settings.builder()
+        .put("cluster.name", "myClusterName").build();
+TransportClient client = new PreBuiltTransportClient(settings);
+//Add transport addresses and do something with the client...
+--------------------------------------------------
+
+Transport client 具有集群感知的特性，可以自动添加新主机或者是删除旧主机。
+当感知被开启时，transport client 通过调用 `addTransportAddress` 方法与内部节点列表中的某一个节点建立连接。
+在这之后，这个 client 就可以调用节点内部的API来获取数据了。
+客户端内部的节点列表会替换这些数据节点，列表默认情况下每5秒刷新一次。
+注意感知所连接的ip地址可以声明在 Elasticsearch 的配置文件中。
+
+请记住，如果连接到的不是数据节点，那么这个节点列表可能不会包含它的原始节点。
+例如，你初始化并连接到了一个master节点，在感知之后，接下来的请求都不会发送到这个master节点，而是发送到其它的数据节点。
+transport client排除非数据节点的原因，是为了避免向master节点发送搜索请求。
+
+想允许感知特性，请设置 `client.transport.sniff` 为 `true` :
+
+[source,java]
+--------------------------------------------------
+Settings settings = Settings.builder()
+        .put("client.transport.sniff", true).build();
+TransportClient client = new PreBuiltTransportClient(settings);
+--------------------------------------------------
+
+其它 transport client 级别的设置包括:
+
+[cols="<,<",options="header",]
+|=======================================================================
+|参数 |描述
+|`client.transport.ignore_cluster_name` | 设置成 `true` 会所连接节点的集群名称校验(0.19.4+)
+
+|`client.transport.ping_timeout` | ping节点的超时时间。默认是 `5秒`。
+
+|`client.transport.nodes_sampler_interval` | 多长时间 sample / ping 节点列表和连接。默认是 `5秒`。
+|=======================================================================
+
+
+[[client-connected-to-client-node]]
+=== 将 Client 连接到一个协调节点
+
+你可以在本地开启一个
+{ref}/modules-node.html#coordinating-only-node[协调节点]
+，然后在连接到该协调节点的应用中轻松地创建一个 <<transport-client,`TransportClient`>> 。
+
+这样这个协调节点就能够加载你需要的所有插件了（例如 discovery 插件）。

@@ -1,0 +1,199 @@
+[[java-docs-update-by-query]]
+=== 通过条件更新文档
+
+`updateByQuery` 最简单的用法是在不更改源的情况下更新同一个index中的所有文档。
+这种用法还可以获取新的属性或其它网络映射的改变。
+
+["source","java"]
+--------------------------------------------------
+UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index").abortOnVersionConflict(false);
+BulkByScrollResponse response = updateByQuery.get();
+--------------------------------------------------
+
+调用 `updateByQuery` 方法会优先获取index的快照，然后使用`internal`版本索引所有的文档。
+
+NOTE: 当文档正在建立索引时，如果快照版本发生了改变，那么这个文档的版本会发生冲突。
+
+当版本匹配时， `updateByQuery` 方法会更新文档并增加版本号。
+
+所有的修改和查询都失败的时候， `updateByQuery` 方法就会停止。
+这些失败的原因可以从 `BulkByScrollResponse#getIndexingFailures` 中获得。
+但是所有成功的更新操作都会保留并且不会回滚。当第一次发生失败而导致终止时，响应会包含批量请求生成的所有失败消息。
+
+为了防止版本冲突而导致 `updateByQuery` 方法停止，请设置 `abortOnVersionConflict(false)` 。
+第一个例子就是这样做的，因为这个例子是想获取网络映射的修改，并且版本冲突意味着冲突文档在 `updateByQuery`
+的开始和尝试更新修改文档之间更新。这样很好，因为修改操作会获取更新后的网络映射。
+
+`UpdateByQueryRequestBuilder` API 支持过滤更新后的文档，并且可以限制更新的数量，还可以通过脚本更新文档:
+
+["source","java"]
+--------------------------------------------------
+UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index")
+    .filter(QueryBuilders.termQuery("level", "awesome"))
+    .size(1000)
+    .script(new Script(ScriptType.INLINE,
+        "ctx._source.awesome = 'absolutely'",
+        "painless",
+        Collections.emptyMap()));
+BulkByScrollResponse response = updateByQuery.get();
+--------------------------------------------------
+
+`UpdateByQueryRequestBuilder` 还支持直接获取用于查询文档的语句。
+你可以用它来改变默认的滚动数量，或者修改匹配文档的请求。
+
+["source","java"]
+--------------------------------------------------
+UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index")
+    .source()
+    .setSize(500);
+BulkByScrollResponse response = updateByQuery.get();
+--------------------------------------------------
+
+您还可以将 `size` 和排序结合使用，来限制需要更新的文档:
+
+["source","java"]
+--------------------------------------------------
+UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index")
+    .size(100)
+    .source()
+    .addSort("cat", SortOrder.DESC);
+BulkByScrollResponse response = updateByQuery.get();
+--------------------------------------------------
+
+除了修改文档的 `_source` 字段之外，您还可以使用脚本来做其它操作，比如 Update API:
+
+["source","java"]
+--------------------------------------------------
+UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index")
+    .script(new Script(
+        ScriptType.INLINE,
+        "if (ctx._source.awesome == 'absolutely') {"
+            + "  ctx.op='noop'"
+            + "} else if (ctx._source.awesome == 'lame') {"
+            + "  ctx.op='delete'"
+            + "} else {"
+            + "ctx._source.awesome = 'absolutely'}",
+        "painless",
+        Collections.emptyMap()));
+BulkByScrollResponse response = updateByQuery.get();
+--------------------------------------------------
+
+与 <<java-docs-update,Update API>> 一样，您可以通过设置 `ctx.op` 来改变执行的操作:
+
+`noop`::
+
+如果这个脚本不会修改任何文档，可以设置 `ctx.op = "noop"` 。
+`updateByQuery` 操作会从修改中忽略掉这个文档。
+这个行为会让响应体中的 `noop` 计数器增加。
+
+`delete`::
+
+如果这个脚本一定会删除文档，可以设置 `ctx.op = "delete"` 。 这样在响应体中的 `deleted` 计数器会有显示。
+
+`ctx.op` 设置其它值会报错。 `ctx` 设置其它字段也会报错。
+
+这个API不允许移动它能接触到的文档，只允许修改source。这是故意这样设计的！我们规定不允许从原始位置将文档移除。
+
+你也可以一次在多个索引和类型上执行这些操作，类似于 search API :
+
+["source","java"]
+--------------------------------------------------
+UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("foo", "bar").source().setTypes("a", "b");
+BulkByScrollResponse response = updateByQuery.get();
+--------------------------------------------------
+
+如果你提供了 `routing` 值，则该进程会将路由值复制到滚动查询中，从而将进程限制为匹配该路由值的分片:
+
+["source","java"]
+--------------------------------------------------
+UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source().setRouting("cat");
+BulkByScrollResponse response = updateByQuery.get();
+--------------------------------------------------
+
+`updateByQuery` 也可以通过指定一个像这样的 `pipeline` 来使用 ingest 节点:
+
+["source","java"]
+--------------------------------------------------
+UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.setPipeline("hurray");
+BulkByScrollResponse response = updateByQuery.get();
+--------------------------------------------------
+
+[[java-docs-update-by-query-task-api]]
+==== 使用任务 API
+
+你可以使用 Task API 来获取所有正在运行中的 update-by-query 请求状态:
+
+["source","java"]
+--------------------------------------------------
+ListTasksResponse tasksList = client.admin().cluster().prepareListTasks()
+    .setActions(UpdateByQueryAction.NAME).setDetailed(true).get();
+for (TaskInfo info: tasksList.getTasks()) {
+    TaskId taskId = info.getTaskId();
+    BulkByScrollTask.Status status =
+        (BulkByScrollTask.Status) info.getStatus();
+    // do stuff
+}
+--------------------------------------------------
+
+使用上面显示的 `TaskId` 您可以直接地找到task:
+
+// provide API Example
+["source","java"]
+--------------------------------------------------
+GetTaskResponse get = client.admin().cluster().prepareGetTask(taskId).get();
+--------------------------------------------------
+
+[[java-docs-update-by-query-cancel-task-api]]
+==== 取消任务 API
+
+任何 Update By Query 可以使用 Task Cancel API 来取消:
+
+["source","java"]
+--------------------------------------------------
+// Cancel all update-by-query requests
+client.admin().cluster().prepareCancelTasks()
+    .setActions(UpdateByQueryAction.NAME).get().getTasks();
+// Cancel a specific update-by-query request
+client.admin().cluster().prepareCancelTasks()
+    .setTaskId(taskId).get().getTasks();
+--------------------------------------------------
+
+使用 `list tasks` API 可以查询 `taskId` 的值。
+
+取消请求通常非常快，但也需要几秒钟。任务状态API会继续列出任务，直到取消完成。
+
+[[java-docs-update-by-query-rethrottle]]
+==== 二次节流
+
+使用 `_rethrottle` API 可以修改正在运行的 `requests_per_second` 值:
+
+["source","java"]
+--------------------------------------------------
+RethrottleAction.INSTANCE.newRequestBuilder(client)
+    .setTaskId(taskId)
+    .setRequestsPerSecond(2.0f)
+    .get();
+--------------------------------------------------
+
+使用 `list tasks` API 可以查询 `taskId` 的值。
+
+与 `updateByQuery` 一样，`requests_per_second` 可以设置成任何正浮点值来设置throttle的级别，或者使用 `Float.POSITIVE_INFINITY` 来禁止 throttling。
+`requests_per_second` 值可以加速进程并立刻生效。
+为防止滚动超时，要在完成当前批处理后设置 `requests_per_second` 来减慢进程。
+

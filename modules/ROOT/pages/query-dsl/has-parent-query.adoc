@@ -1,0 +1,27 @@
+[[java-query-dsl-has-parent-query]]
+==== Has Parent Query
+
+查看 {ref}/query-dsl-has-parent-query.html[Has Parent]
+
+使用 `has_parent` 查询的时候有一点很重要的就是使用 `PreBuiltTransportClient` 而不是普通的client:
+
+[source,java]
+--------------------------------------------------
+Settings settings = Settings.builder().put("cluster.name", "elasticsearch").build();
+TransportClient client = new PreBuiltTransportClient(settings);
+client.addTransportAddress(new TransportAddress(new InetSocketAddress(InetAddresses.forString("127.0.0.1"), 9300)));
+--------------------------------------------------
+
+否则父子链接模块将不会被加载，同样的 `transport client` 中也不能使用 `has_child` 查询语句。
+
+["source","java"]
+--------------------------------------------------
+JoinQueryBuilders.hasParentQuery(
+    "blog", <1>
+    termQuery("tag","something"), <2>
+    false); <3>
+--------------------------------------------------
+<1> parent type to query against
+<2> query
+<3> 是否将父文档匹配分数传递给子文档
+

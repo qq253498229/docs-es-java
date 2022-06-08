@@ -1,0 +1,15 @@
+[[java-query-dsl-geo-bounding-box-query]]
+==== Geo Bounding Box Query
+
+查看 {ref}/query-dsl-geo-bounding-box-query.html[Geo Bounding Box Query]
+
+["source","java"]
+--------------------------------------------------
+geoBoundingBoxQuery("pin.location") <1>
+    .setCorners(40.73, -74.1, <2>
+                40.717, -73.99); <3>
+--------------------------------------------------
+<1> field
+<2> 矩形左上角的坐标点
+<3> 矩形右上角的坐标点
+

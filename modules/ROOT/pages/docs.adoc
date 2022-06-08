@@ -1,0 +1,35 @@
+[[java-docs]]
+== 文档 API
+
+这部分讲的是这些CRUD API:
+
+.单文档 API
+* <<java-docs-index>>
+* <<java-docs-get>>
+* <<java-docs-delete>>
+* <<java-docs-update>>
+
+.多文档 API
+* <<java-docs-multi-get>>
+* <<java-docs-bulk>>
+* <<java-docs-reindex>>
+* <<java-docs-update-by-query>>
+* <<java-docs-delete-by-query>>
+
+NOTE: 所有的CRUD API 都是单index API。 `index` 参数只可以接受单独的index，或者是使用 `alias` 来指向这个index。
+
+include::docs/index_.adoc[]
+
+include::docs/get.adoc[]
+
+include::docs/delete.adoc[]
+
+include::docs/update.adoc[]
+
+include::docs/multi-get.adoc[]
+
+include::docs/bulk.adoc[]
+
+include::docs/update-by-query.adoc[]
+
+include::docs/reindex.adoc[]

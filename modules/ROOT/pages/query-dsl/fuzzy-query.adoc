@@ -1,0 +1,14 @@
+[[java-query-dsl-fuzzy-query]]
+==== Fuzzy Query
+
+查看 {ref}/query-dsl-fuzzy-query.html[Fuzzy Query]
+
+["source","java"]
+--------------------------------------------------
+fuzzyQuery(
+        "name", <1>
+        "kimchy"); <2>
+--------------------------------------------------
+<1> field
+<2> text
+

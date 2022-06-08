@@ -1,0 +1,9 @@
+[[java-query-dsl-query-string-query]]
+==== Query String Query
+
+查看 {ref}/query-dsl-query-string-query.html[Query String Query]
+
+["source","java"]
+--------------------------------------------------
+queryStringQuery("+kimchy -elasticsearch");
+--------------------------------------------------

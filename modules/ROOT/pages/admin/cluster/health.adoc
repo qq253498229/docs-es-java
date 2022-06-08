@@ -1,0 +1,75 @@
+[[java-admin-cluster-health]]
+==== Cluster Health
+
+[[java-admin-cluster-health-health]]
+===== Health
+
+Cluster Health API 可以获取集群健康的简单状态，并且还可以为您提供每个index的集群状态技术信息:
+
+[source,java]
+--------------------------------------------------
+ClusterHealthResponse healths = client.admin().cluster().prepareHealth().get(); <1>
+String clusterName = healths.getClusterName(); <2>
+int numberOfDataNodes = healths.getNumberOfDataNodes(); <3>
+int numberOfNodes = healths.getNumberOfNodes(); <4>
+
+for (ClusterIndexHealth health : healths.getIndices().values()) { <5>
+    String index = health.getIndex(); <6>
+    int numberOfShards = health.getNumberOfShards(); <7>
+    int numberOfReplicas = health.getNumberOfReplicas(); <8>
+    ClusterHealthStatus status = health.getStatus(); <9>
+}
+--------------------------------------------------
+<1> 获取所有 indices 的信息
+<2> 获取 cluster 名称
+<3> 获取数据节点的数量
+<4> 获取节点的数量
+<5> 遍历所有 indices
+<6> Index 名称
+<7> Shards 数量
+<8> Replicas 数量
+<9> Index 状态
+
+[[java-admin-cluster-health-wait-status]]
+===== Wait for status
+
+可以使用 cluster health API 等待整个 cluster 或给定 index 的特定状态:
+
+[source,java]
+--------------------------------------------------
+client.admin().cluster().prepareHealth() <1>
+        .setWaitForYellowStatus() <2>
+        .get();
+client.admin().cluster().prepareHealth("company") <3>
+        .setWaitForGreenStatus() <4>
+        .get();
+
+client.admin().cluster().prepareHealth("employee") <5>
+        .setWaitForGreenStatus() <6>
+        .setTimeout(TimeValue.timeValueSeconds(2)) <7>
+        .get();
+--------------------------------------------------
+<1> 准备 health 请求
+<2> 等待 cluster 状态变黄
+<3> 为 `company` index 准备 health 请求
+<4> 等待 index 状态变绿
+<5> 为 `employee` index 准备 health 请求
+<6> 等待 index 状态变绿
+<7> 等待最多2秒
+
+如果 index 没有匹配预期状态，并且你希望在这种情况下返回失败，则必须明确指定:
+
+[source,java]
+--------------------------------------------------
+ClusterHealthResponse response = client.admin().cluster().prepareHealth("company")
+        .setWaitForGreenStatus() <1>
+        .get();
+
+ClusterHealthStatus status = response.getIndices().get("company").getStatus();
+if (!status.equals(ClusterHealthStatus.GREEN)) {
+    throw new RuntimeException("Index is in " + status + " state"); <2>
+}
+--------------------------------------------------
+<1> 等待 index 状态变绿
+<2> 如果不是 `绿色` 那么就抛出一个异常
+
