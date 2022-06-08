@@ -1,7 +1,7 @@
 [[java-admin-indices]]
 === Indices Administration
 
-要想访问indices JavaAPI，你需要从 <<java-admin,`AdminClient`>> 类中调用 `indices()` 方法:
+要想访问indices JavaAPI，你需要从 xref:admin/index.adoc#java-admin[AdminClient] 类中调用 `indices()` 方法:
 
 [source,java]
 --------------------------------------------------

@@ -3,11 +3,11 @@
 == 前言
 
 本节介绍由Elasticsearch提供的Java API。
-所有的Elasticsearch操作都使用 <<client,Client>> 对象来执行。
+所有的Elasticsearch操作都使用 xref:client.adoc#client[Client] 对象来执行。
 所有操作默认就是异步的（可以使用listener监听，也可以直接返回结果）。
 
 
-此外，也可以使用 <<java-docs-bulk,Bulk>> 在client中批量的执行一系列操作。
+此外，也可以使用 xref:docs/bulk.adoc#java-docs-bulk[Bulk] 在client中批量的执行一系列操作。
 
 请注意，所有的API都是通过Java API调用的（实际上，内部也是使用Java API执行的）
 

@@ -1,7 +1,7 @@
 [[java-admin-indices-create-index]]
 ==== Create Index
 
-使用 <<java-admin-indices,`IndicesAdminClient`>>,
+使用 xref:admin/indices/index.adoc#java-admin-indices[IndicesAdminClient],
 你可以使用默认设置和空映射来创建index:
 
 [source,java]

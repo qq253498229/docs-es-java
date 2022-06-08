@@ -70,5 +70,5 @@ key [2008-01-01T00:00:00.000Z], date [2008], doc_count [3]
 
 ===== Order
 
-支持与 <<java-aggs-bucket-terms,`Terms Aggregation`>> 相同的排序功能。
+支持与 xref:java-aggs-bucket-terms[Terms Aggregation] 相同的排序功能。
 

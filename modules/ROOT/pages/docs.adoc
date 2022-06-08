@@ -4,17 +4,17 @@
 这部分讲的是这些CRUD API:
 
 .单文档 API
-* <<java-docs-index>>
-* <<java-docs-get>>
-* <<java-docs-delete>>
-* <<java-docs-update>>
+* xref:java-docs-index[]
+* xref:java-docs-get[]
+* xref:java-docs-delete[]
+* xref:java-docs-update[]
 
 .多文档 API
-* <<java-docs-multi-get>>
-* <<java-docs-bulk>>
-* <<java-docs-reindex>>
-* <<java-docs-update-by-query>>
-* <<java-docs-delete-by-query>>
+* xref:java-docs-multi-get[]
+* xref:java-docs-bulk[]
+* xref:java-docs-reindex[]
+* xref:java-docs-update-by-query[]
+* xref:java-docs-delete-by-query[]
 
 NOTE: 所有的CRUD API 都是单index API。 `index` 参数只可以接受单独的index，或者是使用 `alias` 来指向这个index。
 

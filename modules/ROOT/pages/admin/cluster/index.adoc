@@ -1,7 +1,7 @@
 [[java-admin-cluster]]
 === Cluster Administration
 
-想要访问集群 Java API ，你需要从 <<java-admin,`AdminClient`>> 类中调用 `cluster()` :
+想要访问集群 Java API ，你需要从 xref:admin/index.adoc#java-admin[AdminClient] 类中调用 `cluster()` :
 
 [source,java]
 --------------------------------------------------

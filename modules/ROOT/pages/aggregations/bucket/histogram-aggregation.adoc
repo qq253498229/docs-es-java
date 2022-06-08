@@ -45,5 +45,5 @@ for (Histogram.Bucket entry : agg.getBuckets()) {
 
 ===== Order
 
-支持与 <<java-aggs-bucket-terms,`Terms Aggregation`>> 相同的排序功能。
+支持与 xref:java-aggs-bucket-terms[Terms Aggregation] 相同的排序功能。
 

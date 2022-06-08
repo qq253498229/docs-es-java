@@ -88,7 +88,7 @@ updateByQuery.source("source_index")
 BulkByScrollResponse response = updateByQuery.get();
 --------------------------------------------------
 
-与 <<java-docs-update,Update API>> 一样，您可以通过设置 `ctx.op` 来改变执行的操作:
+与 xref:java-docs-update[Update API] 一样，您可以通过设置 `ctx.op` 来改变执行的操作:
 
 `noop`::
 

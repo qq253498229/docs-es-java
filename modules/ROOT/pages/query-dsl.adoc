@@ -3,7 +3,7 @@
 
 Elasticsearch以类似于 REST {ref}/query-dsl.html[Query DSL] 的方式提供了一套完整的java query dsl(Domain Specific Language)。
 查询语句构建的factory是 `QueryBuilders` 。
-查询准备就绪之后就可以使用 <<java-search,Search API>> 了。
+查询准备就绪之后就可以使用 xref:search.adoc#java-search[Search API] 了。
 
 要使用 `QueryBuilders` 只需要在类中引入它们:
 

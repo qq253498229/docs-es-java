@@ -11,7 +11,7 @@ client.admin().indices().prepareCreate("twitter") <1>
         .addMapping("_doc", "message", "type=text") <2>
         .get();
 --------------------------------------------------
-<1> <<java-admin-indices-create-index,Creates an index>> 名字是 `twitter`
+<1> xref:java-admin-indices-create-index[Creates an index] 名字是 `twitter`
 <2> 添加名为 `message` 类型为 `_doc` 的字段，该字段的数据类型为 `text`
 
 上面的 `addMapping` 方法有几种变体，有些采用 `XContentBuilder` 或带有映射定义的 `Map` 作为参数。

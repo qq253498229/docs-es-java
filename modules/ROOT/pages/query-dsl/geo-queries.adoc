@@ -5,19 +5,19 @@ Elasticsearch支持两种类型的地理位置数据：支持经纬度的 `geo_p
 
 该组中的查询语句包括:
 
-<<java-query-dsl-geo-shape-query,`geo_shape`>> 查询::
+xref:java-query-dsl-geo-shape-query[`geo_shape`] 查询::
 
 可以匹配坐标与指定区域相交、不相交或包含的地理位置。
 
-<<java-query-dsl-geo-bounding-box-query,`geo_bounding_box`>> 查询::
+xref:java-query-dsl-geo-bounding-box-query[`geo_bounding_box`] 查询::
 
 可以匹配坐标在矩形区域的地理位置。
 
-<<java-query-dsl-geo-distance-query,`geo_distance`>> 查询::
+xref:java-query-dsl-geo-distance-query[`geo_distance`] 查询::
 
 可以查询指定坐标为中心点指定距离内的地理位置。
 
-<<java-query-dsl-geo-polygon-query,`geo_polygon`>> 查询::
+xref:java-query-dsl-geo-polygon-query[`geo_polygon`] 查询::
 
 可以查询坐标在多边形范围内的地理位置。
 

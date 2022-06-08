@@ -3,7 +3,7 @@
 
 Search API 可以执行一个查询操作，返回与查询条件相匹配的结果。
 允许跨index查询，也可以跨type查询。
-可以使用 <<java-query-dsl,query Java API>> 作为查询语句。
+可以使用 xref:query-dsl.adoc#java-query-dsl[query Java API] 作为查询语句。
 查询的请求体使用 `SearchSourceBuilder` 构建。
 例:
 
@@ -115,7 +115,7 @@ Histogram agg2 = sr.getAggregations().get("agg2");
 --------------------------------------------------
 <1> 获取某部分结果
 
-详情请查看 <<java-aggs,Aggregations Java API>> 。
+详情请查看 xref:aggs.adoc#java-aggs[Aggregations Java API] 。
 
 [[java-search-terminate-after]]
 === 提前结束查询

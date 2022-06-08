@@ -3,12 +3,12 @@
 
 有很多种使用 *Java client* 的方式供你选择:
 
-* 在集群中执行标准的 <<java-docs-index,index>>, <<java-docs-get,get>>,
-  <<java-docs-delete,delete>> 和 <<java-search,search>> 操作
+* 在集群中执行标准的 xref:docs.adoc#java-docs-index[index], xref:docs.adoc#java-docs-get[get],
+xref:docs.adoc#java-docs-delete[delete] 和 xref:search.adoc#java-search[search] 操作
 * 在运行中的集群下执行管理员任务
 
 在Elasticsearch中获取 `Client` 很简单。
-最常用的方法就是创建一个 <<transport-client,`TransportClient`>> 连接到集群中，并获取client。
+最常用的方法就是创建一个 xref:transport-client[TransportClient] 连接到集群中，并获取client。
 
 [IMPORTANT]
 ==============================
@@ -103,6 +103,6 @@ TransportClient client = new PreBuiltTransportClient(settings);
 
 你可以在本地开启一个
 {ref}/modules-node.html#coordinating-only-node[协调节点]
-，然后在连接到该协调节点的应用中轻松地创建一个 <<transport-client,`TransportClient`>> 。
+，然后在连接到该协调节点的应用中轻松地创建一个 xref:transport-client[TransportClient] 。
 
 这样这个协调节点就能够加载你需要的所有插件了（例如 discovery 插件）。

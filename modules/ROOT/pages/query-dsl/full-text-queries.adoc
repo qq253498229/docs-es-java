@@ -6,24 +6,24 @@
 
 该组中的查询语句包括:
 
-<<java-query-dsl-match-query,`match` query>>::
+xref:java-query-dsl-match-query[`match` query]::
 
 执行全文检索的标准查询语句，包括模糊匹配、短语匹配和近似匹配。
 
-<<java-query-dsl-multi-match-query,`multi_match` query>>::
+xref:java-query-dsl-multi-match-query[`multi_match` query]::
 
 `match` query 的多字段版本。
 
-<<java-query-dsl-common-terms-query,`common_terms` query>>::
+xref:java-query-dsl-common-terms-query[`common_terms` query]::
 
 一个更加特殊的查询语句，专门为不常用的词准备。
 
-<<java-query-dsl-query-string-query,`query_string` query>>::
+xref:java-query-dsl-query-string-query[`query_string` query]::
 
 支持Lucene的语法，允许在条件中使用 AND|OR|NOT 和单语多字段查询。
 仅供专业用户使用。
 
-<<java-query-dsl-simple-query-string-query,`simple_query_string`>>::
+xref:java-query-dsl-simple-query-string-query[`simple_query_string`]::
 
 一个 `query_string` 语法的的更简单且更健壮版本，适合直接开放给用户。
 
