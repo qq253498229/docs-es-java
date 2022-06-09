@@ -1,5 +1,5 @@
 [#_重新索引接口]
-=重新索引接口
+= 重新索引接口
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/docs-reindex.html[reindex API]
 

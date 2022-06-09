@@ -1,5 +1,5 @@
 [#_跨度查询]
-=跨度查询
+= 跨度查询
 
 xref:_SpanTerm查询[span_term]
 
@@ -35,7 +35,7 @@ xref:_SpanWithin查询[span_within]
 
 
 [#_SpanTerm查询]
-==SpanTerm查询
+== SpanTerm查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-term-query.html[Span Term Query]
 
@@ -47,7 +47,7 @@ spanTermQuery(
 ----
 
 [#_SpanMulti查询]
-==SpanMulti查询
+== SpanMulti查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-multi-term-query.html[Span Multi Term Query]
 
@@ -59,7 +59,7 @@ spanMultiTermQueryBuilder(
 ----
 
 [#_SpanFirst查询]
-==SpanFirst查询
+== SpanFirst查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-first-query.html[Span First Query]
 
@@ -73,7 +73,7 @@ spanFirstQuery(
 ----
 
 [#_SpanNear查询]
-==SpanNear查询
+== SpanNear查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-near-query.html[Span Near Query]
 
@@ -90,7 +90,7 @@ spanNearQuery(
 ----
 
 [#_SpanOr查询]
-==SpanOr查询
+== SpanOr查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-or-query.html[Span Or Query]
 
@@ -102,7 +102,7 @@ spanOrQuery(spanTermQuery("field","value1"))
 ----
 
 [#_SpanNot查询]
-==SpanNot查询
+== SpanNot查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-not-query.html[Span Not Query]
 
@@ -114,7 +114,7 @@ spanNotQuery(
 ----
 
 [#_SpanContaining查询]
-==SpanContaining查询
+== SpanContaining查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-containing-query.html[Span Containing Query]
 
@@ -128,7 +128,7 @@ spanContainingQuery(
 ----
 
 [#_SpanWithin查询]
-==SpanWithin查询
+== SpanWithin查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-within-query.html[Span Within Query]
 

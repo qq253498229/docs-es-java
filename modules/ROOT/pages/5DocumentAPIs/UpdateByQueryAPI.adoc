@@ -1,5 +1,5 @@
 [#_通过脚本修改接口]
-=通过脚本修改接口
+= 通过脚本修改接口
 
 **updateByQuery** 最简单的用法是更新单个索引中的每个文档而不更改源文件。这种用法还可以获取新的属性或其它映射。
 
@@ -112,7 +112,7 @@ BulkByScrollResponse response = updateByQuery.get();
 ----
 
 [#_用于任务接口]
-==用于任务接口
+== 用于任务接口
 
 你可以使用任务接口来获取所有正在运行的 **updateByQuery** 请求的状态：
 
@@ -135,7 +135,7 @@ GetTaskResponse get = client.admin().cluster().prepareGetTask(taskId).get();
 ----
 
 [#_用于取消任务接口]
-==用于取消任务接口
+== 用于取消任务接口
 
 所有 **updateByQuery** 可以使用任务取消接口：
 
@@ -152,7 +152,7 @@ client.admin().cluster().prepareCancelTasks().setTaskId(taskId).get().getTasks()
 取消请求通常非常快，但也需要几秒钟。任务状态接口会继续列出任务，直到取消完成。
 
 [#_重新节流]
-==重新节流
+== 重新节流
 
 使用 **_rethrottle** 接口修改正在运行修改的 **requests_per_second** 值：
 

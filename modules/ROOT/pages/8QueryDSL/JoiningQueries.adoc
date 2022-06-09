@@ -1,5 +1,5 @@
 [#_关联关系查询]
-=关联关系查询
+= 关联关系查询
 
 在ES这样的分布式系统中使用SQL风格的关联语句对性能的损耗是非常大的。所以，ES提供了两种支持水平拓展的关联操作。
 
@@ -12,7 +12,7 @@ xref:_HasChild查询[has_child] 和 xref:_HasParent查询[has_parent] 查询
  - 同一索引之中的文档可以存在父子关系。 **has_child** 查询会返回子文档匹配的父文档，而 **has_parent** 查询则会返回父文档匹配的子文档。
 
 [#_Nested查询]
-==Nested查询
+== Nested查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-nested-query.html[Nested Query] 。
 
@@ -30,7 +30,7 @@ nestedQuery(
 ----
 
 [#_HasChild查询]
-==HasChild查询
+== HasChild查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-has-child-query.html[Has Child Query] 。
 
@@ -57,7 +57,7 @@ JoinQueryBuilders.hasChildQuery(
 
 
 [#_HasParent查询]
-==HasParent查询
+== HasParent查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-has-parent-query.html[Has Parent] 。
 

@@ -1,5 +1,5 @@
 [#_管理索引接口]
-=管理索引接口
+= 管理索引接口
 
 要想访问索引管理JavaAPI，你需要从 xref:./readme.adoc[AdminClient] 类中调用 **indices()** 方法。
 
@@ -15,7 +15,7 @@ IndicesAdminClient indicesAdminClient = client.admin().indices();
 - xref:_更新索引设置[更新索引映射]
 
 [#_创建索引]
-==创建索引
+== 创建索引
 
 xref:_管理索引接口[管理索引接口] 可以通过默认设置和无设置来创建索引。
 
@@ -25,7 +25,7 @@ client.admin().indices().prepareCreate("twitter").get();
 ----
 
 [#_索引设置]
-===索引设置
+=== 索引设置
 
 创建的每个索引都会具有指定的设置：
 
@@ -41,7 +41,7 @@ client.admin().indices().prepareCreate("twitter")
 ----
 
 [#_设置映射]
-==设置映射
+== 设置映射
 
 设置映射接口可以在创建索引的时候添加一个新的type：
 
@@ -114,7 +114,7 @@ client.admin().indices().preparePutMapping("twitter")
 ----
 
 [#_显式刷新]
-==显式刷新
+== 显式刷新
 
 刷新接口允许显式地刷新一个或多个索引：
 
@@ -134,7 +134,7 @@ client.admin().indices()
 
 
 [#_获取设置]
-==获取设置
+== 获取设置
 
 获取映射接口允许查询索引的设置：
 
@@ -157,7 +157,7 @@ for (ObjectObjectCursor<String, Settings> cursor : response.getIndexToSettings()
 ----
 
 [#_更新索引设置]
-==更新索引设置
+== 更新索引设置
 
 你可以通过下面的方式来改变索引的设置：
 

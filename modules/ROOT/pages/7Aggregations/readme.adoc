@@ -1,5 +1,5 @@
 [#_聚合]
-=聚合
+= 聚合
 
 ES提供了完整的JavaAPI来使用聚合，请查阅 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations.html[Aggregations guide] ( https://www.elastic.co/guide/cn/elasticsearch/guide/cn/aggregations.html[中文] )。
 

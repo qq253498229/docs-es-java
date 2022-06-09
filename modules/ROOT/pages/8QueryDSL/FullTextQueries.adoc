@@ -1,5 +1,5 @@
 [#_全文检索]
-=全文检索
+= 全文检索
 
 高级全文检索通常使用在全文本字段中运行全文查询，例如邮件的正文。ES知道如何分析所查询的字段，并在查询前将每个字段的分析器(或查询分析器)应用于查询字符串中。
 
@@ -26,7 +26,7 @@ xref:_simple_query_string查询[simple_query_string查询]
 - query_string查询的更精简、健全的版本，仅供熟练用户使用。
 
 [#_match查询]
-==match查询
+== match查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query.html[Match Query]
 
@@ -41,7 +41,7 @@ QueryBuilder qb = matchQuery(
 ----
 
 [#_multi_match匹配查询]
-==multi_match匹配查询
+== multi_match匹配查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-multi-match-query.html[Multi Match Query]
 
@@ -56,7 +56,7 @@ QueryBuilder qb = multiMatchQuery(
 ----
 
 [#_common_terms查询]
-==common_terms查询
+== common_terms查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-common-terms-query.html[Common Terms Query]
 
@@ -70,7 +70,7 @@ QueryBuilder qb = commonTermsQuery(
 ----
 
 [#_query_string查询]
-==query_string查询
+== query_string查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-query-string-query.html[Query String Query]
 
@@ -82,7 +82,7 @@ QueryBuilder qb = queryStringQuery(
 ----
 
 [#_simple_query_string查询]
-==simple_query_string查询
+== simple_query_string查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-simple-query-string-query.html[Simple Query String Query]
 

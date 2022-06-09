@@ -1,5 +1,5 @@
 [#_指标聚合]
-=指标聚合
+= 指标聚合
 
 - xref:_最小值聚合[最小值聚合]
 - xref:_最大值聚合[最大值聚合]
@@ -16,12 +16,12 @@
 - xref:_脚本指标聚合[脚本指标聚合]
 
 [#_最小值聚合]
-==最小值聚合
+== 最小值聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-min-aggregation.html[最小值聚合] 。
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -34,7 +34,7 @@ MinAggregationBuilder aggregation =
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 
@@ -51,12 +51,12 @@ double value = agg.getValue();
 ----
 
 [#_最大值聚合]
-==最大值聚合
+== 最大值聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-max-aggregation.html[最大值聚合] 。
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -69,7 +69,7 @@ MaxAggregationBuilder aggregation =
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 
@@ -87,12 +87,12 @@ double value = agg.getValue();
 
 
 [#_求和聚合]
-==求和聚合
+== 求和聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-sum-aggregation.html[求和聚合] 。
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -105,7 +105,7 @@ SumAggregationBuilder aggregation =
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 
@@ -122,12 +122,12 @@ double value = agg.getValue();
 ----
 
 [#_平均值聚合]
-==平均值聚合
+== 平均值聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-avg-aggregation.html[平均值聚合] 。
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -140,7 +140,7 @@ AvgAggregationBuilder aggregation =
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 
@@ -157,12 +157,12 @@ double value = agg.getValue();
 ----
 
 [#_统计聚合]
-==统计聚合
+== 统计聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-stats-aggregation.html[统计聚合] 。
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -175,7 +175,7 @@ StatsAggregationBuilder aggregation =
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 
@@ -201,12 +201,12 @@ long count = agg.getCount();
 ----
 
 [#_拓展统计聚合]
-==拓展统计聚合
+== 拓展统计聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-extendedstats-aggregation.html[拓展统计聚合] 。
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -219,7 +219,7 @@ ExtendedStatsAggregationBuilder aggregation =
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 
@@ -246,12 +246,12 @@ double variance = agg.getVariance();
 ----
 
 [#_值计数聚合]
-==值计数聚合
+== 值计数聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-valuecount-aggregation.html[值计数(value count)聚合] 。
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -264,7 +264,7 @@ ValueCountAggregationBuilder aggregation =
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 
@@ -281,12 +281,12 @@ long value = agg.getValue();
 ----
 
 [#_百分比聚合]
-==百分比聚合
+== 百分比聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-percentile-aggregation.html[百分比聚合] 。
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -310,7 +310,7 @@ PercentilesAggregationBuilder aggregation =
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 
@@ -347,12 +347,12 @@ percent [99.0], value [2.284989339108279]
 ----
 
 [#_百分比等级聚合]
-==百分比等级聚合
+== 百分比等级聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-percentile-rank-aggregation.html[百分比等级聚合] 。
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -366,7 +366,7 @@ PercentileRanksAggregationBuilder aggregation =
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 
@@ -399,12 +399,12 @@ percent [94.40095147327283], value [2.22]
 ----
 
 [#_基数聚合]
-==基数聚合
+== 基数聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-cardinality-aggregation.html[基数聚合] 。
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -417,7 +417,7 @@ CardinalityAggregationBuilder aggregation =
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 
@@ -434,12 +434,12 @@ long value = agg.getValue();
 ----
 
 [#_地理界限聚合]
-==地理界限聚合
+== 地理界限聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-geobounds-aggregation.html[地理界限聚合] 。
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -453,7 +453,7 @@ GeoBoundsBuilder aggregation =
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 
@@ -479,12 +479,12 @@ bottomRight [40.70500764381921, 13.952946866893775], topLeft [53.49603022435221,
 ----
 
 [#_热门聚合]
-==热门聚合
+== 热门聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-top-hits-aggregation.html[热门聚合] 。
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -514,7 +514,7 @@ AggregationBuilder aggregation =
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 
@@ -558,7 +558,7 @@ key [female], doc_count [4893]
 ----
 
 [#_脚本指标聚合]
-==脚本指标聚合
+== 脚本指标聚合
 
 你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-scripted-metric-aggregation.html[脚本指标聚合] 。
 
@@ -575,7 +575,7 @@ key [female], doc_count [4893]
 ----
 
 [#_准备聚合请求]
-===准备聚合请求
+=== 准备聚合请求
 
 下面是如何创建聚合请求的例子：
 
@@ -611,7 +611,7 @@ ScriptedMetricAggregationBuilder aggregation = AggregationBuilders
 ----
 
 [#_获得聚合响应]
-===获得聚合响应
+=== 获得聚合响应
 
 在类中引入聚合定义类：
 

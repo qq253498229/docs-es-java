@@ -1,5 +1,5 @@
 [#_Delete接口]
-=Delete接口
+= Delete接口
 
 Delete接口可以在指定的索引中根据ID删除一个JSON类型的文档。
 下面的例子就是从index是twitter的索引中删除一个JSON格式的document，它的type是tweet，id是1：
