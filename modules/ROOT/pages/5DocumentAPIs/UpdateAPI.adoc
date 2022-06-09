@@ -62,7 +62,6 @@ UpdateRequest updateRequest = new UpdateRequest("index", "type", "1")
 client.update(updateRequest).get();
 ----
 
-[#_插入更新(Upsert)]
 == 插入更新(Upsert)
 
 更新的时候也支持**upsert**。如果文档不存在，**upsert**的元素会被建立一个索引：

@@ -587,7 +587,7 @@ for (Histogram.Bucket entry : agg.getBuckets()) {
 
 === 排序
 
-支持与 xref:_TermsAggregation[TermsAggregation] 相同的排序功能。
+支持与 xref:_匹配聚合[匹配聚合] 相同的排序功能。
 
 [#_日期柱状图聚合]
 == 日期柱状图聚合
@@ -655,7 +655,7 @@ key [2008-01-01T00:00:00.000Z], date [2008], doc_count [3]
 
 === 排序
 
-支持与 xref:_TermsAggregation[TermsAggregation] 相同的排序功能。
+支持与 xref:_匹配聚合[匹配聚合] 相同的排序功能。
 
 [#_地理距离聚合]
 == 地理距离聚合

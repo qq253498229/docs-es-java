@@ -1,4 +1,3 @@
-[#_Delete By Query接口]
 = Delete By Query接口
 
 Delete By Query接口可以根据查询的结果删除一组文档：
