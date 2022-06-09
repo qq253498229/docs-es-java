@@ -1,34 +1,34 @@
 = 跨度查询
 
-[span_term](#SpanTerm查询)
+xref:_SpanTerm查询[span_term]
 
 - 等同于[term查询](TermLevelQueries.md#term查询)，但用于其它跨度查询。
 
-[span_multi](#SpanMulti查询)
+xref:_SpanMulti查询[span_multi]
 
 - 包括[term](TermLevelQueries.md#term查询)、[range](TermLevelQueries.md#range查询)、[prefix](TermLevelQueries.md#prefix查询)、[wildcard](TermLevelQueries.md#wildcard查询)、[regexp](TermLevelQueries.md#regexp查询)或[fuzzy](TermLevelQueries.md#fuzzy查询)。
 
-[span_first](#SpanFirst查询)
+xref:_SpanFirst查询[span_first]
 
 - 在前N个位置接受其它跨度查询。
 
-[span_near](#SpanNear查询)
+xref:_SpanNear查询[span_near]
 
 - 在指定距离内接受其它跨度查询，并且可以是以相同的顺序。
 
-[span_or](#SpanOr查询)
+xref:_SpanOr查询[span_or]
 
 - 将多个跨度查询组合起来，并返回任何匹配的文档。
 
-[span_not](#SpanNot查询)
+xref:_SpanNot查询[span_not]
 
 - 包含其它跨度查询，并排除匹配的文档。
 
-[span_containing](#SpanContaining查询)
+xref:_SpanContaining查询[span_containing]
 
 - 接受一个跨度查询列表，但只返回于两个条件都匹配的文档。
 
-[span_within](#SpanWithin查询)
+xref:_SpanWithin查询[span_within]
 
 - 只要跨度落在由其它跨度范围中，就会返回一个跨度查询的结果。
 

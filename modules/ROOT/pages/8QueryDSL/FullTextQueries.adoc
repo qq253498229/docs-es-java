@@ -4,23 +4,23 @@
 
 这一组中的查询有：
 
-[match查询](#match查询)
+xref:_match查询[match查询]
 
 - 全文检索的标准模式，包括模糊匹配、短语匹配和近似匹配。
 
-[multi_match匹配查询](#multi_match匹配查询)
+xref:_multi_match匹配查询[multi_match匹配查询]
 
 - match查询的多字段版本。
 
-[common_terms查询](#common_terms查询)
+xref:_common_terms查询[common_terms查询]
 
 - 专门为不常用词准备的查询。
 
-[query_string查询](#query_string查询)
+xref:_query_string查询[query_string查询]
 
 - 支持紧凑型的Lucene字符串查询语法，允许在一个字符串中加入 AND | OR | NOT 条件和多字段查询，仅供熟练用户使用。
 
-[simple_query_string查询](#simple_query_string查询)
+xref:_simple_query_string查询[simple_query_string查询]
 
 - query_string查询的更精简、健全的版本，仅供熟练用户使用。
 

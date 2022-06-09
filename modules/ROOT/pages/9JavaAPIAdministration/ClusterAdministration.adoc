@@ -7,8 +7,8 @@
 ClusterAdminClient clusterAdminClient = client.admin().cluster();
 ----
 
-- [集群健康接口](#集群健康接口)
-- [存储脚本接口](#存储脚本接口)
+- xref:_集群健康接口[集群健康接口]
+- xref:_存储脚本接口[存储脚本接口]
 
 == 集群健康接口
 

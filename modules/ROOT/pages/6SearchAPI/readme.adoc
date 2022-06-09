@@ -32,7 +32,7 @@ SearchResponse response = client.prepareSearch().get();
 
 > 注意：尽管JavaAPI定义了额外的搜索类型 **QUERY_AND_FETCH** 和 **DFS_QUERY_AND_FETCH** ，但这些模式其实是底层自动优化时使用的模式，不应该由用户指定。
 
-有关索引操作的更多信息，请查阅REST[search](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search.html)文档([中文](https://www.elastic.co/guide/cn/elasticsearch/guide/current/search.html))。
+有关索引操作的更多信息，请查阅REST https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search.html[search] 文档( https://www.elastic.co/guide/cn/elasticsearch/guide/current/search.html[中文])。
 
 - xref:./UsingScrollsInJava.adoc[使用游标查询]
 - xref:./MultiSearchAPI.adoc[批量查询]

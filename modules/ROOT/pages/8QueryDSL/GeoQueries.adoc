@@ -2,19 +2,19 @@
 
 ES支持两种类型的地理位置数据：支持经纬度的 **geo_point** ，以及支持点、线、圆、多边形等的 **geo_shape** 。
 
-[geo_shape查询](#GeoShape查询)
+xref:_GeoShape查询[geo_shape查询]
 
  - 可以查询坐标与指定区域相交、不相交或包含的地理位置。
 
-[geo_bounding_box查询](#GeoBoundingBox查询)
+xref:_GeoBoundingBox查询[geo_bounding_box查询]
 
  - 可以查询坐标在矩形区域的地理位置。
 
-[geo_distance查询](#GeoDistance查询)
+xref:_GeoDistance查询[geo_distance查询]
 
  - 可以查询指定坐标距离内的地理位置。
 
-[geo_polygon查询](#GeoPolygon查询)
+xref:_GeoPolygon查询[geo_polygon查询]
 
  - 可以查询坐标在多边形范围内的地理位置。
 

@@ -1,18 +1,18 @@
 = 特殊查询
 
-[more_like_this](#MoreLikeThis查询)
+xref:_MoreLikeThis查询[more_like_this]
 
 - 查找与指定文本、文档或集合相似的文档。
 
-[script](#Script查询)
+xref:_Script查询[script]
 
 - 可以使用脚本作为过滤器来查询，详情请查看[function_score查询](CompoundQueries.md#function_score查询)。
 
-[percolate](#Percolate查询)
+xref:_Percolate查询[percolate]
 
 - 通过文档查询过滤器。
 
-[wrapper](#Wrapper查询)
+xref:_Wrapper查询[wrapper]
 
 - 可以接受Json和Yaml类型语句的查询。
 
