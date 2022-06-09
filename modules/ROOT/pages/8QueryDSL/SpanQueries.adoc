@@ -1,4 +1,5 @@
-= 跨度查询
+[#_跨度查询]
+=跨度查询
 
 xref:_SpanTerm查询[span_term]
 
@@ -33,7 +34,8 @@ xref:_SpanWithin查询[span_within]
 - 只要跨度落在由其它跨度范围中，就会返回一个跨度查询的结果。
 
 
-== SpanTerm查询
+[#_SpanTerm查询]
+==SpanTerm查询
 
 查看[Span Term Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-term-query.html)
 
@@ -44,7 +46,8 @@ spanTermQuery(
         "kimchy");
 ----
 
-== SpanMulti查询
+[#_SpanMulti查询]
+==SpanMulti查询
 
 查看[Span Multi Term Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-multi-term-query.html)
 
@@ -55,7 +58,8 @@ spanMultiTermQueryBuilder(
         prefixQuery("user", "ki"));
 ----
 
-== SpanFirst查询
+[#_SpanFirst查询]
+==SpanFirst查询
 
 查看[Span First Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-first-query.html)
 
@@ -68,7 +72,8 @@ spanFirstQuery(
     );
 ----
 
-== SpanNear查询
+[#_SpanNear查询]
+==SpanNear查询
 
 查看[Span Near Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-near-query.html)
 
@@ -84,7 +89,8 @@ spanNearQuery(
             .inOrder(false);
 ----
 
-== SpanOr查询
+[#_SpanOr查询]
+==SpanOr查询
 
 查看[Span Or Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-or-query.html)
 
@@ -95,7 +101,8 @@ spanOrQuery(spanTermQuery("field","value1"))
     .addClause(spanTermQuery("field","value3"));
 ----
 
-== SpanNot查询
+[#_SpanNot查询]
+==SpanNot查询
 
 查看[Span Not Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-not-query.html)
 
@@ -106,7 +113,8 @@ spanNotQuery(
         spanTermQuery("field","value2"));
 ----
 
-== SpanContaining查询
+[#_SpanContaining查询]
+==SpanContaining查询
 
 查看[Span Containing Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-containing-query.html)
 
@@ -119,7 +127,8 @@ spanContainingQuery(
         spanTermQuery("field1","foo"));
 ----
 
-== SpanWithin查询
+[#_SpanWithin查询]
+==SpanWithin查询
 
 查看[Span Within Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-within-query.html)
 

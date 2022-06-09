@@ -1,4 +1,5 @@
-= Get接口
+[#_Get接口]
+=Get接口
 
 Get接口允许根据id从index中获取JSON格式的document。
 下面的例子就是从index是twitter的索引中获取一个JSON格式的document，它的type是tweet，id是1：

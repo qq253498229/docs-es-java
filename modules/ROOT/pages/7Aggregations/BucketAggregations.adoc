@@ -1,4 +1,5 @@
-= 桶聚合
+[#_桶聚合]
+=桶聚合
 
 - [整体聚合]
 - xref:_过滤聚合[过滤聚合]
@@ -17,11 +18,13 @@
 - xref:_地理距离聚合[地理距离聚合]
 - xref:_地理哈希网格聚合[地理哈希网格聚合]
 
-== 整体聚合
+[#_整体聚合]
+==整体聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-global-aggregation.html)文档。
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -30,7 +33,8 @@ AggregationBuilders
     .subAggregation(AggregationBuilders.terms("genders").field("gender"));
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 [source,java]
 ----
@@ -44,9 +48,11 @@ Global agg = sr.getAggregations().get("agg");
 agg.getDocCount(); // Doc count
 ----
 
-== 过滤聚合
+[#_过滤聚合]
+==过滤聚合
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-filter-aggregation.html)文档。
 
@@ -56,7 +62,8 @@ AggregationBuilders
     .filter("agg", QueryBuilders.termQuery("gender", "male"));
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 [source,java]
 ----
@@ -70,11 +77,13 @@ Filter agg = sr.getAggregations().get("agg");
 agg.getDocCount(); // Doc count
 ----
 
-== 多过滤器聚合
+[#_多过滤器聚合]
+==多过滤器聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-filters-aggregation.html)文档。
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -85,7 +94,8 @@ AggregationBuilder aggregation =
             new FiltersAggregator.KeyedFilter("women", QueryBuilders.termQuery("gender", "female")));
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 [source,java]
 ----
@@ -113,18 +123,21 @@ key [men], doc_count [4982]
 key [women], doc_count [5018]
 ----
 
-== 无匹配聚合
+[#_无匹配聚合]
+==无匹配聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-missing-aggregation.html)文档。
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
 AggregationBuilders.missing("agg").field("gender");
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 [source,java]
 ----
@@ -138,11 +151,13 @@ Missing agg = sr.getAggregations().get("agg");
 agg.getDocCount(); // Doc count
 ----
 
-== 嵌套聚合
+[#_嵌套聚合]
+==嵌套聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-nested-aggregation.html)文档。
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -150,7 +165,8 @@ AggregationBuilders
     .nested("agg", "resellers");
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 [source,java]
 ----
@@ -164,11 +180,13 @@ Nested agg = sr.getAggregations().get("agg");
 agg.getDocCount(); // Doc count
 ----
 
-== 反向嵌套聚合
+[#_反向嵌套聚合]
+==反向嵌套聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-reverse-nested-aggregation.html)文档。
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -185,7 +203,8 @@ AggregationBuilder aggregation =
         );
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 [source,java]
 ----
@@ -205,11 +224,13 @@ for (Terms.Bucket bucket : name.getBuckets()) {
 }
 ----
 
-== 子对象聚合
+[#_子对象聚合]
+==子对象聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-children-aggregation.html)文档。
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -219,7 +240,8 @@ AggregationBuilder aggregation =
         .children("agg", "reseller");
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 [source,java]
 ----
@@ -233,11 +255,13 @@ Children agg = sr.getAggregations().get("agg");
 agg.getDocCount(); // Doc count
 ----
 
-== 匹配聚合
+[#_匹配聚合]
+==匹配聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-terms-aggregation.html)文档。
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -246,7 +270,8 @@ AggregationBuilders
     .field("gender");
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 [source,java]
 ----
@@ -265,7 +290,8 @@ for (Terms.Bucket entry : genders.getBuckets()) {
 }
 ----
 
-=== 排序
+[#_排序]
+===排序
 
 [source,java]
 ----
@@ -320,11 +346,13 @@ AggregationBuilders
     )
 ----
 
-== 重要匹配聚合
+[#_重要匹配聚合]
+==重要匹配聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-significantterms-aggregation.html)文档。
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -340,7 +368,8 @@ SearchResponse sr = client.prepareSearch()
         .get();
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 [source,java]
 ----
@@ -359,11 +388,13 @@ for (SignificantTerms.Bucket entry : agg.getBuckets()) {
 }
 ----
 
-== 范围聚合
+[#_范围聚合]
+==范围聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-range-aggregation.html)文档。
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -376,7 +407,8 @@ AggregationBuilder aggregation =
                 .addUnboundedFrom(1.5f);            // from 1.5 to +infinity
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 [source,java]
 ----
@@ -408,11 +440,13 @@ key [1.0-1.5], from [1.0], to [1.5], doc_count [21]
 key [1.5-*], from [1.5], to [Infinity], doc_count [20]
 ----
 
-== 日期范围聚合
+[#_日期范围聚合]
+==日期范围聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-daterange-aggregation.html)
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -427,7 +461,8 @@ AggregationBuilder aggregation =
 
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 [source,java]
 ----
@@ -461,11 +496,13 @@ key [1950-1960], from [1950-01-01T00:00:00.000Z], to [1960-01-01T00:00:00.000Z],
 key [1960-*], from [1960-01-01T00:00:00.000Z], to [null], doc_count [37]
 ----
 
-== Ip范围聚合
+[#_Ip范围聚合]
+==Ip范围聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-iprange-aggregation.html)
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -491,7 +528,8 @@ AggregatorBuilder<?> aggregation =
                 .addMaskRange("192.168.0.0/16");
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 
 [source,java]
@@ -533,12 +571,14 @@ key [192.168.0.0/24], from [192.168.0.0], to [192.168.1.0], doc_count [13]
 key [192.168.0.0/16], from [192.168.0.0], to [192.169.0.0], doc_count [50]
 ----
 
-== 柱状图聚合
+[#_柱状图聚合]
+==柱状图聚合
 
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-histogram-aggregation.html)
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -549,7 +589,8 @@ AggregationBuilder aggregation =
                 .interval(1);
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 
 [source,java]
@@ -571,16 +612,19 @@ for (Histogram.Bucket entry : agg.getBuckets()) {
 }
 ----
 
-=== 排序
+[#_排序]
+===排序
 
 支持与 xref:_TermsAggregation[TermsAggregation] 相同的排序功能。
 
-== 日期柱状图聚合
+[#_日期柱状图聚合]
+==日期柱状图聚合
 
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-datehistogram-aggregation.html)
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -602,7 +646,8 @@ AggregationBuilder aggregation =
                 .dateHistogramInterval(DateHistogramInterval.days(10));
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 
 [source,java]
@@ -638,15 +683,18 @@ key [2007-01-01T00:00:00.000Z], date [2007], doc_count [2]
 key [2008-01-01T00:00:00.000Z], date [2008], doc_count [3]
 ----
 
-=== 排序
+[#_排序]
+===排序
 
 支持与 xref:_TermsAggregation[TermsAggregation] 相同的排序功能。
 
-== 地理距离聚合
+[#_地理距离聚合]
+==地理距离聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-geodistance-aggregation.html)
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -660,7 +708,8 @@ AggregationBuilder aggregation =
                 .addRange(10.0, 500.0);
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 
 [source,java]
@@ -693,11 +742,13 @@ key [3.0-10.0], from [3.0], to [10.0], doc_count [460]
 key [10.0-500.0], from [10.0], to [500.0], doc_count [4925]
 ----
 
-== 地理哈希网格聚合
+[#_地理哈希网格聚合]
+==地理哈希网格聚合
 
 点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-geohashgrid-aggregation.html)
 
-=== 准备请求
+[#_准备请求]
+===准备请求
 
 [source,java]
 ----
@@ -708,7 +759,8 @@ AggregationBuilder aggregation =
                 .precision(4);
 ----
 
-=== 获取响应
+[#_获取响应]
+===获取响应
 
 
 [source,java]

@@ -1,6 +1,8 @@
-= Log4j 2 日志
+[#_Log4j 2 日志]
+=Log4j 2 日志
 
-== 加入log4j2来监控日志：
+[#_加入log4j2来监控日志：]
+==加入log4j2来监控日志：
 [source,xml]
 ----
 <dependency>
@@ -10,7 +12,8 @@
 </dependency>
 ----
 
-== 加入log4j2的配置文件，例如在src/main/resource中加入log4j2.properties文件，示例内容如下：
+[#_加入log4j2的配置文件，例如在src/main/resource中加入log4j2.properties文件，示例内容如下：]
+==加入log4j2的配置文件，例如在src/main/resource中加入log4j2.properties文件，示例内容如下：
 [source,properties]
 ----
 appender.console.type = Console

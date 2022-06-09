@@ -1,4 +1,5 @@
-= 组合查询
+[#_组合查询]
+=组合查询
 
 组合查询可以将其它组合查询，以及其它单独的查询语句合并到一起，并将结果和匹配分数组合起来。它可以改变它们的行为，或是将查询转换为过滤条件。
 
@@ -25,7 +26,8 @@ xref:_boosting查询[boosting查询]
 
 - 这里查询条件将会分为正匹配和负匹配。正匹配到的文档将会加分，负匹配得到的文档将会减分。
 
-== constant_score查询
+[#_constant_score查询]
+==constant_score查询
 
 查看[Constant Score Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-constant-score-query.html)
 
@@ -37,7 +39,8 @@ constantScoreQuery(
     .boost(2.0f);
 ----
 
-== bool查询
+[#_bool查询]
+==bool查询
 
 查看[Bool Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-bool-query.html)
 
@@ -52,7 +55,8 @@ boolQuery()
         .filter(termQuery("content", "test5"));
 ----
 
-== dis_max查询
+[#_dis_max查询]
+==dis_max查询
 
 查看[Dis Max Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-dis-max-query.html)
 
@@ -65,7 +69,8 @@ disMaxQuery()
         .tieBreaker(0.7f);
 ----
 
-== function_score查询
+[#_function_score查询]
+==function_score查询
 
 查看[Function Score Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-function-score-query.html)
 
@@ -86,7 +91,8 @@ FilterFunctionBuilder[] functions = {
 functionScoreQuery(functions);
 ----
 
-== boosting查询
+[#_boosting查询]
+==boosting查询
 
 查看[Boosting Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-boosting-query.html)
 

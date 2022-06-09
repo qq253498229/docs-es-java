@@ -1,4 +1,5 @@
-= 模版查询
+[#_模版查询]
+=模版查询
 
 查看 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-template.html[Search Template] 文档。
 

@@ -1,4 +1,5 @@
-= index文档
+[#_index文档]
+=index文档
 
 下面的例子的作用是，将一个JSON在ES中建立索引，index为twitter，type是tweet，id是1。
 其中有三个属性，user的值是kimchy，postDate的属性是当前时间，message的属性是trying out Elasticsearch：

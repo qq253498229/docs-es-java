@@ -1,4 +1,5 @@
-= 生成JSON文档
+[#_生成JSON文档]
+=生成JSON文档
 
 有下面几种方式生成一个JSON文档：
 
@@ -10,7 +11,8 @@
 在内部，所有类型都会转换成 **byte[]** 类型。因此，如果你的对象已经是这种格式了，那么就直接使用它吧。
 当然 **jsonBuilder** 是一个高度优化的工具，你可以使用它来直接构造 **byte[]**
 
-== 手动拼接
+[#_手动拼接]
+==手动拼接
 
 如果你使用过json格式，那么这里对你来说没什么困难的，
 唯一需要注意的是你需要通过 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/mapping-date-format.html[Date Format]
@@ -25,7 +27,8 @@ String json = "{" +
     "}";
 ----
 
-== 使用Map
+[#_使用Map]
+==使用Map
 
 Map是一个键值对的集合，它可以表现为一个JSON结构：
 
@@ -37,7 +40,8 @@ json.put("postDate",new Date());
 json.put("message","trying out Elasticsearch");
 ----
 
-== 使用第三方库
+[#_使用第三方库]
+==使用第三方库
 
 你可以使用 http://wiki.fasterxml.com/JacksonHome[Jackson]将你的Bean序列化成JSON。
 请将 http://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind[Jackson Databind]加入你的项目中。
@@ -54,7 +58,8 @@ ObjectMapper mapper = new ObjectMapper(); // create once, reuse
 byte[] json = mapper.writeValueAsBytes(yourbeaninstance);
 ----
 
-== 使用ES内置的工具
+[#_使用ES内置的工具]
+==使用ES内置的工具
 
 ES提供了一个内置的工具来帮助你生成JSON内容：
 

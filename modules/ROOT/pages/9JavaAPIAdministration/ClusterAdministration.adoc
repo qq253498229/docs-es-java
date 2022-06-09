@@ -1,4 +1,5 @@
-= 管理集群接口
+[#_管理集群接口]
+=管理集群接口
 
 想要访问集群接口，你需要从[AdminClient](readme.md#管理员接口)类中调用 **cluster()** 。
 
@@ -10,9 +11,11 @@ ClusterAdminClient clusterAdminClient = client.admin().cluster();
 - xref:_集群健康接口[集群健康接口]
 - xref:_存储脚本接口[存储脚本接口]
 
-== 集群健康接口
+[#_集群健康接口]
+==集群健康接口
 
-=== 健康
+[#_健康]
+===健康
 
 集群健康接口允许将集群的健康状态返回一个简单的状态，并且还可以为您提供每个索引的集群状态的技术信息：
 
@@ -40,7 +43,8 @@ for (ClusterIndexHealth health : healths.getIndices().values()) {
 }
 ----
 
-=== 等待状态
+[#_等待状态]
+===等待状态
 
 可以使用集群状态接口等待整个集群或给定索引的特定状态：
 
@@ -80,7 +84,8 @@ if (!status.equals(ClusterHealthStatus.GREEN)) {
 }
 ----
 
-== 存储脚本接口
+[#_存储脚本接口]
+==存储脚本接口
 
 存储脚本接口允许用户在脚本和模版中间进行交互。也可以用来创建、更新和删除存储的脚本和模版：
 
@@ -102,6 +107,7 @@ DeleteStoredScriptResponse response = client().admin().cluster().prepareDeleteSt
 
 也可以简单的使用 **mustache** 作为 **scriptLang** 来存储脚本
 
-=== 脚本语言
+[#_脚本语言]
+===脚本语言
 
 存储脚本接口允许你设置存储脚本的语言。如果没有提供的话，则使用默认的脚本语言。

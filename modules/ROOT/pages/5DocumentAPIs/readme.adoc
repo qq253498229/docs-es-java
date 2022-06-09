@@ -1,8 +1,10 @@
-= 文档接口
+[#_文档接口]
+=文档接口
 
 这部分讲的是这些CRUD接口:
 
-== 单文档接口
+[#_单文档接口]
+==单文档接口
 
 - xref:./IndexAPI.adoc[Index接口]
 - xref:./GetAPI.adoc[Get接口]
@@ -10,7 +12,8 @@
 - xref:./DeleteByQueryAPI.adoc[Delete By Query接口]
 - xref:./UpdateAPI.adoc[Update接口]
 
-== 多文档接口
+[#_多文档接口]
+==多文档接口
 
 - xref:./MultiGetAPI.adoc[Multi Get接口]
 - xref:./BulkAPI.adoc[Bulk接口]
