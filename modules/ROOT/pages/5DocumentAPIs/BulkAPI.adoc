@@ -2,7 +2,8 @@
 
 Bulk接口允许在一个请求中索引或删除多个文档。例：
 
-```java
+[source,java]
+----
 import static org.elasticsearch.common.xcontent.XContentFactory.*;
 
 BulkRequestBuilder bulkRequest = client.prepareBulk();
@@ -32,4 +33,4 @@ BulkResponse bulkResponse = bulkRequest.get();
 if (bulkResponse.hasFailures()) {
     // process failures by iterating through each bulk response item
 }
-```
+----

@@ -28,56 +28,61 @@
 
 查看[Match Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query.html)
 
-```java
+[source,java]
+----
 QueryBuilder qb = matchQuery(
     //字段
     "name",
     //查询值
     "kimchy elasticsearch"
 );
-```
+----
 
 == multi_match匹配查询
 
 查看[Multi Match Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-multi-match-query.html)
 
-```java
+[source,java]
+----
 QueryBuilder qb = multiMatchQuery(
     //查询值
     "kimchy elasticsearch",
     //字段
     "user", "message"
 );
-```
+----
 
 == common_terms查询
 
 查看[Common Terms Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-common-terms-query.html)
 
-```java
+[source,java]
+----
 QueryBuilder qb = commonTermsQuery(
     //字段
     "name",
     //查询值
     "kimchy");
-```
+----
 
 == query_string查询
 
 查看[Query String Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-query-string-query.html)
 
-```java
+[source,java]
+----
 QueryBuilder qb = queryStringQuery(
     //查询值
     "+kimchy -elasticsearch");
-```
+----
 
 == simple_query_string查询
 
 查看[Simple Query String Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-simple-query-string-query.html)
 
-```java
+[source,java]
+----
 QueryBuilder qb = simpleQueryStringQuery(
     //查询值
     "+kimchy -elasticsearch");
-```
+----

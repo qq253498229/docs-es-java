@@ -10,7 +10,8 @@
 - 日期柱状图聚合(桶)
 - 平均值聚合(指标)
 
-```java
+[source,java]
+----
 SearchResponse sr = node.client().prepareSearch()
     .addAggregation(
         AggregationBuilders.terms("by_country").field("country")
@@ -21,4 +22,4 @@ SearchResponse sr = node.client().prepareSearch()
         )
     )
     .execute().actionGet();
-```
+----

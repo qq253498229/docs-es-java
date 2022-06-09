@@ -4,7 +4,8 @@
 
 要使用它，首先要创建一个**BulkProcessor**实例：
 
-```java
+[source,java]
+----
 import org.elasticsearch.action.bulk.BackoffPolicy;
 import org.elasticsearch.action.bulk.BulkProcessor;
 import org.elasticsearch.common.unit.ByteSizeUnit;
@@ -50,7 +51,7 @@ BulkProcessor bulkProcessor = BulkProcessor.builder(
         .setBackoffPolicy(
             BackoffPolicy.exponentialBackoff(TimeValue.timeValueMillis(100), 3))
         .build();
-```
+----
 
 默认情况，BulkProcessor的配置如下：
 
@@ -65,24 +66,27 @@ BulkProcessor bulkProcessor = BulkProcessor.builder(
 
 现在可以向**Bulk Processor**中添加请求了
 
-```java
+[source,java]
+----
 bulkProcessor.add(new IndexRequest("twitter", "tweet", "1").source(/* your doc here */));
 bulkProcessor.add(new DeleteRequest("twitter", "tweet", "2"));
-```
+----
 
 == 关闭Bulk Processor
 
 当确认所有的文档全部发送到**BulkProcessor**之后，可以使用**awaitClose**或**close**方法关闭它。
 
-```java
+[source,java]
+----
 bulkProcessor.awaitClose(10, TimeUnit.MINUTES);
-```
+----
 
 或者
 
-```java
+[source,java]
+----
 bulkProcessor.close();
-```
+----
 
 如果设置了**flushInterval**，上面两个方法都可以发送剩余的文档并且禁用发送任务。
 如果开启了并发请求策略，**awaitClose**方法会等待所指定的时间，当所有批处理请求全部完成时，会返回**true**，
@@ -94,7 +98,8 @@ bulkProcessor.close();
 
 如果你正在测试ES并且使用的是**BulkProcessor**来批量添加数据，最好将并发请求数量设置为**0**，这样批处理请求将会以同步的方式执行：
 
-```java
+[source,java]
+----
 BulkProcessor bulkProcessor = BulkProcessor.builder(client, new BulkProcessor.Listener() { /* Listener methods */ })
         .setBulkActions(10000)
         .setConcurrentRequests(0)
@@ -114,4 +119,4 @@ client.admin().indices().prepareRefresh().get();
 
 // 现在可以开始查询了!
 client.prepareSearch().get();
-```
+----

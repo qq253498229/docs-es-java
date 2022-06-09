@@ -37,39 +37,43 @@
 
 查看[Span Term Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-term-query.html)
 
-```java
+[source,java]
+----
 spanTermQuery(
         "user",
         "kimchy");
-```
+----
 
 == SpanMulti查询
 
 查看[Span Multi Term Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-multi-term-query.html)
 
-```java
+[source,java]
+----
 spanMultiTermQueryBuilder(
         //支持任何继承MultiTermQueryBuilder的类。例如：FuzzyQueryBuilder、PrefixQueryBuilder、RangeQueryBuilder、RegexpQueryBuilder或WildcardQueryBuilder
         prefixQuery("user", "ki"));
-```
+----
 
 == SpanFirst查询
 
 查看[Span First Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-first-query.html)
 
-```java
+[source,java]
+----
 spanFirstQuery(
         spanTermQuery("user", "kimchy"),
         //最大位置
         3
     );
-```
+----
 
 == SpanNear查询
 
 查看[Span Near Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-near-query.html)
 
-```java
+[source,java]
+----
 spanNearQuery(
         spanTermQuery("field","value1"),
         //不匹配的最大数量
@@ -78,48 +82,52 @@ spanNearQuery(
             .addClause(spanTermQuery("field","value3"))
             //是否按照顺序进行匹配
             .inOrder(false);
-```
+----
 
 == SpanOr查询
 
 查看[Span Or Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-or-query.html)
 
-```java
+[source,java]
+----
 spanOrQuery(spanTermQuery("field","value1"))
     .addClause(spanTermQuery("field","value2"))
     .addClause(spanTermQuery("field","value3"));
-```
+----
 
 == SpanNot查询
 
 查看[Span Not Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-not-query.html)
 
-```java
+[source,java]
+----
 spanNotQuery(
         spanTermQuery("field","value1"),
         spanTermQuery("field","value2"));
-```
+----
 
 == SpanContaining查询
 
 查看[Span Containing Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-containing-query.html)
 
-```java
+[source,java]
+----
 spanContainingQuery(
         spanNearQuery(spanTermQuery("field1","bar"), 5)
             .addClause(spanTermQuery("field1","baz"))
             .inOrder(true),
         spanTermQuery("field1","foo"));
-```
+----
 
 == SpanWithin查询
 
 查看[Span Within Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-span-within-query.html)
 
-```java
+[source,java]
+----
 spanWithinQuery(
         spanNearQuery(spanTermQuery("field1", "bar"), 5)
             .addClause(spanTermQuery("field1", "baz"))
             .inOrder(true),
         spanTermQuery("field1", "foo"));
-```
+----

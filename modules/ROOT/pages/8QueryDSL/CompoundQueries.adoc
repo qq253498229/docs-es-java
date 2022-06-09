@@ -29,18 +29,20 @@
 
 查看[Constant Score Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-constant-score-query.html)
 
-```java
+[source,java]
+----
 constantScoreQuery(
         termQuery("name","kimchy"))
     //指定分数
     .boost(2.0f);
-```
+----
 
 == bool查询
 
 查看[Bool Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-bool-query.html)
 
-```java
+[source,java]
+----
 boolQuery()
         .must(termQuery("content", "test1"))
         .must(termQuery("content", "test4"))
@@ -48,29 +50,32 @@ boolQuery()
         .should(termQuery("content", "test3"))
         //绝对匹配，不参与评分
         .filter(termQuery("content", "test5"));
-```
+----
 
 == dis_max查询
 
 查看[Dis Max Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-dis-max-query.html)
 
-```java
+[source,java]
+----
 disMaxQuery()
         .add(termQuery("name", "kimchy"))
         .add(termQuery("name", "elasticsearch"))
         .boost(1.2f)
         .tieBreaker(0.7f);
-```
+----
 
 == function_score查询
 
 查看[Function Score Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-function-score-query.html)
 
-```java
+[source,java]
+----
 import static org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders.*;
-```
+----
 
-```java
+[source,java]
+----
 FilterFunctionBuilder[] functions = {
         new FunctionScoreQueryBuilder.FilterFunctionBuilder(
                 matchQuery("name", "kimchy"),
@@ -79,15 +84,16 @@ FilterFunctionBuilder[] functions = {
                 exponentialDecayFunction("age", 0L, 1L))
 };
 functionScoreQuery(functions);
-```
+----
 
 == boosting查询
 
 查看[Boosting Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-boosting-query.html)
 
-```java
+[source,java]
+----
 boostingQuery(
             termQuery("name","kimchy"),
             termQuery("name","dadoonet"))
         .negativeBoost(0.2f);
-```
+----
