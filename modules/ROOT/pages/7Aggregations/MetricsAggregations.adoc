@@ -526,14 +526,15 @@ key [female], doc_count [4893]
 
 如果你想在嵌入式数据节点(例如单元测试)中使用Groovy脚本都话，不要忘了在classpath中加入groovy。例如，在maven中，你可以将下面的依赖加入到 **pom.xml** 中：
 
-```xml
+[source,xml]
+----
 <dependency>
     <groupId>org.codehaus.groovy</groupId>
     <artifactId>groovy-all</artifactId>
     <version>2.3.2</version>
     <classifier>indy</classifier>
 </dependency>
-```
+----
 
 === 准备聚合请求
 

@@ -26,7 +26,8 @@ ES支持两种类型的地理位置数据：支持经纬度的 **geo_point** ，
 
 注意： **geo_shape** 类型使用 **Spatial4J** 和 **JTS** 两种依赖：
 
-```xml
+[source,xml]
+----
 <dependency>
     <groupId>org.locationtech.spatial4j</groupId>
     <artifactId>spatial4j</artifactId>
@@ -44,7 +45,7 @@ ES支持两种类型的地理位置数据：支持经纬度的 **geo_point** ，
         </exclusion>
     </exclusions>
 </dependency>
-```
+----
 
 [source,java]
 ----
