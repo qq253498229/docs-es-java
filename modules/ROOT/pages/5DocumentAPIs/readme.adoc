@@ -4,18 +4,18 @@
 
 == 单文档接口
 
-- [Index接口](IndexAPI.md)
-- [Get接口](GetAPI.md)
-- [Delete接口](DeleteAPI.md)
-- [Delete By Query接口](DeleteByQueryAPI.md)
-- [Update接口](UpdateAPI.md)
+- xref:./IndexAPI.adoc[Index接口]
+- xref:./GetAPI.adoc[Get接口]
+- xref:./DeleteAPI.adoc[Delete接口]
+- xref:./DeleteByQueryAPI.adoc[Delete By Query接口]
+- xref:./UpdateAPI.adoc[Update接口]
 
 == 多文档接口
 
-- [Multi Get接口](MultiGetAPI.md)
-- [Bulk接口](BulkAPI.md)
-- [使用Bulk Processor](UsingBulkProcessor.md)
-- [通过脚本修改接口](UpdateByQueryAPI.md)
-- [重新索引接口](ReindexAPI.md)
+- xref:./MultiGetAPI.adoc[Multi Get接口]
+- xref:./BulkAPI.adoc[Bulk接口]
+- xref:./UsingBulkProcessor.adoc[使用Bulk Processor]
+- xref:./UpdateByQueryAPI.adoc[通过脚本修改接口]
+- xref:./ReindexAPI.adoc[重新索引接口]
 
 > 所有的CRUD接口都是针对同一个索引的接口。**index** 参数只可以接受单独的索引名，也可以使用**alias**来指向这个索引

@@ -2,10 +2,10 @@
 
 你有很多方法来使用 **java client**
 
-- 在一个已有的集群中执行标准的[index](../5DocumentAPIs/IndexAPI.md#index接口)，[get](../5DocumentAPIs/GetAPI.md)，[delete](../5DocumentAPIs/DeleteAPI.md)和[search](../6SearchAPI/readme.md)操作。
+- 在一个已有的集群中执行标准的 xref:5DocumentAPIs/IndexAPI.adoc[index]，xref:5DocumentAPIs/GetAPI.adoc[get]，xref:5DocumentAPIs/DeleteAPI.adoc[delete] 和 xref:6SearchAPI/readme.adoc[search] 操作。
 - 在一个已有的集群中执行管理任务
 
-获取 ES **client** 很简单。最常用的方法就是创建一个连接到集群的[TransportClient](../4Client/readme.md#TransportClient)，并从中获取client。
+获取 ES **client** 很简单。最常用的方法就是创建一个连接到集群的 xref:4Client/readme.adoc[TransportClient]，并从中获取client。
 
 > 重要：集群中的客户端节点必须重要版本相同（例如5.6.8和5.6.2，2.4.6和2.4.0）。
 虽然不同版本的客户端可以同时连接到同一个集群中，但是一些新版本的新特性在旧版本可能就不会被支持了。
@@ -13,9 +13,10 @@
 
 > 警告：在ES7.0中我们不建议您使用TransportClient，它将会在8.0中被移除。
 所以请尽量快速地习惯并使用JavaHighLevelClient。JavaHighLevelClient目前已经支持大部分常用的API，但是还有一些需要补充。
-你可以点击[这里](https://github.com/elastic/elasticsearch/issues/27205)把你的应用需要添加的api告诉我们。
-任何尚未支持的API仍然可以使用 [low level Java REST Client]() 通过json的方式来调用。
+你可以点击 (https://github.com/elastic/elasticsearch/issues/27205[这里] 把你的应用需要添加的api告诉我们。
+任何尚未支持的API仍然可以使用 https://www.elastic.co/guide/en/elasticsearch/client/java-rest/6.2/java-rest-low.html[low level Java REST Client] 通过json的方式来调用。
 
+[[_transportclient]]
 == TransportClient
 
 **TransportClient** 使用 transport模块远程连接到ES集群。
@@ -72,6 +73,6 @@ client.transport.ping_timeout | ping超时时间，默认**5**秒。
 client.transport.nodes_sampler_interval | sample/ping节点列表并连接的间隔，默认**5**秒
 
 == 将client连接到一个节点
-在本地[连接到一个节点](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/modules-node.html#coordinating-only-node)，
-然后在应用中创建一个 [TransportClient](#TransportClient)吧。
+在本地 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/modules-node.html#coordinating-only-node[连接到一个节点] ，
+然后在应用中创建一个 xref:_transportclient[TransportClient]吧。
 这样这个节点就可以加载你需要的任何插件了(例如discovery插件)。

@@ -1,4 +1,4 @@
-# Lucene Snapshot仓库
+= Lucene Snapshot仓库
 
 有时候主要版本(如测试版)的第一个版本可能建立在Lucene的快照版本之上，这时候您可能无法解决Lucene的依赖问题。
 

@@ -1,7 +1,7 @@
 = Search接口
 
 Search接口允许执行一个查询操作，并返回与查询条件相匹配的结果。允许跨index查询，也可以跨type查询。
-可以使用[query Java API](https://www.elastic.co/guide/en/elasticsearch/client/java-api/5.6/java-query-dsl.html)作为查询语句。
+可以使用 https://www.elastic.co/guide/en/elasticsearch/client/java-api/5.6/java-query-dsl.html[query Java API] 作为查询语句。
 查询的请求体使用**SearchSourceBuilder**构建。例：
 
 [source,java]

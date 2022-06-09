@@ -30,6 +30,6 @@ ES 已经托管在 Maven 中央仓库
   <version>6.2.2</version>
 </dependency>
 ----
-- [Lucene Snapshot仓库](./LuceneSnapshotRepository.md)
-- [Log4j 2 日志](./log4j2.md)
-- [使用其它的日志](./UsingAnotherLogger.md)
+- xref:./LuceneSnapshotRepository.adoc[Lucene Snapshot仓库]
+- xref:./log4j2.adoc[Log4j 2 日志]
+- xref:./UsingAnotherLogger.adoc[使用其它的日志]

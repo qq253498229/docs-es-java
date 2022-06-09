@@ -9,4 +9,3 @@
 * xref:9JavaAPIAdministration/readme.adoc[管理员接口]
 * https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html[《Elasticsearch: 权威指南》中文版]
 * xref:0Remark/words.adoc[名词解释(对比关系型数据库)]
-* xref:0Remark/Contribution.adoc[贡献说明]

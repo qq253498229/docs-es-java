@@ -1,4 +1,4 @@
-# Update接口
+= Update接口
 
 你可以创建一个 **UpdateRequest** 并发送给 **client**
 
@@ -23,7 +23,7 @@ client.prepareUpdate("ttl", "doc", "1")
         .get();
 
 client.prepareUpdate("ttl", "doc", "1")
-        .setDoc(jsonBuilder()               
+        .setDoc(jsonBuilder()
             .startObject()
                 .field("gender", "male")
             .endObject())
@@ -32,7 +32,7 @@ client.prepareUpdate("ttl", "doc", "1")
 
 注意，不能同时使用 **script** 和 **doc** 。
 
-## 使用脚本更新文档
+== 使用脚本更新文档
 
 Update接口允许提供一个脚本来更新文档：
 
@@ -42,7 +42,7 @@ UpdateRequest updateRequest = new UpdateRequest("ttl", "doc", "1")
 client.update(updateRequest).get();
 ```
 
-## 合并的方式更新文档
+== 合并的方式更新文档
 
 Update接口允许传入一部分文档，并将之合并到一个已存在的文档中(简单的递归合并，对象的内部合并，替换键值对和数组)，例：
 
@@ -55,7 +55,7 @@ UpdateRequest updateRequest = new UpdateRequest("index", "type", "1")
 client.update(updateRequest).get();
 ```
 
-## 插入更新(Upsert)
+== 插入更新(Upsert)
 
 更新的时候也支持**upsert**。如果文档不存在，**upsert**的元素会被建立一个索引：
 
@@ -72,7 +72,7 @@ UpdateRequest updateRequest = new UpdateRequest("index", "type", "1")
                 .field("gender", "male")
             .endObject())
         //如果文档不存在，indexRequest中的元素就会被建立索引
-        .upsert(indexRequest);              
+        .upsert(indexRequest);
 client.update(updateRequest).get();
 ```
 

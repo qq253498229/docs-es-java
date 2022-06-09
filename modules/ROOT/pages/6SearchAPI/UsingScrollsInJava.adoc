@@ -1,8 +1,9 @@
-# 使用游标查询
+= 使用游标查询
 
-首先请阅读[游标查询](https://www.elastic.co/guide/cn/elasticsearch/guide/cn/scroll.html)文档。
+首先请阅读 https://www.elastic.co/guide/cn/elasticsearch/guide/cn/scroll.html[游标查询] 文档。
 
-```java
+[source,java]
+----
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 QueryBuilder qb = termQuery("multi", "test");
@@ -20,4 +21,4 @@ do {
 
     scrollResp = client.prepareSearchScroll(scrollResp.getScrollId()).setScroll(new TimeValue(60000)).execute().actionGet();
 } while(scrollResp.getHits().getHits().length != 0); // 没有返回结果的时候就停止循环和游标
-```
+----
