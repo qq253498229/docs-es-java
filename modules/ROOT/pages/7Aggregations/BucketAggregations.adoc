@@ -23,7 +23,6 @@
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-global-aggregation.html[查看] 文档。
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -33,7 +32,6 @@ AggregationBuilders
     .subAggregation(AggregationBuilders.terms("genders").field("gender"));
 ----
 
-[#_获取响应]
 === 获取响应
 
 [source,java]
@@ -51,7 +49,6 @@ agg.getDocCount(); // Doc count
 [#_过滤聚合]
 == 过滤聚合
 
-[#_准备请求]
 === 准备请求
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-filter-aggregation.html[查看] 文档。
@@ -62,7 +59,6 @@ AggregationBuilders
     .filter("agg", QueryBuilders.termQuery("gender", "male"));
 ----
 
-[#_获取响应]
 === 获取响应
 
 [source,java]
@@ -82,7 +78,6 @@ agg.getDocCount(); // Doc count
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-filters-aggregation.html[查看] 文档。
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -94,7 +89,6 @@ AggregationBuilder aggregation =
             new FiltersAggregator.KeyedFilter("women", QueryBuilders.termQuery("gender", "female")));
 ----
 
-[#_获取响应]
 === 获取响应
 
 [source,java]
@@ -128,7 +122,6 @@ key [women], doc_count [5018]
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-missing-aggregation.html[查看] 文档。
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -136,7 +129,6 @@ key [women], doc_count [5018]
 AggregationBuilders.missing("agg").field("gender");
 ----
 
-[#_获取响应]
 === 获取响应
 
 [source,java]
@@ -156,7 +148,6 @@ agg.getDocCount(); // Doc count
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-nested-aggregation.html[查看] 文档。
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -165,7 +156,6 @@ AggregationBuilders
     .nested("agg", "resellers");
 ----
 
-[#_获取响应]
 === 获取响应
 
 [source,java]
@@ -185,7 +175,6 @@ agg.getDocCount(); // Doc count
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-reverse-nested-aggregation.html[查看] 文档。
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -203,7 +192,6 @@ AggregationBuilder aggregation =
         );
 ----
 
-[#_获取响应]
 === 获取响应
 
 [source,java]
@@ -229,7 +217,6 @@ for (Terms.Bucket bucket : name.getBuckets()) {
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-children-aggregation.html[查看] 文档。
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -240,7 +227,6 @@ AggregationBuilder aggregation =
         .children("agg", "reseller");
 ----
 
-[#_获取响应]
 === 获取响应
 
 [source,java]
@@ -260,7 +246,6 @@ agg.getDocCount(); // Doc count
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-terms-aggregation.html[查看] 文档。
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -270,7 +255,6 @@ AggregationBuilders
     .field("gender");
 ----
 
-[#_获取响应]
 === 获取响应
 
 [source,java]
@@ -290,7 +274,6 @@ for (Terms.Bucket entry : genders.getBuckets()) {
 }
 ----
 
-[#_排序]
 === 排序
 
 [source,java]
@@ -351,7 +334,6 @@ AggregationBuilders
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-significantterms-aggregation.html[查看] 文档。
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -368,7 +350,6 @@ SearchResponse sr = client.prepareSearch()
         .get();
 ----
 
-[#_获取响应]
 === 获取响应
 
 [source,java]
@@ -393,7 +374,6 @@ for (SignificantTerms.Bucket entry : agg.getBuckets()) {
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-range-aggregation.html[查看] 文档。
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -407,7 +387,6 @@ AggregationBuilder aggregation =
                 .addUnboundedFrom(1.5f);            // from 1.5 to +infinity
 ----
 
-[#_获取响应]
 === 获取响应
 
 [source,java]
@@ -445,7 +424,6 @@ key [1.5-*], from [1.5], to [Infinity], doc_count [20]
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-daterange-aggregation.html[查看]
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -461,7 +439,6 @@ AggregationBuilder aggregation =
 
 ----
 
-[#_获取响应]
 === 获取响应
 
 [source,java]
@@ -501,7 +478,6 @@ key [1960-*], from [1960-01-01T00:00:00.000Z], to [null], doc_count [37]
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-iprange-aggregation.html[查看]
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -528,7 +504,6 @@ AggregatorBuilder<?> aggregation =
                 .addMaskRange("192.168.0.0/16");
 ----
 
-[#_获取响应]
 === 获取响应
 
 
@@ -577,7 +552,6 @@ key [192.168.0.0/16], from [192.168.0.0], to [192.169.0.0], doc_count [50]
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-histogram-aggregation.html[查看]
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -589,7 +563,6 @@ AggregationBuilder aggregation =
                 .interval(1);
 ----
 
-[#_获取响应]
 === 获取响应
 
 
@@ -612,7 +585,6 @@ for (Histogram.Bucket entry : agg.getBuckets()) {
 }
 ----
 
-[#_排序]
 === 排序
 
 支持与 xref:_TermsAggregation[TermsAggregation] 相同的排序功能。
@@ -623,7 +595,6 @@ for (Histogram.Bucket entry : agg.getBuckets()) {
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-datehistogram-aggregation.html[查看]
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -646,7 +617,6 @@ AggregationBuilder aggregation =
                 .dateHistogramInterval(DateHistogramInterval.days(10));
 ----
 
-[#_获取响应]
 === 获取响应
 
 
@@ -683,7 +653,6 @@ key [2007-01-01T00:00:00.000Z], date [2007], doc_count [2]
 key [2008-01-01T00:00:00.000Z], date [2008], doc_count [3]
 ----
 
-[#_排序]
 === 排序
 
 支持与 xref:_TermsAggregation[TermsAggregation] 相同的排序功能。
@@ -693,7 +662,6 @@ key [2008-01-01T00:00:00.000Z], date [2008], doc_count [3]
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-geodistance-aggregation.html[查看]
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -708,7 +676,6 @@ AggregationBuilder aggregation =
                 .addRange(10.0, 500.0);
 ----
 
-[#_获取响应]
 === 获取响应
 
 
@@ -747,7 +714,6 @@ key [10.0-500.0], from [10.0], to [500.0], doc_count [4925]
 
 点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-geohashgrid-aggregation.html[查看]
 
-[#_准备请求]
 === 准备请求
 
 [source,java]
@@ -759,7 +725,6 @@ AggregationBuilder aggregation =
                 .precision(4);
 ----
 
-[#_获取响应]
 === 获取响应
 
 
