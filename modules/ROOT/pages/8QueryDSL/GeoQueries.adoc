@@ -24,7 +24,7 @@ xref:_GeoPolygon查询[geo_polygon查询]
 [#_GeoShape查询]
 ==GeoShape查询
 
-查看[Geo Shape Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-geo-shape-query.html)
+查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-geo-shape-query.html[Geo Shape Query]
 
 注意： **geo_shape** 类型使用 **Spatial4J** 和 **JTS** 两种依赖：
 
@@ -95,7 +95,7 @@ qb.relation(ShapeRelation.WITHIN)
 [#_GeoBoundingBox查询]
 ==GeoBoundingBox查询
 
-查看[Geo Bounding Box Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-geo-bounding-box-query.html)
+查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-geo-bounding-box-query.html[Geo Bounding Box Query]
 
 [source,java]
 ----
@@ -110,7 +110,7 @@ geoBoundingBoxQuery("pin.location")
 [#_GeoDistance查询]
 ==GeoDistance查询
 
-查看[Geo Distance Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-geo-bounding-box-query.html)
+查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-geo-bounding-box-query.html[Geo Distance Query]
 
 [source,java]
 ----
@@ -125,7 +125,7 @@ geoDistanceQuery("pin.location")
 [#_GeoPolygon查询]
 ==GeoPolygon查询
 
-查看[Geo Polygon Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-geo-polygon-query.html)
+查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-geo-polygon-query.html[Geo Polygon Query]
 
 [source,java]
 ----

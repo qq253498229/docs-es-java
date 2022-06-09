@@ -29,7 +29,7 @@ xref:_boosting查询[boosting查询]
 [#_constant_score查询]
 ==constant_score查询
 
-查看[Constant Score Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-constant-score-query.html)
+查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-constant-score-query.html[Constant Score Query]
 
 [source,java]
 ----
@@ -42,7 +42,7 @@ constantScoreQuery(
 [#_bool查询]
 ==bool查询
 
-查看[Bool Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-bool-query.html)
+查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-bool-query.html[Bool Query]
 
 [source,java]
 ----
@@ -58,7 +58,7 @@ boolQuery()
 [#_dis_max查询]
 ==dis_max查询
 
-查看[Dis Max Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-dis-max-query.html)
+查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-dis-max-query.html[Dis Max Query]
 
 [source,java]
 ----
@@ -72,7 +72,7 @@ disMaxQuery()
 [#_function_score查询]
 ==function_score查询
 
-查看[Function Score Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-function-score-query.html)
+查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-function-score-query.html[Function Score Query]
 
 [source,java]
 ----
@@ -94,7 +94,7 @@ functionScoreQuery(functions);
 [#_boosting查询]
 ==boosting查询
 
-查看[Boosting Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-boosting-query.html)
+查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-boosting-query.html[Boosting Query]
 
 [source,java]
 ----

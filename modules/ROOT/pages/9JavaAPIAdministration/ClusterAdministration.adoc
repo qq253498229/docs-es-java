@@ -1,7 +1,7 @@
 [#_管理集群接口]
 =管理集群接口
 
-想要访问集群接口，你需要从[AdminClient](readme.md#管理员接口)类中调用 **cluster()** 。
+想要访问集群接口，你需要从 xref:./readme.adoc#_管理员接口[AdminClient] 类中调用 **cluster()** 。
 
 [source,java]
 ----

@@ -21,7 +21,7 @@
 [#_整体聚合]
 ==整体聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-global-aggregation.html)文档。
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-global-aggregation.html[查看] 文档。
 
 [#_准备请求]
 ===准备请求
@@ -54,7 +54,7 @@ agg.getDocCount(); // Doc count
 [#_准备请求]
 ===准备请求
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-filter-aggregation.html)文档。
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-filter-aggregation.html[查看] 文档。
 
 [source,java]
 ----
@@ -80,7 +80,7 @@ agg.getDocCount(); // Doc count
 [#_多过滤器聚合]
 ==多过滤器聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-filters-aggregation.html)文档。
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-filters-aggregation.html[查看] 文档。
 
 [#_准备请求]
 ===准备请求
@@ -126,7 +126,7 @@ key [women], doc_count [5018]
 [#_无匹配聚合]
 ==无匹配聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-missing-aggregation.html)文档。
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-missing-aggregation.html[查看] 文档。
 
 [#_准备请求]
 ===准备请求
@@ -154,7 +154,7 @@ agg.getDocCount(); // Doc count
 [#_嵌套聚合]
 ==嵌套聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-nested-aggregation.html)文档。
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-nested-aggregation.html[查看] 文档。
 
 [#_准备请求]
 ===准备请求
@@ -183,7 +183,7 @@ agg.getDocCount(); // Doc count
 [#_反向嵌套聚合]
 ==反向嵌套聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-reverse-nested-aggregation.html)文档。
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-reverse-nested-aggregation.html[查看] 文档。
 
 [#_准备请求]
 ===准备请求
@@ -227,7 +227,7 @@ for (Terms.Bucket bucket : name.getBuckets()) {
 [#_子对象聚合]
 ==子对象聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-children-aggregation.html)文档。
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-children-aggregation.html[查看] 文档。
 
 [#_准备请求]
 ===准备请求
@@ -258,7 +258,7 @@ agg.getDocCount(); // Doc count
 [#_匹配聚合]
 ==匹配聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-terms-aggregation.html)文档。
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-terms-aggregation.html[查看] 文档。
 
 [#_准备请求]
 ===准备请求
@@ -349,7 +349,7 @@ AggregationBuilders
 [#_重要匹配聚合]
 ==重要匹配聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-significantterms-aggregation.html)文档。
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-significantterms-aggregation.html[查看] 文档。
 
 [#_准备请求]
 ===准备请求
@@ -391,7 +391,7 @@ for (SignificantTerms.Bucket entry : agg.getBuckets()) {
 [#_范围聚合]
 ==范围聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-range-aggregation.html)文档。
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-range-aggregation.html[查看] 文档。
 
 [#_准备请求]
 ===准备请求
@@ -443,7 +443,7 @@ key [1.5-*], from [1.5], to [Infinity], doc_count [20]
 [#_日期范围聚合]
 ==日期范围聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-daterange-aggregation.html)
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-daterange-aggregation.html[查看]
 
 [#_准备请求]
 ===准备请求
@@ -499,7 +499,7 @@ key [1960-*], from [1960-01-01T00:00:00.000Z], to [null], doc_count [37]
 [#_Ip范围聚合]
 ==Ip范围聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-iprange-aggregation.html)
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-iprange-aggregation.html[查看]
 
 [#_准备请求]
 ===准备请求
@@ -575,7 +575,7 @@ key [192.168.0.0/16], from [192.168.0.0], to [192.169.0.0], doc_count [50]
 ==柱状图聚合
 
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-histogram-aggregation.html)
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-histogram-aggregation.html[查看]
 
 [#_准备请求]
 ===准备请求
@@ -621,7 +621,7 @@ for (Histogram.Bucket entry : agg.getBuckets()) {
 ==日期柱状图聚合
 
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-datehistogram-aggregation.html)
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-datehistogram-aggregation.html[查看]
 
 [#_准备请求]
 ===准备请求
@@ -691,7 +691,7 @@ key [2008-01-01T00:00:00.000Z], date [2008], doc_count [3]
 [#_地理距离聚合]
 ==地理距离聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-geodistance-aggregation.html)
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-geodistance-aggregation.html[查看]
 
 [#_准备请求]
 ===准备请求
@@ -745,7 +745,7 @@ key [10.0-500.0], from [10.0], to [500.0], doc_count [4925]
 [#_地理哈希网格聚合]
 ==地理哈希网格聚合
 
-点击[查看](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-geohashgrid-aggregation.html)
+点击 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/search-aggregations-bucket-geohashgrid-aggregation.html[查看]
 
 [#_准备请求]
 ===准备请求

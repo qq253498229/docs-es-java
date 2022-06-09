@@ -18,7 +18,7 @@
 [#_最小值聚合]
 ==最小值聚合
 
-你可以通过JavaAPI使用[最小值聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-min-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-min-aggregation.html[最小值聚合] 。
 
 [#_准备聚合请求]
 ===准备聚合请求
@@ -53,7 +53,7 @@ double value = agg.getValue();
 [#_最大值聚合]
 ==最大值聚合
 
-你可以通过JavaAPI使用[最大值聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-max-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-max-aggregation.html[最大值聚合] 。
 
 [#_准备聚合请求]
 ===准备聚合请求
@@ -89,7 +89,7 @@ double value = agg.getValue();
 [#_求和聚合]
 ==求和聚合
 
-你可以通过JavaAPI使用[求和聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-sum-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-sum-aggregation.html[求和聚合] 。
 
 [#_准备聚合请求]
 ===准备聚合请求
@@ -124,7 +124,7 @@ double value = agg.getValue();
 [#_平均值聚合]
 ==平均值聚合
 
-你可以通过JavaAPI使用[平均值聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-avg-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-avg-aggregation.html[平均值聚合] 。
 
 [#_准备聚合请求]
 ===准备聚合请求
@@ -159,7 +159,7 @@ double value = agg.getValue();
 [#_统计聚合]
 ==统计聚合
 
-你可以通过JavaAPI使用[统计聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-stats-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-stats-aggregation.html[统计聚合] 。
 
 [#_准备聚合请求]
 ===准备聚合请求
@@ -203,7 +203,7 @@ long count = agg.getCount();
 [#_拓展统计聚合]
 ==拓展统计聚合
 
-你可以通过JavaAPI使用[拓展统计聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-extendedstats-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-extendedstats-aggregation.html[拓展统计聚合] 。
 
 [#_准备聚合请求]
 ===准备聚合请求
@@ -248,7 +248,7 @@ double variance = agg.getVariance();
 [#_值计数聚合]
 ==值计数聚合
 
-你可以通过JavaAPI使用[值计数(value count)聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-valuecount-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-valuecount-aggregation.html[值计数(value count)聚合] 。
 
 [#_准备聚合请求]
 ===准备聚合请求
@@ -283,7 +283,7 @@ long value = agg.getValue();
 [#_百分比聚合]
 ==百分比聚合
 
-你可以通过JavaAPI使用[百分比聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-percentile-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-percentile-aggregation.html[百分比聚合] 。
 
 [#_准备聚合请求]
 ===准备聚合请求
@@ -349,7 +349,7 @@ percent [99.0], value [2.284989339108279]
 [#_百分比等级聚合]
 ==百分比等级聚合
 
-你可以通过JavaAPI使用[百分比等级聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-percentile-rank-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-percentile-rank-aggregation.html[百分比等级聚合] 。
 
 [#_准备聚合请求]
 ===准备聚合请求
@@ -401,7 +401,7 @@ percent [94.40095147327283], value [2.22]
 [#_基数聚合]
 ==基数聚合
 
-你可以通过JavaAPI使用[基数聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-cardinality-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-cardinality-aggregation.html[基数聚合] 。
 
 [#_准备聚合请求]
 ===准备聚合请求
@@ -436,7 +436,7 @@ long value = agg.getValue();
 [#_地理界限聚合]
 ==地理界限聚合
 
-你可以通过JavaAPI使用[地理界限聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-geobounds-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-geobounds-aggregation.html[地理界限聚合] 。
 
 [#_准备聚合请求]
 ===准备聚合请求
@@ -481,7 +481,7 @@ bottomRight [40.70500764381921, 13.952946866893775], topLeft [53.49603022435221,
 [#_热门聚合]
 ==热门聚合
 
-你可以通过JavaAPI使用[热门聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-top-hits-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-top-hits-aggregation.html[热门聚合] 。
 
 [#_准备聚合请求]
 ===准备聚合请求
@@ -560,7 +560,7 @@ key [female], doc_count [4893]
 [#_脚本指标聚合]
 ==脚本指标聚合
 
-你可以通过JavaAPI使用[脚本指标聚合](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-scripted-metric-aggregation.html)。
+你可以通过JavaAPI使用 https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-scripted-metric-aggregation.html[脚本指标聚合] 。
 
 如果你想在嵌入式数据节点(例如单元测试)中使用Groovy脚本都话，不要忘了在classpath中加入groovy。例如，在maven中，你可以将下面的依赖加入到 **pom.xml** 中：
 

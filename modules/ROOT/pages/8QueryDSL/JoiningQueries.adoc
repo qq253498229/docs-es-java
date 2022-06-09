@@ -14,7 +14,7 @@ xref:_HasChild查询[has_child] 和 xref:_HasParent查询[has_parent] 查询
 [#_Nested查询]
 ==Nested查询
 
-查看[Nested Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-nested-query.html)。
+查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-nested-query.html[Nested Query] 。
 
 [source,java]
 ----
@@ -32,7 +32,7 @@ nestedQuery(
 [#_HasChild查询]
 ==HasChild查询
 
-查看[Has Child Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-has-child-query.html)。
+查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-has-child-query.html[Has Child Query] 。
 
 使用 **has_child** 查询的时候有一点很重要的就是使用 **PreBuiltTransportClient** 而不是普通的 **client**。
 
@@ -59,7 +59,7 @@ JoinQueryBuilders.hasChildQuery(
 [#_HasParent查询]
 ==HasParent查询
 
-查看[Has Parent](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-has-parent-query.html)。
+查看 https://www.elastic.co/guide/en/elasticsearch/reference/6.2/query-dsl-has-parent-query.html[Has Parent] 。
 
 使用 **has_child** 查询的时候有一点很重要的就是使用 **PreBuiltTransportClient** 而不是普通的 **client**。
 
@@ -70,7 +70,7 @@ TransportClient client = new PreBuiltTransportClient(settings);
 client.addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress(InetAddresses.forString("127.0.0.1"), 9300)));
 ----
 
-否则父链接模块将不会被加载，并且[TransportClient](../4Client/readme.md#TransportClient)中不能使用 **has_parent** 查询。
+否则父链接模块将不会被加载，并且 xref:4Client/readme.adoc#_TransportClient[TransportClient] 中不能使用 **has_parent** 查询。
 
 [source,java]
 ----
