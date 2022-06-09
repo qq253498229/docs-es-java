@@ -3,8 +3,9 @@ site:
   start_page: 7.16.0@docs-es-java::introduction.adoc
 content:
   sources:
+#    - url: https://gitee.com/consolelog/docs-es-java.git
     - url: .
-      branches: [v7.16,v6.8]
+      branches: [v7.16,v6.8,v6.2]
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
