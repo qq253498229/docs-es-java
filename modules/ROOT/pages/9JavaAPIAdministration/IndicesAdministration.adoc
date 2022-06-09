@@ -1,6 +1,6 @@
 = 管理索引接口
 
-要想访问索引管理JavaAPI，你需要从[AdminClient](readme.md)类中调用 **indices()** 方法。
+要想访问索引管理JavaAPI，你需要从 xref:./readme.adoc[AdminClient] 类中调用 **indices()** 方法。
 
 [source,java]
 ----

@@ -21,6 +21,6 @@ SearchResponse sr = node.client().prepareSearch()
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 ----
 
-- [构建聚合](StructuringAggregations.md)
-- [指标聚合](MetricsAggregations.md)
-- [桶聚合](BucketAggregations.md)
+- xref:./StructuringAggregations.adoc[构建聚合]
+- xref:./MetricsAggregations.adoc[指标聚合]
+- xref:./BucketAggregations.adoc[桶聚合]

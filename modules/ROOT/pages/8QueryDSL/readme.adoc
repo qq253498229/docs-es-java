@@ -15,11 +15,11 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 
 **QueryBuilder** 可以被用于接受查询的任何接口中，例如 **count** 和 **search** 。
 
-- [匹配所有的查询](MatchAllQuery.md)
-- [全文检索](FullTextQueries.md)
-- [匹配查询](TermLevelQueries.md)
-- [组合查询](CompoundQueries.md)
-- [关联关系查询](JoiningQueries.md)
-- [地理位置查询](GeoQueries.md)
-- [特殊查询](SpecializedQueries.md)
-- [跨度查询](SpanQueries.md)
+- xref:./MatchAllQuery.adoc[匹配所有的查询]
+- xref:./FullTextQueries.adoc[全文检索]
+- xref:./TermLevelQueries.adoc[匹配查询]
+- xref:./CompoundQueries.adoc[组合查询]
+- xref:./JoiningQueries.adoc[关联关系查询]
+- xref:./GeoQueries.adoc[地理位置查询]
+- xref:./SpecializedQueries.adoc[特殊查询]
+- xref:./SpanQueries.adoc[跨度查询]

@@ -34,8 +34,8 @@ SearchResponse response = client.prepareSearch().get();
 
 有关索引操作的更多信息，请查阅REST[search](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search.html)文档([中文](https://www.elastic.co/guide/cn/elasticsearch/guide/current/search.html))。
 
-- [使用游标查询](UsingScrollsInJava.md)
-- [批量查询](MultiSearchAPI.md)
-- [使用聚合](UsingAggregations.md)
-- [设置终止标志](TerminateAfter.md)
-- [模版查询](SearchTemplate.md)
+- xref:./UsingScrollsInJava.adoc[使用游标查询]
+- xref:./MultiSearchAPI.adoc[批量查询]
+- xref:./UsingAggregations.adoc[使用聚合]
+- xref:./TerminateAfter.adoc[设置终止标志]
+- xref:./SearchTemplate.adoc[模版查询]
