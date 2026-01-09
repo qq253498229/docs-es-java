@@ -1,0 +1,29 @@
+name: 部署
+on:
+  push:
+    paths:
+      - '!**'
+      - 'modules/**'
+      - 'ui-bundle/**'
+      - '.github/**'
+      - 'antora.yml'
+      - 'antora-playbook.yml'
+      - 'package.json'
+      - 'package-lock.json'
+permissions:
+  contents: write
+jobs:
+  RunTesting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+      - name: 打包应用
+        run: |
+          npm ci
+          npm run build-doc
+      - name: 部署到gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs
+          branch: gh-pages
