@@ -1,5 +1,5 @@
 {
-  "name": "docs-root-study",
+  "name": "docs-es-java",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@antora/cli": "^3.1.5",
+    "@antora/cli": "^3.1.14",
     "@antora/site-generator-default": "^3.1.5"
   }
 }

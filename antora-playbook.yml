@@ -1,5 +1,5 @@
 site:
-  title: Antora Docs
+  title: Docs ES
   start_page: 7.16.0@docs-es-java::introduction.adoc
 content:
   sources:
@@ -9,3 +9,6 @@ ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+
+output:
+  dir: ./docs
