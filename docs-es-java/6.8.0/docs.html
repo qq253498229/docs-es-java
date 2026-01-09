@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="6.8.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="preface.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="preface.html">前言</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="java-doc.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="maven-repository.html">Maven仓库</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="client.html">Client</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="docs.html">文档 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="search.html">查询 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aggs.html">聚合</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="query-dsl.html">Query DSL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="admin/index.html">Java API Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admin/indices/index.html">Indices Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admin/cluster/index.html">Cluster Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">6.8.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../7.16.0/introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="preface.html">ES Java API Client</a></li>
+    <li><a href="docs.html">文档 API</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.8.0</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../7.16.0/introduction.html">7.16.0</a>
+    <a class="version is-current" href="docs.html">6.8.0</a>
+    <a class="version is-missing" href="../6.2.2/1Preface/readme.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v6.8/modules/ROOT/pages/docs.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="java-docs"><a class="anchor" href="#java-docs"></a>文档 API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>这部分讲的是这些CRUD API:</p>
+</div>
+<div class="ulist">
+<div class="title">单文档 API</div>
+<ul>
+<li>
+<p><a href="#java-docs-index">对JSON文档建立索引</a></p>
+</li>
+<li>
+<p><a href="#java-docs-get">根据ID获取文档</a></p>
+</li>
+<li>
+<p><a href="#java-docs-delete">删除文档</a></p>
+</li>
+<li>
+<p><a href="#java-docs-update">更新文档</a></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">多文档 API</div>
+<ul>
+<li>
+<p><a href="#java-docs-multi-get">获取多个文档</a></p>
+</li>
+<li>
+<p><a href="#java-docs-bulk">批处理</a></p>
+</li>
+<li>
+<p><a href="#java-docs-reindex">重新建立索引</a></p>
+</li>
+<li>
+<p><a href="#java-docs-update-by-query">通过条件更新文档</a></p>
+</li>
+<li>
+<p><a href="#java-docs-delete-by-query">根据条件删除文档</a></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+所有的CRUD API 都是单index API。 <code>index</code> 参数只可以接受单独的index，或者是使用 <code>alias</code> 来指向这个index。
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="java-docs-index"><a class="anchor" href="#java-docs-index"></a>对JSON文档建立索引</h3>
+<div class="paragraph">
+<p>Index API 可以在指定的index中将一个结构化的JSON文档建立索引，并使其可以被查询到。</p>
+</div>
+<div class="sect3">
+<h4 id="java-docs-index-generate"><a class="anchor" href="#java-docs-index-generate"></a>生成JSON格式的文档</h4>
+<div class="paragraph">
+<p>一般有下面几种方式来生成一个JSON文档:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>手动使用 <code>byte[]</code> 或 <code>String</code> 类型拼接一个JSON</p>
+</li>
+<li>
+<p>使用 <code>Map</code> 类型会自动转换成对应的JSON</p>
+</li>
+<li>
+<p>使用第三方库将你的Bean序列化成Json格式，例如 <a href="https://github.com/FasterXML/jackson">Jackson</a> 库等</p>
+</li>
+<li>
+<p>使用内置的 XContentFactory.jsonBuilder() 生成JSON</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>在内部，所有类型最终都会转换成 <code>byte[]</code> 类型（所以String类型最后也会转成 <code>byte[]</code> 类型）。
+因此，如果你的对象已经是 <code>byte[]</code> 类型了，那么就直接使用它吧。
+当然官方内置的 <code>jsonBuilder</code> 是一个高度优化后的工具，你可以使用它来直接构造 <code>byte[]</code> 。</p>
+</div>
+<div class="sect4">
+<h5 id="java-docs-index-generate-diy"><a class="anchor" href="#java-docs-index-generate-diy"></a>手动拼接</h5>
+<div class="paragraph">
+<p>没什么困难的，唯一需要注意的是通过
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/mapping-date-format.html">Date Format</a>
+对日期进行格式化。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String json = "{" +
+        "\"user\":\"kimchy\"," +
+        "\"postDate\":\"2013-01-30\"," +
+        "\"message\":\"trying out Elasticsearch\"" +
+    "}";</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="java-docs-index-generate-using-map"><a class="anchor" href="#java-docs-index-generate-using-map"></a>使用 Map</h5>
+<div class="paragraph">
+<p>Map是一个键值对的集合，它可以等价于一个JSON结构:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Map&lt;String, Object&gt; json = new HashMap&lt;String, Object&gt;();
+json.put("user","kimchy");
+json.put("postDate",new Date());
+json.put("message","trying out Elasticsearch");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="java-docs-index-generate-beans"><a class="anchor" href="#java-docs-index-generate-beans"></a>序列化 JavaBean</h5>
+<div class="paragraph">
+<p>你可以使用 <a href="https://github.com/FasterXML/jackson">Jackson</a> 将你的Bean序列化成JSON。
+请将 <a href="http://search.maven.org/#search%7Cga%7C1%7Cjackson-databind">Jackson Databind</a> 加入你的项目中。
+然后你就可以使用 <code>ObjectMapper</code> 来序列化你的Bean了:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import com.fasterxml.jackson.databind.*;
+
+// 实例化一个 json mapper
+ObjectMapper mapper = new ObjectMapper(); // 只创建一次，重复使用
+
+// 生成 json
+byte[] json = mapper.writeValueAsBytes(yourbeaninstance);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="java-docs-index-generate-helpers"><a class="anchor" href="#java-docs-index-generate-helpers"></a>使用 Elasticsearch 助手</h5>
+<div class="paragraph">
+<p>Elasticsearch 提供了一个内置的助手来帮助你生成JSON内容。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.elasticsearch.common.xcontent.XContentFactory.*;
+
+XContentBuilder builder = jsonBuilder()
+    .startObject()
+        .field("user", "kimchy")
+        .field("postDate", new Date())
+        .field("message", "trying out Elasticsearch")
+    .endObject()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>注意，你也可以使用 <code>startArray(String)</code> 和 <code>endArray()</code> 方法来添加一个数组。
+顺便说一下，<code>field</code> 方法可以接受很多对象类型。
+你可以直接传一些 number，date 或者是其它 XContentBuilder 对象。</p>
+</div>
+<div class="paragraph">
+<p>如果你想查看生成的JSON内容，可以使用 <code>Strings.toString()</code> 方法。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.common.Strings;
+
+String json = Strings.toString(builder);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-index-doc"><a class="anchor" href="#java-docs-index-doc"></a>对文档建立索引</h4>
+<div class="paragraph">
+<p>下面就是将一个JSON文档建立索引的例子，其中index为twitter，type为 <code>_doc</code> ，id的值是1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.elasticsearch.common.xcontent.XContentFactory.*;
+
+IndexResponse response = client.prepareIndex("twitter", "_doc", "1")
+        .setSource(jsonBuilder()
+                    .startObject()
+                        .field("user", "kimchy")
+                        .field("postDate", new Date())
+                        .field("message", "trying out Elasticsearch")
+                    .endObject()
+                  )
+        .get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>注意，你也可以对一个JSON字符串类型的文档建立索引，并且 ID 也不是必须的:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String json = "{" +
+        "\"user\":\"kimchy\"," +
+        "\"postDate\":\"2013-01-30\"," +
+        "\"message\":\"trying out Elasticsearch\"" +
+    "}";
+
+IndexResponse response = client.prepareIndex("twitter", "_doc")
+        .setSource(json, XContentType.JSON)
+        .get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>结果可以在 <code>IndexResponse</code> 中查看:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Index 名称
+String _index = response.getIndex();
+// Type 名称
+String _type = response.getType();
+// Document ID (generated or not)
+String _id = response.getId();
+// Version (如果你是新建的这个文档，会得到1)
+long _version = response.getVersion();
+// 当前实例的存储状态
+RestStatus status = response.status();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>有关index操作的更多信息，请查看 REST <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/docs-index_.html">index</a> 。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-docs-get"><a class="anchor" href="#java-docs-get"></a>根据ID获取文档</h3>
+<div class="paragraph">
+<p>Get API 可以根据 <code>id</code> 从 index 中获取JSON文档。
+下面就是一个获取JSON格式文档的例子，它的条件是index为twitter，type是 <code>_doc</code> ，id是1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">GetResponse response = client.prepareGet("twitter", "_doc", "1").get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>有关Get操作的更多信息，请查看 REST <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/docs-get.html">get</a> 。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-docs-delete"><a class="anchor" href="#java-docs-delete"></a>删除文档</h3>
+<div class="paragraph">
+<p>Delete API 可以在指定的 index 中根据ID删除一个JSON类型的文档。
+下面就是一个删除JSON文档的例子，它的index是twitter，type是 <code>_doc</code> ，id是1:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DeleteResponse response = client.prepareDelete("twitter", "_doc", "1").get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>有关Delete操作的更多信息，请查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/docs-delete.html">delete API</a> 。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-docs-delete-by-query"><a class="anchor" href="#java-docs-delete-by-query"></a>根据条件删除文档</h3>
+<div class="paragraph">
+<p>Delete By Query API 可以根据查询的结果删除一组文档:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BulkByScrollResponse response =
+  DeleteByQueryAction.INSTANCE.newRequestBuilder(client)
+    .filter(QueryBuilders.matchQuery("gender", "male")) <i class="conum" data-value="1"></i><b>(1)</b>
+    .source("persons") <i class="conum" data-value="2"></i><b>(2)</b>
+    .get(); <i class="conum" data-value="3"></i><b>(3)</b>
+long deleted = response.getDeleted(); <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>index</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>执行操作</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>删除文档的数量</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>由于这个操作可能会运行很长时间，如果你希望异步执行，可以使用 <code>execute</code> 代替 <code>get</code> 来执行，并提供一个listener，比如:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DeleteByQueryAction.INSTANCE.newRequestBuilder(client)
+    .filter(QueryBuilders.matchQuery("gender", "male")) <i class="conum" data-value="1"></i><b>(1)</b>
+    .source("persons") <i class="conum" data-value="2"></i><b>(2)</b>
+    .execute(new ActionListener&lt;BulkByScrollResponse&gt;() { <i class="conum" data-value="3"></i><b>(3)</b>
+        @Override
+        public void onResponse(BulkByScrollResponse response) {
+            long deleted = response.getDeleted(); <i class="conum" data-value="4"></i><b>(4)</b>
+        }
+        @Override
+        public void onFailure(Exception e) {
+            // Handle the exception
+        }
+    });</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>index</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>执行操作</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>删除文档的数量</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-docs-update"><a class="anchor" href="#java-docs-update"></a>更新文档</h3>
+<div class="paragraph">
+<p>你可以创建一个 <code>UpdateRequest</code> 并发送给client:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateRequest updateRequest = new UpdateRequest();
+updateRequest.index("index");
+updateRequest.type("_doc");
+updateRequest.id("1");
+updateRequest.doc(jsonBuilder()
+        .startObject()
+            .field("gender", "male")
+        .endObject());
+client.update(updateRequest).get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>或者也可以使用 <code>prepareUpdate()</code> 方法:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">client.prepareUpdate("ttl", "doc", "1")
+        .setScript(new Script(
+            "ctx._source.gender = \"male\"", <i class="conum" data-value="1"></i><b>(1)</b>
+            ScriptService.ScriptType.INLINE, null, null))
+        .get();
+
+client.prepareUpdate("ttl", "doc", "1")
+        .setDoc(jsonBuilder() <i class="conum" data-value="2"></i><b>(2)</b>
+            .startObject()
+                .field("gender", "male")
+            .endObject())
+        .get();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>你的脚本。它也可以是存储中本地文件中，这种情况下，需要使用 <code>ScriptService.ScriptType.FILE</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>将要和已有文档合并的文档。</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Note that you can&#8217;t provide both <code>script</code> and <code>doc</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="java-docs-update-api-script"><a class="anchor" href="#java-docs-update-api-script"></a>通过脚本更新</h4>
+<div class="paragraph">
+<p>Update API 允许通过一个脚本来更新文档:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateRequest updateRequest = new UpdateRequest("ttl", "doc", "1")
+        .script(new Script("ctx._source.gender = \"male\""));
+client.update(updateRequest).get();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-update-api-merge-docs"><a class="anchor" href="#java-docs-update-api-merge-docs"></a>合并文档</h4>
+<div class="paragraph">
+<p>Update API 也可以传入一部分文档，并将之合并(简单的递归合并，对象的内部合并，替换键值对和数组)到一个已存在的文档中。
+例如:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateRequest updateRequest = new UpdateRequest("index", "type", "1")
+        .doc(jsonBuilder()
+            .startObject()
+                .field("gender", "male")
+            .endObject());
+client.update(updateRequest).get();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-update-api-upsert"><a class="anchor" href="#java-docs-update-api-upsert"></a>更新并插入</h4>
+<div class="paragraph">
+<p>Update API 也支持 <code>upsert</code> 。如果该文档不存在，则会对该文档建立索引:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">IndexRequest indexRequest = new IndexRequest("index", "type", "1")
+        .source(jsonBuilder()
+            .startObject()
+                .field("name", "Joe Smith")
+                .field("gender", "male")
+            .endObject());
+UpdateRequest updateRequest = new UpdateRequest("index", "type", "1")
+        .doc(jsonBuilder()
+            .startObject()
+                .field("gender", "male")
+            .endObject())
+        .upsert(indexRequest); <i class="conum" data-value="1"></i><b>(1)</b>
+client.update(updateRequest).get();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>如果文档不存在， <code>indexRequest</code> 中的元素就会被建立索引</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>如果 <code>index/_doc/1</code> 这个文档已经存在了，在这个操作之后我们会有一个这样的文档:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">{
+    "name"  : "Joe Dalton",
+    "gender": "male" <i class="conum" data-value="1"></i><b>(1)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>这个字段是通过 update request 添加的</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>如果不存在，我们会得到一个新的文档：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">{
+    "name" : "Joe Smith",
+    "gender": "male"
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-docs-multi-get"><a class="anchor" href="#java-docs-multi-get"></a>获取多个文档</h3>
+<div class="paragraph">
+<p>Multi get API 允许通过 <code>index</code> 和  <code>id</code> 获取多个文档:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MultiGetResponse multiGetItemResponses = client.prepareMultiGet()
+    .add("twitter", "_doc", "1") <i class="conum" data-value="1"></i><b>(1)</b>
+    .add("twitter", "_doc", "2", "3", "4") <i class="conum" data-value="2"></i><b>(2)</b>
+    .add("another", "_doc", "foo") <i class="conum" data-value="3"></i><b>(3)</b>
+    .get();
+
+for (MultiGetItemResponse itemResponse : multiGetItemResponses) { <i class="conum" data-value="4"></i><b>(4)</b>
+    GetResponse response = itemResponse.getResponse();
+    if (response.isExists()) { <i class="conum" data-value="5"></i><b>(5)</b>
+        String json = response.getSourceAsString(); <i class="conum" data-value="6"></i><b>(6)</b>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>通过单独的id获取</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>在同一个index中，可以通过多个id获取</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>也可以从其它的index中获取文档</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>遍历结果集</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>查看文档是否存在</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>获取 <code>_source</code> 字段</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>有关Multi get操作的更多信息，请查看REST <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/docs-multi-get.html">multi get</a>。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-docs-bulk"><a class="anchor" href="#java-docs-bulk"></a>批处理</h3>
+<div class="paragraph">
+<p>Bulk API 允许在一次单独的请求中索引或删除多个文档。
+下面是一个用法示例:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.elasticsearch.common.xcontent.XContentFactory.*;
+
+BulkRequestBuilder bulkRequest = client.prepareBulk();
+
+// either use client#prepare, or use Requests# to directly build index/delete requests
+bulkRequest.add(client.prepareIndex("twitter", "_doc", "1")
+        .setSource(jsonBuilder()
+                    .startObject()
+                        .field("user", "kimchy")
+                        .field("postDate", new Date())
+                        .field("message", "trying out Elasticsearch")
+                    .endObject()
+                  )
+        );
+
+bulkRequest.add(client.prepareIndex("twitter", "_doc", "2")
+        .setSource(jsonBuilder()
+                    .startObject()
+                        .field("user", "kimchy")
+                        .field("postDate", new Date())
+                        .field("message", "another post")
+                    .endObject()
+                  )
+        );
+
+BulkResponse bulkResponse = bulkRequest.get();
+if (bulkResponse.hasFailures()) {
+    // process failures by iterating through each bulk response item
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-docs-bulk-processor"><a class="anchor" href="#java-docs-bulk-processor"></a>使用批处理工具</h3>
+<div class="paragraph">
+<p><code>BulkProcessor</code> 类提供了一个简单的 API 来自动执行批处理操作，它可以设置的规则有请求数、请求数据大小、周期。</p>
+</div>
+<div class="paragraph">
+<p>要使用它，首先需要创建一个 <code>BulkProcessor</code> 实例:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.action.bulk.BackoffPolicy;
+import org.elasticsearch.action.bulk.BulkProcessor;
+import org.elasticsearch.common.unit.ByteSizeUnit;
+import org.elasticsearch.common.unit.ByteSizeValue;
+import org.elasticsearch.common.unit.TimeValue;
+
+BulkProcessor bulkProcessor = BulkProcessor.builder(
+        client, <i class="conum" data-value="1"></i><b>(1)</b>
+        new BulkProcessor.Listener() {
+            @Override
+            public void beforeBulk(long executionId,
+                                   BulkRequest request) { ... } <i class="conum" data-value="2"></i><b>(2)</b>
+
+            @Override
+            public void afterBulk(long executionId,
+                                  BulkRequest request,
+                                  BulkResponse response) { ... } <i class="conum" data-value="3"></i><b>(3)</b>
+
+            @Override
+            public void afterBulk(long executionId,
+                                  BulkRequest request,
+                                  Throwable failure) { ... } <i class="conum" data-value="4"></i><b>(4)</b>
+        })
+        .setBulkActions(10000) <i class="conum" data-value="5"></i><b>(5)</b>
+        .setBulkSize(new ByteSizeValue(5, ByteSizeUnit.MB)) <i class="conum" data-value="6"></i><b>(6)</b>
+        .setFlushInterval(TimeValue.timeValueSeconds(5)) <i class="conum" data-value="7"></i><b>(7)</b>
+        .setConcurrentRequests(1) <i class="conum" data-value="8"></i><b>(8)</b>
+        .setBackoffPolicy(
+            BackoffPolicy.exponentialBackoff(TimeValue.timeValueMillis(100), 3)) <i class="conum" data-value="9"></i><b>(9)</b>
+        .build();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>添加Elasticsearch client</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>在批处理执行之前被调用。你可以使用 <code>request.numberOfActions()</code> 方法来获取本次批处理的数量</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>在批处理执行之后被调用。你可以使用 <code>response.hasFailures()</code> 方法可以查看失败的请求</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>在批处理执行失败，或抛出 <code>Throwable</code> 的时候被调用</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>设置每次累计达10000个请求就立刻执行批处理</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>设置每次数据到达5MB的大小就立刻执行批处理</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>设置无论有几条请求，总之每隔5秒就立刻执行批处理</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>设置执行批处理请求时允许的最大并发数。0代表每次只执行一个请求，1代表允许1条并发请求</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="9"></i><b>9</b></td>
+<td>设置自定义补偿策略:第一次等待100ms，之后每次的间隔时间翻倍，一共重试3次。当批处理执行的时候抛出 <code>EsRejectedExecutionException</code> 异常的时候，会启动重试策略。原因可能是硬件资源太低。如想关闭该策略，可以传入 <code>BackoffPolicy.noBackoff()</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>默认情况，<code>BulkProcessor</code> 的配置如下：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>1000</code> 个请求</p>
+</li>
+<li>
+<p><code>5mb</code> 大小</p>
+</li>
+<li>
+<p>没有间隔</p>
+</li>
+<li>
+<p>允许1个并发请求</p>
+</li>
+<li>
+<p>第一次等待50ms重试，之后每次的间隔时间翻倍，一共重试8次，总时间大概5.1s左右（这个5.1s是怎么算出来的？麻烦知道的告诉一下）</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="java-docs-bulk-processor-requests"><a class="anchor" href="#java-docs-bulk-processor-requests"></a>添加请求</h4>
+<div class="paragraph">
+<p>然后你就可以很简单的向 <code>BulkProcessor</code> 中添加请求了:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">bulkProcessor.add(new IndexRequest("twitter", "_doc", "1").source(/* your doc here */));
+bulkProcessor.add(new DeleteRequest("twitter", "_doc", "2"));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-bulk-processor-close"><a class="anchor" href="#java-docs-bulk-processor-close"></a>关闭批处理工具</h4>
+<div class="paragraph">
+<p>当所有文档全部加载到 <code>BulkProcessor</code> 之后，可以使用 <code>awaitClose</code> 或 <code>close</code> 方法关闭它:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">bulkProcessor.awaitClose(10, TimeUnit.MINUTES);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>或</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">bulkProcessor.close();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果设置了 <code>flushInterval</code> ，上面两个方法都会刷新剩余的文档并且禁用定时刷新任务。
+如果开启了并发请求策略，<code>awaitClose</code> 方法会根据你所指定的时间作出等待，当规定时间内所有批处理请求全部完成时，会返回 <code>true</code> ；
+如果在规定时间内，仍有批处理请求未完成，则会返回 <code>false</code> 。
+<code>close</code> 方法不会等待批处理请求是否完成，而是直接取消剩余的所有请求。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-bulk-processor-tests"><a class="anchor" href="#java-docs-bulk-processor-tests"></a>在测试中使用批处理工具</h4>
+<div class="paragraph">
+<p>如果你正使用 Elasticsearch 进行测试并且使用的是 <code>BulkProcessor</code> 来批量添加数据，那么最好将并发请求数量设置为 <code>0</code> ，
+这样批处理请求将会以同步的方式执行:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BulkProcessor bulkProcessor = BulkProcessor.builder(client, new BulkProcessor.Listener() { /* Listener methods */ })
+        .setBulkActions(10000)
+        .setConcurrentRequests(0)
+        .build();
+
+// 添加请求
+bulkProcessor.add(/* Your requests */);
+
+// 刷新剩余请求
+bulkProcessor.flush();
+
+// 如果你不在需要它了则关闭掉
+bulkProcessor.close();
+
+// Refresh your indices
+client.admin().indices().prepareRefresh().get();
+
+// 现在可以开始检索啦！
+client.prepareSearch().get();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-bulk-global-parameters"><a class="anchor" href="#java-docs-bulk-global-parameters"></a>全局参数</h4>
+<div class="paragraph">
+<p>全局参数可以在 BulkRequest 和 BulkProcessor 上指定，类似于REST API。
+这些全局参数用作默认值，可以被每个子请求的本地参数所覆盖。
+有一些参数必须在子请求添加之前被设置， - index, type - ，并且必须在 BulkRequest 或 BulkProcessor 创建期间指定它们。
+也有一些是可选的 - pipeline, routing - ，这些可以在批量发送之前的任意时间点指定。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">try (BulkProcessor processor = initBulkProcessorBuilder(listener)
+        .setGlobalIndex("tweets")
+        .setGlobalType("_doc")
+        .setGlobalRouting("routing")
+        .setGlobalPipeline("pipeline_id")
+        .build()) {
+
+
+    processor.add(new IndexRequest() <i class="conum" data-value="1"></i><b>(1)</b>
+        .source(XContentType.JSON, "user", "some user"));
+    processor.add(new IndexRequest("blogs", "post_type", "1") <i class="conum" data-value="2"></i><b>(2)</b>
+        .source(XContentType.JSON, "title", "some title"));
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>BulkRequest 的全局参数将应用于子请求</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>子请求中的本地管道参数将覆盖BulkRequest中的全局参数</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BulkRequest request = new BulkRequest();
+request.pipeline("globalId");
+
+request.add(new IndexRequest("test", "doc", "1")
+    .source(XContentType.JSON, "field", "bulk1")
+    .setPipeline("perIndexId")); <i class="conum" data-value="1"></i><b>(1)</b>
+
+request.add(new IndexRequest("test", "doc", "2")
+    .source(XContentType.JSON, "field", "bulk2")); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>子请求中的本地管道参数将覆盖BulkRequest中的全局参数</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>BulkRequest 的全局参数将应用于子请求</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-docs-update-by-query"><a class="anchor" href="#java-docs-update-by-query"></a>通过条件更新文档</h3>
+<div class="paragraph">
+<p><code>updateByQuery</code> 最简单的用法是在不更改源的情况下更新同一个index中的所有文档。
+这种用法还可以获取新的属性或其它网络映射的改变。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index").abortOnVersionConflict(false);
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>调用 <code>updateByQuery</code> 方法会优先获取index的快照，然后使用`internal`版本索引所有的文档。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+当文档正在建立索引时，如果快照版本发生了改变，那么这个文档的版本会发生冲突。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>当版本匹配时， <code>updateByQuery</code> 方法会更新文档并增加版本号。</p>
+</div>
+<div class="paragraph">
+<p>所有的修改和查询都失败的时候， <code>updateByQuery</code> 方法就会停止。
+这些失败的原因可以从 <code>BulkByScrollResponse#getIndexingFailures</code> 中获得。
+但是所有成功的更新操作都会保留并且不会回滚。当第一次发生失败而导致终止时，响应会包含批量请求生成的所有失败消息。</p>
+</div>
+<div class="paragraph">
+<p>为了防止版本冲突而导致 <code>updateByQuery</code> 方法停止，请设置 <code>abortOnVersionConflict(false)</code> 。
+第一个例子就是这样做的，因为这个例子是想获取网络映射的修改，并且版本冲突意味着冲突文档在 <code>updateByQuery</code>
+的开始和尝试更新修改文档之间更新。这样很好，因为修改操作会获取更新后的网络映射。</p>
+</div>
+<div class="paragraph">
+<p><code>UpdateByQueryRequestBuilder</code> API 支持过滤更新后的文档，并且可以限制更新的数量，还可以通过脚本更新文档:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index")
+    .filter(QueryBuilders.termQuery("level", "awesome"))
+    .size(1000)
+    .script(new Script(ScriptType.INLINE,
+        "ctx._source.awesome = 'absolutely'",
+        "painless",
+        Collections.emptyMap()));
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>UpdateByQueryRequestBuilder</code> 还支持直接获取用于查询文档的语句。
+你可以用它来改变默认的滚动数量，或者修改匹配文档的请求。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index")
+    .source()
+    .setSize(500);
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>您还可以将 <code>size</code> 和排序结合使用，来限制需要更新的文档:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index")
+    .size(100)
+    .source()
+    .addSort("cat", SortOrder.DESC);
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>除了修改文档的 <code>_source</code> 字段之外，您还可以使用脚本来做其它操作，比如 Update API:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index")
+    .script(new Script(
+        ScriptType.INLINE,
+        "if (ctx._source.awesome == 'absolutely') {"
+            + "  ctx.op='noop'"
+            + "} else if (ctx._source.awesome == 'lame') {"
+            + "  ctx.op='delete'"
+            + "} else {"
+            + "ctx._source.awesome = 'absolutely'}",
+        "painless",
+        Collections.emptyMap()));
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>与 <a href="#java-docs-update">Update API</a> 一样，您可以通过设置 <code>ctx.op</code> 来改变执行的操作:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>noop</code></dt>
+<dd>
+<p>如果这个脚本不会修改任何文档，可以设置 <code>ctx.op = "noop"</code> 。
+<code>updateByQuery</code> 操作会从修改中忽略掉这个文档。
+这个行为会让响应体中的 <code>noop</code> 计数器增加。</p>
+</dd>
+<dt class="hdlist1"><code>delete</code></dt>
+<dd>
+<p>如果这个脚本一定会删除文档，可以设置 <code>ctx.op = "delete"</code> 。 这样在响应体中的 <code>deleted</code> 计数器会有显示。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><code>ctx.op</code> 设置其它值会报错。 <code>ctx</code> 设置其它字段也会报错。</p>
+</div>
+<div class="paragraph">
+<p>这个API不允许移动它能接触到的文档，只允许修改source。这是故意这样设计的！我们规定不允许从原始位置将文档移除。</p>
+</div>
+<div class="paragraph">
+<p>你也可以一次在多个索引和类型上执行这些操作，类似于 search API :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("foo", "bar").source().setTypes("a", "b");
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果你提供了 <code>routing</code> 值，则该进程会将路由值复制到滚动查询中，从而将进程限制为匹配该路由值的分片:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source().setRouting("cat");
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>updateByQuery</code> 也可以通过指定一个像这样的 <code>pipeline</code> 来使用 ingest 节点:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.setPipeline("hurray");
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-update-by-query-task-api"><a class="anchor" href="#java-docs-update-by-query-task-api"></a>使用任务 API</h4>
+<div class="paragraph">
+<p>你可以使用 Task API 来获取所有正在运行中的 update-by-query 请求状态:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ListTasksResponse tasksList = client.admin().cluster().prepareListTasks()
+    .setActions(UpdateByQueryAction.NAME).setDetailed(true).get();
+for (TaskInfo info: tasksList.getTasks()) {
+    TaskId taskId = info.getTaskId();
+    BulkByScrollTask.Status status =
+        (BulkByScrollTask.Status) info.getStatus();
+    // do stuff
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>使用上面显示的 <code>TaskId</code> 您可以直接地找到task:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">GetTaskResponse get = client.admin().cluster().prepareGetTask(taskId).get();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-update-by-query-cancel-task-api"><a class="anchor" href="#java-docs-update-by-query-cancel-task-api"></a>取消任务 API</h4>
+<div class="paragraph">
+<p>任何 Update By Query 可以使用 Task Cancel API 来取消:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Cancel all update-by-query requests
+client.admin().cluster().prepareCancelTasks()
+    .setActions(UpdateByQueryAction.NAME).get().getTasks();
+// Cancel a specific update-by-query request
+client.admin().cluster().prepareCancelTasks()
+    .setTaskId(taskId).get().getTasks();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>使用 <code>list tasks</code> API 可以查询 <code>taskId</code> 的值。</p>
+</div>
+<div class="paragraph">
+<p>取消请求通常非常快，但也需要几秒钟。任务状态API会继续列出任务，直到取消完成。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-update-by-query-rethrottle"><a class="anchor" href="#java-docs-update-by-query-rethrottle"></a>二次节流</h4>
+<div class="paragraph">
+<p>使用 <code>_rethrottle</code> API 可以修改正在运行的 <code>requests_per_second</code> 值:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RethrottleAction.INSTANCE.newRequestBuilder(client)
+    .setTaskId(taskId)
+    .setRequestsPerSecond(2.0f)
+    .get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>使用 <code>list tasks</code> API 可以查询 <code>taskId</code> 的值。</p>
+</div>
+<div class="paragraph">
+<p>与 <code>updateByQuery</code> 一样，<code>requests_per_second</code> 可以设置成任何正浮点值来设置throttle的级别，或者使用 <code>Float.POSITIVE_INFINITY</code> 来禁止 throttling。
+<code>requests_per_second</code> 值可以加速进程并立刻生效。
+为防止滚动超时，要在完成当前批处理后设置 <code>requests_per_second</code> 来减慢进程。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-docs-reindex"><a class="anchor" href="#java-docs-reindex"></a>重新建立索引</h3>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/docs-reindex.html">reindex API</a>。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BulkByScrollResponse response =
+    ReindexAction.INSTANCE.newRequestBuilder(client)
+    .source("source_index")
+    .destination("target_index")
+    .filter(QueryBuilders.matchQuery("category", "xzy")) <i class="conum" data-value="1"></i><b>(1)</b>
+    .get();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>可以提供一个查询语句来筛选 source index 到 target index 的文档。</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

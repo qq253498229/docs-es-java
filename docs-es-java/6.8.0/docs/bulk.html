@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="6.8.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../preface.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../preface.html">前言</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../java-doc.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../maven-repository.html">Maven仓库</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../client.html">Client</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../docs.html">文档 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../search.html">查询 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../aggs.html">聚合</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../query-dsl.html">Query DSL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../admin/index.html">Java API Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/indices/index.html">Indices Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/cluster/index.html">Cluster Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">6.8.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="../preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../7.16.0/introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.8.0</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../../7.16.0/introduction.html">7.16.0</a>
+    <a class="version is-current" href="bulk.html">6.8.0</a>
+    <a class="version is-missing" href="../../6.2.2/1Preface/readme.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v6.8/modules/ROOT/pages/docs/bulk.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect2">
+<h3 id="java-docs-bulk"><a class="anchor" href="#java-docs-bulk"></a>批处理</h3>
+<div class="paragraph">
+<p>Bulk API 允许在一次单独的请求中索引或删除多个文档。
+下面是一个用法示例:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.elasticsearch.common.xcontent.XContentFactory.*;
+
+BulkRequestBuilder bulkRequest = client.prepareBulk();
+
+// either use client#prepare, or use Requests# to directly build index/delete requests
+bulkRequest.add(client.prepareIndex("twitter", "_doc", "1")
+        .setSource(jsonBuilder()
+                    .startObject()
+                        .field("user", "kimchy")
+                        .field("postDate", new Date())
+                        .field("message", "trying out Elasticsearch")
+                    .endObject()
+                  )
+        );
+
+bulkRequest.add(client.prepareIndex("twitter", "_doc", "2")
+        .setSource(jsonBuilder()
+                    .startObject()
+                        .field("user", "kimchy")
+                        .field("postDate", new Date())
+                        .field("message", "another post")
+                    .endObject()
+                  )
+        );
+
+BulkResponse bulkResponse = bulkRequest.get();
+if (bulkResponse.hasFailures()) {
+    // process failures by iterating through each bulk response item
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-docs-bulk-processor"><a class="anchor" href="#java-docs-bulk-processor"></a>使用批处理工具</h3>
+<div class="paragraph">
+<p><code>BulkProcessor</code> 类提供了一个简单的 API 来自动执行批处理操作，它可以设置的规则有请求数、请求数据大小、周期。</p>
+</div>
+<div class="paragraph">
+<p>要使用它，首先需要创建一个 <code>BulkProcessor</code> 实例:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.action.bulk.BackoffPolicy;
+import org.elasticsearch.action.bulk.BulkProcessor;
+import org.elasticsearch.common.unit.ByteSizeUnit;
+import org.elasticsearch.common.unit.ByteSizeValue;
+import org.elasticsearch.common.unit.TimeValue;
+
+BulkProcessor bulkProcessor = BulkProcessor.builder(
+        client, <i class="conum" data-value="1"></i><b>(1)</b>
+        new BulkProcessor.Listener() {
+            @Override
+            public void beforeBulk(long executionId,
+                                   BulkRequest request) { ... } <i class="conum" data-value="2"></i><b>(2)</b>
+
+            @Override
+            public void afterBulk(long executionId,
+                                  BulkRequest request,
+                                  BulkResponse response) { ... } <i class="conum" data-value="3"></i><b>(3)</b>
+
+            @Override
+            public void afterBulk(long executionId,
+                                  BulkRequest request,
+                                  Throwable failure) { ... } <i class="conum" data-value="4"></i><b>(4)</b>
+        })
+        .setBulkActions(10000) <i class="conum" data-value="5"></i><b>(5)</b>
+        .setBulkSize(new ByteSizeValue(5, ByteSizeUnit.MB)) <i class="conum" data-value="6"></i><b>(6)</b>
+        .setFlushInterval(TimeValue.timeValueSeconds(5)) <i class="conum" data-value="7"></i><b>(7)</b>
+        .setConcurrentRequests(1) <i class="conum" data-value="8"></i><b>(8)</b>
+        .setBackoffPolicy(
+            BackoffPolicy.exponentialBackoff(TimeValue.timeValueMillis(100), 3)) <i class="conum" data-value="9"></i><b>(9)</b>
+        .build();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>添加Elasticsearch client</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>在批处理执行之前被调用。你可以使用 <code>request.numberOfActions()</code> 方法来获取本次批处理的数量</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>在批处理执行之后被调用。你可以使用 <code>response.hasFailures()</code> 方法可以查看失败的请求</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>在批处理执行失败，或抛出 <code>Throwable</code> 的时候被调用</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>设置每次累计达10000个请求就立刻执行批处理</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>设置每次数据到达5MB的大小就立刻执行批处理</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>设置无论有几条请求，总之每隔5秒就立刻执行批处理</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>设置执行批处理请求时允许的最大并发数。0代表每次只执行一个请求，1代表允许1条并发请求</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="9"></i><b>9</b></td>
+<td>设置自定义补偿策略:第一次等待100ms，之后每次的间隔时间翻倍，一共重试3次。当批处理执行的时候抛出 <code>EsRejectedExecutionException</code> 异常的时候，会启动重试策略。原因可能是硬件资源太低。如想关闭该策略，可以传入 <code>BackoffPolicy.noBackoff()</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>默认情况，<code>BulkProcessor</code> 的配置如下：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>1000</code> 个请求</p>
+</li>
+<li>
+<p><code>5mb</code> 大小</p>
+</li>
+<li>
+<p>没有间隔</p>
+</li>
+<li>
+<p>允许1个并发请求</p>
+</li>
+<li>
+<p>第一次等待50ms重试，之后每次的间隔时间翻倍，一共重试8次，总时间大概5.1s左右（这个5.1s是怎么算出来的？麻烦知道的告诉一下）</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="java-docs-bulk-processor-requests"><a class="anchor" href="#java-docs-bulk-processor-requests"></a>添加请求</h4>
+<div class="paragraph">
+<p>然后你就可以很简单的向 <code>BulkProcessor</code> 中添加请求了:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">bulkProcessor.add(new IndexRequest("twitter", "_doc", "1").source(/* your doc here */));
+bulkProcessor.add(new DeleteRequest("twitter", "_doc", "2"));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-bulk-processor-close"><a class="anchor" href="#java-docs-bulk-processor-close"></a>关闭批处理工具</h4>
+<div class="paragraph">
+<p>当所有文档全部加载到 <code>BulkProcessor</code> 之后，可以使用 <code>awaitClose</code> 或 <code>close</code> 方法关闭它:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">bulkProcessor.awaitClose(10, TimeUnit.MINUTES);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>或</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">bulkProcessor.close();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果设置了 <code>flushInterval</code> ，上面两个方法都会刷新剩余的文档并且禁用定时刷新任务。
+如果开启了并发请求策略，<code>awaitClose</code> 方法会根据你所指定的时间作出等待，当规定时间内所有批处理请求全部完成时，会返回 <code>true</code> ；
+如果在规定时间内，仍有批处理请求未完成，则会返回 <code>false</code> 。
+<code>close</code> 方法不会等待批处理请求是否完成，而是直接取消剩余的所有请求。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-bulk-processor-tests"><a class="anchor" href="#java-docs-bulk-processor-tests"></a>在测试中使用批处理工具</h4>
+<div class="paragraph">
+<p>如果你正使用 Elasticsearch 进行测试并且使用的是 <code>BulkProcessor</code> 来批量添加数据，那么最好将并发请求数量设置为 <code>0</code> ，
+这样批处理请求将会以同步的方式执行:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BulkProcessor bulkProcessor = BulkProcessor.builder(client, new BulkProcessor.Listener() { /* Listener methods */ })
+        .setBulkActions(10000)
+        .setConcurrentRequests(0)
+        .build();
+
+// 添加请求
+bulkProcessor.add(/* Your requests */);
+
+// 刷新剩余请求
+bulkProcessor.flush();
+
+// 如果你不在需要它了则关闭掉
+bulkProcessor.close();
+
+// Refresh your indices
+client.admin().indices().prepareRefresh().get();
+
+// 现在可以开始检索啦！
+client.prepareSearch().get();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-bulk-global-parameters"><a class="anchor" href="#java-docs-bulk-global-parameters"></a>全局参数</h4>
+<div class="paragraph">
+<p>全局参数可以在 BulkRequest 和 BulkProcessor 上指定，类似于REST API。
+这些全局参数用作默认值，可以被每个子请求的本地参数所覆盖。
+有一些参数必须在子请求添加之前被设置， - index, type - ，并且必须在 BulkRequest 或 BulkProcessor 创建期间指定它们。
+也有一些是可选的 - pipeline, routing - ，这些可以在批量发送之前的任意时间点指定。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">try (BulkProcessor processor = initBulkProcessorBuilder(listener)
+        .setGlobalIndex("tweets")
+        .setGlobalType("_doc")
+        .setGlobalRouting("routing")
+        .setGlobalPipeline("pipeline_id")
+        .build()) {
+
+
+    processor.add(new IndexRequest() <i class="conum" data-value="1"></i><b>(1)</b>
+        .source(XContentType.JSON, "user", "some user"));
+    processor.add(new IndexRequest("blogs", "post_type", "1") <i class="conum" data-value="2"></i><b>(2)</b>
+        .source(XContentType.JSON, "title", "some title"));
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>BulkRequest 的全局参数将应用于子请求</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>子请求中的本地管道参数将覆盖BulkRequest中的全局参数</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BulkRequest request = new BulkRequest();
+request.pipeline("globalId");
+
+request.add(new IndexRequest("test", "doc", "1")
+    .source(XContentType.JSON, "field", "bulk1")
+    .setPipeline("perIndexId")); <i class="conum" data-value="1"></i><b>(1)</b>
+
+request.add(new IndexRequest("test", "doc", "2")
+    .source(XContentType.JSON, "field", "bulk2")); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>子请求中的本地管道参数将覆盖BulkRequest中的全局参数</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>BulkRequest 的全局参数将应用于子请求</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>管理集群接口 :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="6.2.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../1Preface/readme.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../1Preface/readme.html">前言</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../2JavaDoc/readme.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../3MavenRepository/readme.html">Maven仓库</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../3MavenRepository/LuceneSnapshotRepository.html">Lucene Snapshot仓库</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../3MavenRepository/log4j2.html">Log4j 2 日志</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../3MavenRepository/UsingAnotherLogger.html">使用其它的日志</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../4Client/readme.html">Client</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../5DocumentAPIs/readme.html">Document接口</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../5DocumentAPIs/IndexAPI.html">Index接口</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../5DocumentAPIs/1IndexAPI/GenerateJSONDocument.html">生成JSON文档</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../5DocumentAPIs/1IndexAPI/IndexDocument.html">索引一个文档</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/GetAPI.html">Get接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/DeleteAPI.html">Delete接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/DeleteByQueryAPI.html">Delete By Query接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/UpdateAPI.html">Update接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/MultiGetAPI.html">Multi Get接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/BulkAPI.html">Bulk接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/UsingBulkProcessor.html">使用Bulk Processor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/UpdateByQueryAPI.html">通过脚本修改接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/ReindexAPI.html">重新索引接口</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../6SearchAPI/readme.html">Search接口</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/UsingScrollsInJava.html">使用游标查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/MultiSearchAPI.html">批量查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/UsingAggregations.html">使用聚合</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/TerminateAfter.html">设置终止标志</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/SearchTemplate.html">模版查询</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../7Aggregations/readme.html">聚合</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../7Aggregations/StructuringAggregations.html">构建聚合</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../7Aggregations/MetricsAggregations.html">指标聚合</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../7Aggregations/BucketAggregations.html">桶聚合</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../8QueryDSL/readme.html">领域查询</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/MatchAllQuery.html">匹配所有的查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/FullTextQueries.html">全文检索</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/TermLevelQueries.html">匹配查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/CompoundQueries.html">组合查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/JoiningQueries.html">关联关系查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/GeoQueries.html">地理位置查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/SpecializedQueries.html">特殊查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/SpanQueries.html">跨度查询</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="readme.html">管理员接口</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="IndicesAdministration.html">管理索引接口</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="ClusterAdministration.html">管理集群接口</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html">《Elasticsearch: 权威指南》中文版</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../0Remark/words.html">名词解释(对比关系型数据库)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">6.2.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="../1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../7.16.0/introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../1Preface/readme.html">ES Java API Client</a></li>
+    <li><a href="readme.html">管理员接口</a></li>
+    <li><a href="ClusterAdministration.html">管理集群接口</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.2</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../../7.16.0/introduction.html">7.16.0</a>
+    <a class="version is-missing" href="../../6.8.0/preface.html">6.8.0</a>
+    <a class="version is-current" href="ClusterAdministration.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v6.2/modules/ROOT/pages/9JavaAPIAdministration/ClusterAdministration.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">管理集群接口</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>想要访问集群接口，你需要从 <a href="readme.html#_管理员接口" class="xref page">AdminClient</a> 类中调用 <strong>cluster()</strong> 。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ClusterAdminClient clusterAdminClient = client.admin().cluster();</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_集群健康接口">集群健康接口</a></p>
+</li>
+<li>
+<p><a href="#_存储脚本接口">存储脚本接口</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_集群健康接口"><a class="anchor" href="#_集群健康接口"></a>集群健康接口</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_健康"><a class="anchor" href="#_健康"></a>健康</h3>
+<div class="paragraph">
+<p>集群健康接口允许将集群的健康状态返回一个简单的状态，并且还可以为您提供每个索引的集群状态的技术信息：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//获取所有索引的信息
+ClusterHealthResponse healths = client.admin().cluster().prepareHealth().get();
+//集群名
+String clusterName = healths.getClusterName();
+//获取数据节点总数
+int numberOfDataNodes = healths.getNumberOfDataNodes();
+//获取节点总数
+int numberOfNodes = healths.getNumberOfNodes();
+
+//遍历所有索引
+for (ClusterIndexHealth health : healths.getIndices().values()) {
+    //索引名
+    String index = health.getIndex();
+    //分片数
+    int numberOfShards = health.getNumberOfShards();
+    //备份数
+    int numberOfReplicas = health.getNumberOfReplicas();
+    //状态码
+    ClusterHealthStatus status = health.getStatus();
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_等待状态"><a class="anchor" href="#_等待状态"></a>等待状态</h3>
+<div class="paragraph">
+<p>可以使用集群状态接口等待整个集群或给定索引的特定状态：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//准备请求
+client.admin().cluster().prepareHealth()
+        //等待集群变为黄色
+        .setWaitForYellowStatus()
+        .get();
+//为company索引准备请求
+client.admin().cluster().prepareHealth("company")
+        //等待集群变为绿色
+        .setWaitForGreenStatus()
+        .get();
+
+client.admin().cluster().prepareHealth("employee")
+        .setWaitForGreenStatus()
+        //最多等待2秒钟
+        .setTimeout(TimeValue.timeValueSeconds(2))
+        .get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果索引不具备预期状态，并且你希望在这种情况下失败，必须明确指定：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ClusterHealthResponse response = client.admin().cluster().prepareHealth("company")
+        //等待变为绿色
+        .setWaitForGreenStatus()
+        .get();
+
+ClusterHealthStatus status = response.getIndices().get("company").getStatus();
+if (!status.equals(ClusterHealthStatus.GREEN)) {
+    //如果不是绿色则抛出异常
+    throw new RuntimeException("Index is in " + status + " state");
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_存储脚本接口"><a class="anchor" href="#_存储脚本接口"></a>存储脚本接口</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>存储脚本接口允许用户在脚本和模版中间进行交互。也可以用来创建、更新和删除存储的脚本和模版：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">PutStoredScriptResponse response = client.admin().cluster().preparePutStoredScript()
+                .setId("script1")
+                .setContent(new BytesArray("{\"script\": {\"lang\": \"painless\", \"source\": \"_score * doc['my_numeric_field'].value\"} }"), XContentType.JSON)
+                .get();
+
+GetStoredScriptResponse response = client().admin().cluster().prepareGetStoredScript()
+                .setId("script1")
+                .get();
+
+DeleteStoredScriptResponse response = client().admin().cluster().prepareDeleteStoredScript()
+                .setId("script1")
+                .get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>也可以简单的使用 <strong>mustache</strong> 作为 <strong>scriptLang</strong> 来存储脚本</p>
+</div>
+<div class="sect2">
+<h3 id="_脚本语言"><a class="anchor" href="#_脚本语言"></a>脚本语言</h3>
+<div class="paragraph">
+<p>存储脚本接口允许你设置存储脚本的语言。如果没有提供的话，则使用默认的脚本语言。</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

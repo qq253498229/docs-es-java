@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="6.8.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../preface.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../preface.html">前言</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../java-doc.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../maven-repository.html">Maven仓库</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../client.html">Client</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../docs.html">文档 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../search.html">查询 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../aggs.html">聚合</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../query-dsl.html">Query DSL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../admin/index.html">Java API Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/indices/index.html">Indices Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/cluster/index.html">Cluster Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">6.8.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="../preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../7.16.0/introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.8.0</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../../7.16.0/introduction.html">7.16.0</a>
+    <a class="version is-current" href="bucket.html">6.8.0</a>
+    <a class="version is-missing" href="../../6.2.2/1Preface/readme.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v6.8/modules/ROOT/pages/aggregations/bucket.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect3">
+<h4 id="java-aggs-bucket-global"><a class="anchor" href="#java-aggs-bucket-global"></a>Global Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-global-aggregation.html">Global Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request"><a class="anchor" href="#_prepare_aggregation_request"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilders
+    .global("agg")
+    .subAggregation(AggregationBuilders.terms("genders").field("gender"));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response"><a class="anchor" href="#_use_aggregation_response"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.global.Global;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Global agg = sr.getAggregations().get("agg");
+agg.getDocCount(); // Doc count</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-filter"><a class="anchor" href="#java-aggs-bucket-filter"></a>Filter Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-filter-aggregation.html">Filter Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_2"><a class="anchor" href="#_prepare_aggregation_request_2"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilders
+    .filter("agg", QueryBuilders.termQuery("gender", "male"));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_2"><a class="anchor" href="#_use_aggregation_response_2"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.filter.Filter;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Filter agg = sr.getAggregations().get("agg");
+agg.getDocCount(); // Doc count</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-filters"><a class="anchor" href="#java-aggs-bucket-filters"></a>Filters Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-filters-aggregation.html">Filters Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_3"><a class="anchor" href="#_prepare_aggregation_request_3"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+    AggregationBuilders
+        .filters("agg",
+            new FiltersAggregator.KeyedFilter("men", QueryBuilders.termQuery("gender", "male")),
+            new FiltersAggregator.KeyedFilter("women", QueryBuilders.termQuery("gender", "female")));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_3"><a class="anchor" href="#_use_aggregation_response_3"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.filters.Filters;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Filters agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (Filters.Bucket entry : agg.getBuckets()) {
+    String key = entry.getKeyAsString();            // bucket key
+    long docCount = entry.getDocCount();            // Doc count
+    logger.info("key [{}], doc_count [{}]", key, docCount);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>一般会返回如下结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">key [men], doc_count [4982]
+key [women], doc_count [5018]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-missing"><a class="anchor" href="#java-aggs-bucket-missing"></a>Missing Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-missing-aggregation.html">Missing Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_4"><a class="anchor" href="#_prepare_aggregation_request_4"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilders.missing("agg").field("gender");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_4"><a class="anchor" href="#_use_aggregation_response_4"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.missing.Missing;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Missing agg = sr.getAggregations().get("agg");
+agg.getDocCount(); // Doc count</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-nested"><a class="anchor" href="#java-aggs-bucket-nested"></a>Nested Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-nested-aggregation.html">Nested Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_5"><a class="anchor" href="#_prepare_aggregation_request_5"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilders
+    .nested("agg", "resellers");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_5"><a class="anchor" href="#_use_aggregation_response_5"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.nested.Nested;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Nested agg = sr.getAggregations().get("agg");
+agg.getDocCount(); // Doc count</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-reverse-nested"><a class="anchor" href="#java-aggs-bucket-reverse-nested"></a>Reverse Nested Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-reverse-nested-aggregation.html">Reverse Nested Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_6"><a class="anchor" href="#_prepare_aggregation_request_6"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+    AggregationBuilders
+        .nested("agg", "resellers")
+        .subAggregation(
+                AggregationBuilders
+                        .terms("name").field("resellers.name")
+                        .subAggregation(
+                                AggregationBuilders
+                                        .reverseNested("reseller_to_product")
+                        )
+        );</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_6"><a class="anchor" href="#_use_aggregation_response_6"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.nested.Nested;
+import org.elasticsearch.search.aggregations.bucket.nested.ReverseNested;
+import org.elasticsearch.search.aggregations.bucket.terms.Terms;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Nested agg = sr.getAggregations().get("agg");
+Terms name = agg.getAggregations().get("name");
+for (Terms.Bucket bucket : name.getBuckets()) {
+    ReverseNested resellerToProduct = bucket.getAggregations().get("reseller_to_product");
+    resellerToProduct.getDocCount(); // Doc count
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-children"><a class="anchor" href="#java-aggs-bucket-children"></a>Children Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-children-aggregation.html">Children Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_7"><a class="anchor" href="#_prepare_aggregation_request_7"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+    AggregationBuilders
+        .children("agg", "reseller"); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>"agg"</code> 是聚合的名字，  <code>"reseller"</code> 是子类型</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_7"><a class="anchor" href="#_use_aggregation_response_7"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.join.aggregations.Children;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Children agg = sr.getAggregations().get("agg");
+agg.getDocCount(); // Doc count</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-terms"><a class="anchor" href="#java-aggs-bucket-terms"></a>Terms Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-terms-aggregation.html">Terms Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_8"><a class="anchor" href="#_prepare_aggregation_request_8"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilders
+    .terms("genders")
+    .field("gender");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_8"><a class="anchor" href="#_use_aggregation_response_8"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.terms.Terms;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Terms genders = sr.getAggregations().get("genders");
+
+// For each entry
+for (Terms.Bucket entry : genders.getBuckets()) {
+    entry.getKey();      // Term
+    entry.getDocCount(); // Doc count
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_order"><a class="anchor" href="#_order"></a>Order</h5>
+<div class="paragraph">
+<p>导入BucketOrder类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.BucketOrder;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>按 <code>doc_count</code> 升序方式进行排序:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilders
+    .terms("genders")
+    .field("gender")
+    .order(BucketOrder.count(true))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ordering the buckets alphabetically by their terms in an ascending manner:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilders
+    .terms("genders")
+    .field("gender")
+    .order(BucketOrder.key(true))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ordering the buckets by single value metrics sub-aggregation (identified by the aggregation name):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilders
+    .terms("genders")
+    .field("gender")
+    .order(BucketOrder.aggregation("avg_height", false))
+    .subAggregation(
+        AggregationBuilders.avg("avg_height").field("height")
+    )</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>按多个条件排序:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilders
+    .terms("genders")
+    .field("gender")
+    .order(BucketOrder.compound( // in order of priority:
+        BucketOrder.aggregation("avg_height", false), // sort by sub-aggregation first
+        BucketOrder.count(true))) // then bucket count as a tie-breaker
+    .subAggregation(
+        AggregationBuilders.avg("avg_height").field("height")
+    )</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-significantterms"><a class="anchor" href="#java-aggs-bucket-significantterms"></a>Significant Terms Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-significantterms-aggregation.html">Significant Terms Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_9"><a class="anchor" href="#_prepare_aggregation_request_9"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+        AggregationBuilders
+                .significantTerms("significant_countries")
+                .field("address.country");
+
+// Let say you search for men only
+SearchResponse sr = client.prepareSearch()
+        .setQuery(QueryBuilders.termQuery("gender", "male"))
+        .addAggregation(aggregation)
+        .get();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_9"><a class="anchor" href="#_use_aggregation_response_9"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.significant.SignificantTerms;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+SignificantTerms agg = sr.getAggregations().get("significant_countries");
+
+// For each entry
+for (SignificantTerms.Bucket entry : agg.getBuckets()) {
+    entry.getKey();      // Term
+    entry.getDocCount(); // Doc count
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-range"><a class="anchor" href="#java-aggs-bucket-range"></a>Range Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-range-aggregation.html">Range Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_10"><a class="anchor" href="#_prepare_aggregation_request_10"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+        AggregationBuilders
+                .range("agg")
+                .field("height")
+                .addUnboundedTo(1.0f)               // from -infinity to 1.0 (excluded)
+                .addRange(1.0f, 1.5f)               // from 1.0 to 1.5 (excluded)
+                .addUnboundedFrom(1.5f);            // from 1.5 to +infinity</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_10"><a class="anchor" href="#_use_aggregation_response_10"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.range.Range;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Range agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (Range.Bucket entry : agg.getBuckets()) {
+    String key = entry.getKeyAsString();             // Range as key
+    Number from = (Number) entry.getFrom();          // Bucket from
+    Number to = (Number) entry.getTo();              // Bucket to
+    long docCount = entry.getDocCount();    // Doc count
+
+    logger.info("key [{}], from [{}], to [{}], doc_count [{}]", key, from, to, docCount);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>一般会返回如下结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">key [*-1.0], from [-Infinity], to [1.0], doc_count [9]
+key [1.0-1.5], from [1.0], to [1.5], doc_count [21]
+key [1.5-*], from [1.5], to [Infinity], doc_count [20]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-daterange"><a class="anchor" href="#java-aggs-bucket-daterange"></a>Date Range Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-daterange-aggregation.html">Date Range Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_11"><a class="anchor" href="#_prepare_aggregation_request_11"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+        AggregationBuilders
+                .dateRange("agg")
+                .field("dateOfBirth")
+                .format("yyyy")
+                .addUnboundedTo("1950")    // from -infinity to 1950 (excluded)
+                .addRange("1950", "1960")  // from 1950 to 1960 (excluded)
+                .addUnboundedFrom("1960"); // from 1960 to +infinity</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_11"><a class="anchor" href="#_use_aggregation_response_11"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.range.Range;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Range agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (Range.Bucket entry : agg.getBuckets()) {
+    String key = entry.getKeyAsString();                // Date range as key
+    DateTime fromAsDate = (DateTime) entry.getFrom();   // Date bucket from as a Date
+    DateTime toAsDate = (DateTime) entry.getTo();       // Date bucket to as a Date
+    long docCount = entry.getDocCount();                // Doc count
+
+    logger.info("key [{}], from [{}], to [{}], doc_count [{}]", key, fromAsDate, toAsDate, docCount);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>一般会返回如下结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">key [*-1950], from [null], to [1950-01-01T00:00:00.000Z], doc_count [8]
+key [1950-1960], from [1950-01-01T00:00:00.000Z], to [1960-01-01T00:00:00.000Z], doc_count [5]
+key [1960-*], from [1960-01-01T00:00:00.000Z], to [null], doc_count [37]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-iprange"><a class="anchor" href="#java-aggs-bucket-iprange"></a>Ip Range Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-iprange-aggregation.html">Ip Range Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_12"><a class="anchor" href="#_prepare_aggregation_request_12"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregatorBuilder&lt;?&gt; aggregation =
+        AggregationBuilders
+                .ipRange("agg")
+                .field("ip")
+                .addUnboundedTo("192.168.1.0")             // from -infinity to 192.168.1.0 (excluded)
+                .addRange("192.168.1.0", "192.168.2.0")    // from 192.168.1.0 to 192.168.2.0 (excluded)
+                .addUnboundedFrom("192.168.2.0");          // from 192.168.2.0 to +infinity</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>注意，你也可以使用ip掩码作为范围:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregatorBuilder&lt;?&gt; aggregation =
+        AggregationBuilders
+                .ipRange("agg")
+                .field("ip")
+                .addMaskRange("192.168.0.0/32")
+                .addMaskRange("192.168.0.0/24")
+                .addMaskRange("192.168.0.0/16");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_12"><a class="anchor" href="#_use_aggregation_response_12"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.range.Range;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Range agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (Range.Bucket entry : agg.getBuckets()) {
+    String key = entry.getKeyAsString();            // Ip range as key
+    String fromAsString = entry.getFromAsString();  // Ip bucket from as a String
+    String toAsString = entry.getToAsString();      // Ip bucket to as a String
+    long docCount = entry.getDocCount();            // Doc count
+
+    logger.info("key [{}], from [{}], to [{}], doc_count [{}]", key, fromAsString, toAsString, docCount);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>第一个请求一般会返回如下结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">key [*-192.168.1.0], from [null], to [192.168.1.0], doc_count [13]
+key [192.168.1.0-192.168.2.0], from [192.168.1.0], to [192.168.2.0], doc_count [14]
+key [192.168.2.0-*], from [192.168.2.0], to [null], doc_count [23]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>第二个请求（使用IP掩码）一般会返回如下结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">key [192.168.0.0/32], from [192.168.0.0], to [192.168.0.1], doc_count [0]
+key [192.168.0.0/24], from [192.168.0.0], to [192.168.1.0], doc_count [13]
+key [192.168.0.0/16], from [192.168.0.0], to [192.169.0.0], doc_count [50]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-histogram"><a class="anchor" href="#java-aggs-bucket-histogram"></a>Histogram Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-histogram-aggregation.html">Histogram Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_13"><a class="anchor" href="#_prepare_aggregation_request_13"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+        AggregationBuilders
+                .histogram("agg")
+                .field("height")
+                .interval(1);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_13"><a class="anchor" href="#_use_aggregation_response_13"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.histogram.Histogram;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Histogram agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (Histogram.Bucket entry : agg.getBuckets()) {
+    Number key = (Number) entry.getKey();   // Key
+    long docCount = entry.getDocCount();    // Doc count
+
+    logger.info("key [{}], doc_count [{}]", key, docCount);
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_order_2"><a class="anchor" href="#_order_2"></a>Order</h5>
+<div class="paragraph">
+<p>支持与 <a href="#java-aggs-bucket-terms">Terms Aggregation</a> 相同的排序功能。</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-datehistogram"><a class="anchor" href="#java-aggs-bucket-datehistogram"></a>Date Histogram Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-datehistogram-aggregation.html">Date Histogram Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_14"><a class="anchor" href="#_prepare_aggregation_request_14"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+        AggregationBuilders
+                .dateHistogram("agg")
+                .field("dateOfBirth")
+                .dateHistogramInterval(DateHistogramInterval.YEAR);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果你想设置10天间隔:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+        AggregationBuilders
+                .dateHistogram("agg")
+                .field("dateOfBirth")
+                .dateHistogramInterval(DateHistogramInterval.days(10));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_14"><a class="anchor" href="#_use_aggregation_response_14"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.histogram.Histogram;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Histogram agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (Histogram.Bucket entry : agg.getBuckets()) {
+    DateTime key = (DateTime) entry.getKey();    // Key
+    String keyAsString = entry.getKeyAsString(); // Key as String
+    long docCount = entry.getDocCount();         // Doc count
+
+    logger.info("key [{}], date [{}], doc_count [{}]", keyAsString, key.getYear(), docCount);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>一般会返回如下结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">key [1942-01-01T00:00:00.000Z], date [1942], doc_count [1]
+key [1945-01-01T00:00:00.000Z], date [1945], doc_count [1]
+key [1946-01-01T00:00:00.000Z], date [1946], doc_count [1]
+...
+key [2005-01-01T00:00:00.000Z], date [2005], doc_count [1]
+key [2007-01-01T00:00:00.000Z], date [2007], doc_count [2]
+key [2008-01-01T00:00:00.000Z], date [2008], doc_count [3]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_order_3"><a class="anchor" href="#_order_3"></a>Order</h5>
+<div class="paragraph">
+<p>支持与 <a href="#java-aggs-bucket-terms">Terms Aggregation</a> 相同的排序功能。</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-geodistance"><a class="anchor" href="#java-aggs-bucket-geodistance"></a>Geo Distance Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-geodistance-aggregation.html">Geo Distance Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_15"><a class="anchor" href="#_prepare_aggregation_request_15"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+        AggregationBuilders
+                .geoDistance("agg", new GeoPoint(48.84237171118314,2.33320027692004))
+                .field("address.location")
+                .unit(DistanceUnit.KILOMETERS)
+                .addUnboundedTo(3.0)
+                .addRange(3.0, 10.0)
+                .addRange(10.0, 500.0);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_15"><a class="anchor" href="#_use_aggregation_response_15"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.range.Range;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Range agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (Range.Bucket entry : agg.getBuckets()) {
+    String key = entry.getKeyAsString();    // key as String
+    Number from = (Number) entry.getFrom(); // bucket from value
+    Number to = (Number) entry.getTo();     // bucket to value
+    long docCount = entry.getDocCount();    // Doc count
+
+    logger.info("key [{}], from [{}], to [{}], doc_count [{}]", key, from, to, docCount);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>一般会返回如下结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">key [*-3.0], from [0.0], to [3.0], doc_count [161]
+key [3.0-10.0], from [3.0], to [10.0], doc_count [460]
+key [10.0-500.0], from [10.0], to [500.0], doc_count [4925]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-bucket-geohashgrid"><a class="anchor" href="#java-aggs-bucket-geohashgrid"></a>Geo Hash Grid Aggregation</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-bucket-geohashgrid-aggregation.html">Geo Hash Grid Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="_prepare_aggregation_request_16"><a class="anchor" href="#_prepare_aggregation_request_16"></a>Prepare aggregation request</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+        AggregationBuilders
+                .geohashGrid("agg")
+                .field("address.location")
+                .precision(4);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_aggregation_response_16"><a class="anchor" href="#_use_aggregation_response_16"></a>Use aggregation response</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.geogrid.GeoHashGrid;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+GeoHashGrid agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (GeoHashGrid.Bucket entry : agg.getBuckets()) {
+    String keyAsString = entry.getKeyAsString(); // key as String
+    GeoPoint key = (GeoPoint) entry.getKey();    // key as geo point
+    long docCount = entry.getDocCount();         // Doc count
+
+    logger.info("key [{}], point {}, doc_count [{}]", keyAsString, key, docCount);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>一般会返回如下结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">key [gbqu], point [47.197265625, -1.58203125], doc_count [1282]
+key [gbvn], point [50.361328125, -4.04296875], doc_count [1248]
+key [u1j0], point [50.712890625, 7.20703125], doc_count [1156]
+key [u0j2], point [45.087890625, 7.55859375], doc_count [1138]
+...</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

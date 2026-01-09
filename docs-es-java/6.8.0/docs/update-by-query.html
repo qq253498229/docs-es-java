@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="6.8.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../preface.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../preface.html">前言</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../java-doc.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../maven-repository.html">Maven仓库</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../client.html">Client</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../docs.html">文档 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../search.html">查询 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../aggs.html">聚合</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../query-dsl.html">Query DSL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../admin/index.html">Java API Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/indices/index.html">Indices Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/cluster/index.html">Cluster Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">6.8.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="../preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../7.16.0/introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.8.0</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../../7.16.0/introduction.html">7.16.0</a>
+    <a class="version is-current" href="update-by-query.html">6.8.0</a>
+    <a class="version is-missing" href="../../6.2.2/1Preface/readme.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v6.8/modules/ROOT/pages/docs/update-by-query.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect2">
+<h3 id="java-docs-update-by-query"><a class="anchor" href="#java-docs-update-by-query"></a>通过条件更新文档</h3>
+<div class="paragraph">
+<p><code>updateByQuery</code> 最简单的用法是在不更改源的情况下更新同一个index中的所有文档。
+这种用法还可以获取新的属性或其它网络映射的改变。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index").abortOnVersionConflict(false);
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>调用 <code>updateByQuery</code> 方法会优先获取index的快照，然后使用`internal`版本索引所有的文档。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+当文档正在建立索引时，如果快照版本发生了改变，那么这个文档的版本会发生冲突。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>当版本匹配时， <code>updateByQuery</code> 方法会更新文档并增加版本号。</p>
+</div>
+<div class="paragraph">
+<p>所有的修改和查询都失败的时候， <code>updateByQuery</code> 方法就会停止。
+这些失败的原因可以从 <code>BulkByScrollResponse#getIndexingFailures</code> 中获得。
+但是所有成功的更新操作都会保留并且不会回滚。当第一次发生失败而导致终止时，响应会包含批量请求生成的所有失败消息。</p>
+</div>
+<div class="paragraph">
+<p>为了防止版本冲突而导致 <code>updateByQuery</code> 方法停止，请设置 <code>abortOnVersionConflict(false)</code> 。
+第一个例子就是这样做的，因为这个例子是想获取网络映射的修改，并且版本冲突意味着冲突文档在 <code>updateByQuery</code>
+的开始和尝试更新修改文档之间更新。这样很好，因为修改操作会获取更新后的网络映射。</p>
+</div>
+<div class="paragraph">
+<p><code>UpdateByQueryRequestBuilder</code> API 支持过滤更新后的文档，并且可以限制更新的数量，还可以通过脚本更新文档:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index")
+    .filter(QueryBuilders.termQuery("level", "awesome"))
+    .size(1000)
+    .script(new Script(ScriptType.INLINE,
+        "ctx._source.awesome = 'absolutely'",
+        "painless",
+        Collections.emptyMap()));
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>UpdateByQueryRequestBuilder</code> 还支持直接获取用于查询文档的语句。
+你可以用它来改变默认的滚动数量，或者修改匹配文档的请求。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index")
+    .source()
+    .setSize(500);
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>您还可以将 <code>size</code> 和排序结合使用，来限制需要更新的文档:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index")
+    .size(100)
+    .source()
+    .addSort("cat", SortOrder.DESC);
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>除了修改文档的 <code>_source</code> 字段之外，您还可以使用脚本来做其它操作，比如 Update API:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("source_index")
+    .script(new Script(
+        ScriptType.INLINE,
+        "if (ctx._source.awesome == 'absolutely') {"
+            + "  ctx.op='noop'"
+            + "} else if (ctx._source.awesome == 'lame') {"
+            + "  ctx.op='delete'"
+            + "} else {"
+            + "ctx._source.awesome = 'absolutely'}",
+        "painless",
+        Collections.emptyMap()));
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>与 <a href="#java-docs-update">Update API</a> 一样，您可以通过设置 <code>ctx.op</code> 来改变执行的操作:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>noop</code></dt>
+<dd>
+<p>如果这个脚本不会修改任何文档，可以设置 <code>ctx.op = "noop"</code> 。
+<code>updateByQuery</code> 操作会从修改中忽略掉这个文档。
+这个行为会让响应体中的 <code>noop</code> 计数器增加。</p>
+</dd>
+<dt class="hdlist1"><code>delete</code></dt>
+<dd>
+<p>如果这个脚本一定会删除文档，可以设置 <code>ctx.op = "delete"</code> 。 这样在响应体中的 <code>deleted</code> 计数器会有显示。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><code>ctx.op</code> 设置其它值会报错。 <code>ctx</code> 设置其它字段也会报错。</p>
+</div>
+<div class="paragraph">
+<p>这个API不允许移动它能接触到的文档，只允许修改source。这是故意这样设计的！我们规定不允许从原始位置将文档移除。</p>
+</div>
+<div class="paragraph">
+<p>你也可以一次在多个索引和类型上执行这些操作，类似于 search API :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source("foo", "bar").source().setTypes("a", "b");
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果你提供了 <code>routing</code> 值，则该进程会将路由值复制到滚动查询中，从而将进程限制为匹配该路由值的分片:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.source().setRouting("cat");
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>updateByQuery</code> 也可以通过指定一个像这样的 <code>pipeline</code> 来使用 ingest 节点:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateByQueryRequestBuilder updateByQuery =
+  UpdateByQueryAction.INSTANCE.newRequestBuilder(client);
+updateByQuery.setPipeline("hurray");
+BulkByScrollResponse response = updateByQuery.get();</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-update-by-query-task-api"><a class="anchor" href="#java-docs-update-by-query-task-api"></a>使用任务 API</h4>
+<div class="paragraph">
+<p>你可以使用 Task API 来获取所有正在运行中的 update-by-query 请求状态:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ListTasksResponse tasksList = client.admin().cluster().prepareListTasks()
+    .setActions(UpdateByQueryAction.NAME).setDetailed(true).get();
+for (TaskInfo info: tasksList.getTasks()) {
+    TaskId taskId = info.getTaskId();
+    BulkByScrollTask.Status status =
+        (BulkByScrollTask.Status) info.getStatus();
+    // do stuff
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>使用上面显示的 <code>TaskId</code> 您可以直接地找到task:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">GetTaskResponse get = client.admin().cluster().prepareGetTask(taskId).get();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-update-by-query-cancel-task-api"><a class="anchor" href="#java-docs-update-by-query-cancel-task-api"></a>取消任务 API</h4>
+<div class="paragraph">
+<p>任何 Update By Query 可以使用 Task Cancel API 来取消:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Cancel all update-by-query requests
+client.admin().cluster().prepareCancelTasks()
+    .setActions(UpdateByQueryAction.NAME).get().getTasks();
+// Cancel a specific update-by-query request
+client.admin().cluster().prepareCancelTasks()
+    .setTaskId(taskId).get().getTasks();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>使用 <code>list tasks</code> API 可以查询 <code>taskId</code> 的值。</p>
+</div>
+<div class="paragraph">
+<p>取消请求通常非常快，但也需要几秒钟。任务状态API会继续列出任务，直到取消完成。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-docs-update-by-query-rethrottle"><a class="anchor" href="#java-docs-update-by-query-rethrottle"></a>二次节流</h4>
+<div class="paragraph">
+<p>使用 <code>_rethrottle</code> API 可以修改正在运行的 <code>requests_per_second</code> 值:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RethrottleAction.INSTANCE.newRequestBuilder(client)
+    .setTaskId(taskId)
+    .setRequestsPerSecond(2.0f)
+    .get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>使用 <code>list tasks</code> API 可以查询 <code>taskId</code> 的值。</p>
+</div>
+<div class="paragraph">
+<p>与 <code>updateByQuery</code> 一样，<code>requests_per_second</code> 可以设置成任何正浮点值来设置throttle的级别，或者使用 <code>Float.POSITIVE_INFINITY</code> 来禁止 throttling。
+<code>requests_per_second</code> 值可以加速进程并立刻生效。
+为防止滚动超时，要在完成当前批处理后设置 <code>requests_per_second</code> 来减慢进程。</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

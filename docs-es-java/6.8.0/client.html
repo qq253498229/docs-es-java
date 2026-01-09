@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="6.8.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="preface.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="preface.html">前言</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="java-doc.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="maven-repository.html">Maven仓库</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="client.html">Client</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docs.html">文档 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="search.html">查询 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aggs.html">聚合</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="query-dsl.html">Query DSL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="admin/index.html">Java API Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admin/indices/index.html">Indices Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admin/cluster/index.html">Cluster Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">6.8.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../7.16.0/introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="preface.html">ES Java API Client</a></li>
+    <li><a href="client.html">Client</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.8.0</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../7.16.0/introduction.html">7.16.0</a>
+    <a class="version is-current" href="client.html">6.8.0</a>
+    <a class="version is-missing" href="../6.2.2/1Preface/readme.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v6.8/modules/ROOT/pages/client.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="client"><a class="anchor" href="#client"></a>Client</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>有很多种使用 <strong>Java client</strong> 的方式供你选择:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>在集群中执行标准的 <a href="docs.html#java-docs-index" class="xref page">index</a>, <a href="docs.html#java-docs-get" class="xref page">get</a>,
+<a href="docs.html#java-docs-delete" class="xref page">delete</a> 和 <a href="search.html#java-search" class="xref page">search</a> 操作</p>
+</li>
+<li>
+<p>在运行中的集群下执行管理员任务</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>在Elasticsearch中获取 <code>Client</code> 很简单。
+最常用的方法就是创建一个 <a href="#transport-client">TransportClient</a> 连接到集群中，并获取client。</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>所有集群中的client节点必须使用相同的major版本(例如 <code>2.x</code> 或 <code>5.x</code>)。
+但是不同minor版本的client却都可以连接到集群，只是有些新版本的特性在旧版本下可能会不支持。
+所以最理想的状态就是集群中所有client的版本号都相同。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>我们计划在ElasticSearch 7.0中弃用 <code>TransportClient</code> ，并在8.0中完全删除它。
+作为替代，您应该使用 <a href="https://www.elastic.co/guide/en/elasticsearch/client/java-rest/6.8/java-rest-high.html">Java High Level REST Client</a> ，
+它执行的是HTTP请求而不是序列化之后的Java请求。
+<a href="https://www.elastic.co/guide/en/elasticsearch/client/java-rest/6.8/java-rest-high-level-migration.html">迁移指南</a> 中介绍了迁移所需的所有步骤。</p>
+</div>
+<div class="paragraph">
+<p>JavaHighLevelClient 现在支持了更多常用的接口，但还有许多需要添加。
+点击 <a href="https://github.com/elastic/elasticsearch/issues/27205">完善 Java high-level REST client</a>
+通知我们您的应用需要哪些缺失的接口，帮助我们共同完善Elasticsearch。</p>
+</div>
+<div class="paragraph">
+<p>所有缺失的接口也可以通过使用带有JSON请求体的
+<a href="https://www.elastic.co/guide/en/elasticsearch/client/java-rest/6.8/java-rest-low.html">low level Java REST Client</a>
+来实现并获取结果。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="transport-client"><a class="anchor" href="#transport-client"></a>Transport Client</h3>
+<div class="paragraph">
+<p><code>TransportClient</code> 使用 transport模块远程连接到Elasticsearch集群。
+它并不是加入到集群中，而只是获取一个或多个初始传输地址，在操作的时候以循环的方式与之进行通信(大部分操作可能都是 "two hop" 操作):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// on startup
+
+TransportClient client = new PreBuiltTransportClient(Settings.EMPTY)
+        .addTransportAddress(new TransportAddress(InetAddress.getByName("host1"), 9300))
+        .addTransportAddress(new TransportAddress(InetAddress.getByName("host2"), 9300));
+
+// on shutdown
+
+client.close();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>注意如果你的集群名称不是 "elasticsearch" 的话，你需要设置成你自己的:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Settings settings = Settings.builder()
+        .put("cluster.name", "myClusterName").build();
+TransportClient client = new PreBuiltTransportClient(settings);
+//Add transport addresses and do something with the client...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Transport client 具有集群感知的特性，可以自动添加新主机或者是删除旧主机。
+当感知被开启时，transport client 通过调用 <code>addTransportAddress</code> 方法与内部节点列表中的某一个节点建立连接。
+在这之后，这个 client 就可以调用节点内部的API来获取数据了。
+客户端内部的节点列表会替换这些数据节点，列表默认情况下每5秒刷新一次。
+注意感知所连接的ip地址可以声明在 Elasticsearch 的配置文件中。</p>
+</div>
+<div class="paragraph">
+<p>请记住，如果连接到的不是数据节点，那么这个节点列表可能不会包含它的原始节点。
+例如，你初始化并连接到了一个master节点，在感知之后，接下来的请求都不会发送到这个master节点，而是发送到其它的数据节点。
+transport client排除非数据节点的原因，是为了避免向master节点发送搜索请求。</p>
+</div>
+<div class="paragraph">
+<p>想允许感知特性，请设置 <code>client.transport.sniff</code> 为 <code>true</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Settings settings = Settings.builder()
+        .put("client.transport.sniff", true).build();
+TransportClient client = new PreBuiltTransportClient(settings);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>其它 transport client 级别的设置包括:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">参数</th>
+<th class="tableblock halign-left valign-top">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>client.transport.ignore_cluster_name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">设置成 <code>true</code> 会所连接节点的集群名称校验(0.19.4+)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>client.transport.ping_timeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ping节点的超时时间。默认是 <code>5秒</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>client.transport.nodes_sampler_interval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">多长时间 sample / ping 节点列表和连接。默认是 <code>5秒</code>。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="client-connected-to-client-node"><a class="anchor" href="#client-connected-to-client-node"></a>将 Client 连接到一个协调节点</h3>
+<div class="paragraph">
+<p>你可以在本地开启一个
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-node.html#coordinating-only-node">协调节点</a>
+，然后在连接到该协调节点的应用中轻松地创建一个 <a href="#transport-client">TransportClient</a> 。</p>
+</div>
+<div class="paragraph">
+<p>这样这个协调节点就能够加载你需要的所有插件了（例如 discovery 插件）。</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

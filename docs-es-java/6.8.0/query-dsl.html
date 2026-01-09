@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="6.8.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="preface.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="preface.html">前言</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="java-doc.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="maven-repository.html">Maven仓库</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="client.html">Client</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docs.html">文档 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="search.html">查询 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aggs.html">聚合</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="query-dsl.html">Query DSL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="admin/index.html">Java API Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admin/indices/index.html">Indices Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admin/cluster/index.html">Cluster Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">6.8.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../7.16.0/introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="preface.html">ES Java API Client</a></li>
+    <li><a href="query-dsl.html">Query DSL</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.8.0</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../7.16.0/introduction.html">7.16.0</a>
+    <a class="version is-current" href="query-dsl.html">6.8.0</a>
+    <a class="version is-missing" href="../6.2.2/1Preface/readme.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v6.8/modules/ROOT/pages/query-dsl.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="java-query-dsl"><a class="anchor" href="#java-query-dsl"></a>Query DSL</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Elasticsearch以类似于 REST <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl.html">Query DSL</a> 的方式提供了一套完整的java query dsl(Domain Specific Language)。
+查询语句构建的factory是 <code>QueryBuilders</code> 。
+查询准备就绪之后就可以使用 <a href="search.html#java-search" class="xref page">Search API</a> 了。</p>
+</div>
+<div class="paragraph">
+<p>要使用 <code>QueryBuilders</code> 只需要在类中引入它们:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.elasticsearch.index.query.QueryBuilders.*;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>注意可以使用 <code>QueryBuilder</code> 类中的 <code>toString()</code> 方法方便的打印(调试时)查询语句生成的JSON。</p>
+</div>
+<div class="paragraph">
+<p><code>QueryBuilder</code> 可以被用于接受查询语句的任何API中，例如 <code>count</code> 和 <code>search</code> 。</p>
+</div>
+<div class="sect2">
+<h3 id="java-query-dsl-match-all-query"><a class="anchor" href="#java-query-dsl-match-all-query"></a>Match All Query</h3>
+<div class="paragraph">
+<p>请查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-match-all-query.html">Match All Query</a> 。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">matchAllQuery();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-full-text-queries"><a class="anchor" href="#java-full-text-queries"></a>Full text queries</h3>
+<div class="paragraph">
+<p>高级全文检索通常在全文本全字段这样的全文查询时使用，邮件的正文就是这样的例如。
+它们了解如何分析所查询的字段，并在查询前将每个字段的 <code>analyzer</code> (或 <code>search_analyzer</code> )应用于查询字符串中。</p>
+</div>
+<div class="paragraph">
+<p>该组中的查询语句包括:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#java-query-dsl-match-query"><code>match</code> query</a></dt>
+<dd>
+<p>执行全文检索的标准查询语句，包括模糊匹配、短语匹配和近似匹配。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-multi-match-query"><code>multi_match</code> query</a></dt>
+<dd>
+<p><code>match</code> query 的多字段版本。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-common-terms-query"><code>common_terms</code> query</a></dt>
+<dd>
+<p>一个更加特殊的查询语句，专门为不常用的词准备。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-query-string-query"><code>query_string</code> query</a></dt>
+<dd>
+<p>支持Lucene的语法，允许在条件中使用 AND|OR|NOT 和单语多字段查询。
+仅供专业用户使用。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-simple-query-string-query"><code>simple_query_string</code></a></dt>
+<dd>
+<p>一个 <code>query_string</code> 语法的的更简单且更健壮版本，适合直接开放给用户。</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-match-query"><a class="anchor" href="#java-query-dsl-match-query"></a>Match Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-match-query.html">Match Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">matchQuery(
+        "name", <i class="conum" data-value="1"></i><b>(1)</b>
+        "kimchy elasticsearch"); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>text</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-multi-match-query"><a class="anchor" href="#java-query-dsl-multi-match-query"></a>Multi Match Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-multi-match-query.html">Multi Match Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">multiMatchQuery(
+        "kimchy elasticsearch", <i class="conum" data-value="1"></i><b>(1)</b>
+        "user", "message"); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>text</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>fields</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-common-terms-query"><a class="anchor" href="#java-query-dsl-common-terms-query"></a>Common Terms Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-common-terms-query.html">Common Terms Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">commonTermsQuery("name", <i class="conum" data-value="1"></i><b>(1)</b>
+                 "kimchy"); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>value</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-query-string-query"><a class="anchor" href="#java-query-dsl-query-string-query"></a>Query String Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-query-string-query.html">Query String Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">queryStringQuery("+kimchy -elasticsearch");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-simple-query-string-query"><a class="anchor" href="#java-query-dsl-simple-query-string-query"></a>Simple Query String Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-simple-query-string-query.html">Simple Query String Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">simpleQueryStringQuery("+kimchy -elasticsearch");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-term-level-queries"><a class="anchor" href="#java-term-level-queries"></a>Term level queries</h3>
+<div class="paragraph">
+<p>尽管 <a href="#java-full-text-queries">full text queries</a> 将在执行之前分析查询语句，
+但 <em>term-level queries</em> 会按照存储在反向索引中的确切词进行操作。</p>
+</div>
+<div class="paragraph">
+<p>这些查询语句通常使用在数字、日期和枚举等结构化数据，而不是全字符串字段。
+当然也允许在分析过程之前使用 low-level 查询语句。</p>
+</div>
+<div class="paragraph">
+<p>这一组中的查询有:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#java-query-dsl-term-query"><code>term</code> query</a></dt>
+<dd>
+<p>检索指定字段包含指定条件的文档。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-terms-query"><code>terms</code> query</a></dt>
+<dd>
+<p>检索指定字段包含指定条件中的任意一个的文档。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-range-query"><code>range</code> query</a></dt>
+<dd>
+<p>检索指定字段包含指定范围内的值（日期、数字或字符串）的文档。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-exists-query"><code>exists</code> query</a></dt>
+<dd>
+<p>检索指定字段是否包含非空值的文档。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-prefix-query"><code>prefix</code> query</a></dt>
+<dd>
+<p>查找指定字段是以指定的条件作为开头的文档。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-wildcard-query"><code>wildcard</code> query</a></dt>
+<dd>
+<p>根据通配符匹配指定字段来检索文档，支持单字符匹配(<code>?</code>)和多字符匹配(<code>*</code>)。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-regexp-query"><code>regexp</code> query</a></dt>
+<dd>
+<p>根据正则表达式匹配指定字段来检索文档。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-fuzzy-query"><code>fuzzy</code> query</a></dt>
+<dd>
+<p>根据模糊相似词检索文档。
+模糊度是根据
+<a href="https://zh.wikipedia.org/wiki/%E8%90%8A%E6%96%87%E6%96%AF%E5%9D%A6%E8%B7%9D%E9%9B%A2">莱文斯坦距离</a>
+1或2来衡量的
+。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-type-query"><code>type</code> query</a></dt>
+<dd>
+<p>根据指定类型检索文档。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-ids-query"><code>ids</code> query</a></dt>
+<dd>
+<p>根据指定类型和id列表检索文档。</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-term-query"><a class="anchor" href="#java-query-dsl-term-query"></a>Term Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-term-query.html">Term Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">termQuery(
+        "name", <i class="conum" data-value="1"></i><b>(1)</b>
+        "kimchy"); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>text</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-terms-query"><a class="anchor" href="#java-query-dsl-terms-query"></a>Terms Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-terms-query.html">Terms Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">termsQuery("tags", <i class="conum" data-value="1"></i><b>(1)</b>
+        "blue", "pill"); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>values</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-range-query"><a class="anchor" href="#java-query-dsl-range-query"></a>Range Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-range-query.html">Range Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">rangeQuery("price") <i class="conum" data-value="1"></i><b>(1)</b>
+    .from(5) <i class="conum" data-value="2"></i><b>(2)</b>
+    .to(10) <i class="conum" data-value="3"></i><b>(3)</b>
+    .includeLower(true) <i class="conum" data-value="4"></i><b>(4)</b>
+    .includeUpper(false);  <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>字段</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>开始</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>结束</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>是否包含最小值</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>是否包含最大值</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// 一种简单的写法是使用 gte(greater than or equal), gt, lt 或 lte(less than or equal)
+rangeQuery("age") <i class="conum" data-value="1"></i><b>(1)</b>
+    .gte("10") <i class="conum" data-value="2"></i><b>(2)</b>
+    .lt("20"); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>等价于 <code>from(10)</code> 和 <code>includeLower(true)</code> 两个条件</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>等价于 <code>to(20)</code> 和 <code>includeUpper(false)</code> 两个条件</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-exists-query"><a class="anchor" href="#java-query-dsl-exists-query"></a>Exists Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-exists-query.html">Exists Query</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">existsQuery("name"); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-prefix-query"><a class="anchor" href="#java-query-dsl-prefix-query"></a>Prefix Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-prefix-query.html">Prefix Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">prefixQuery(
+        "brand", <i class="conum" data-value="1"></i><b>(1)</b>
+        "heine"); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>prefix</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-wildcard-query"><a class="anchor" href="#java-query-dsl-wildcard-query"></a>Wildcard Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-wildcard-query.html">Wildcard Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">wildcardQuery(
+        "user", <i class="conum" data-value="1"></i><b>(1)</b>
+        "k?mch*"); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>字段</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>通配符表达式</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-regexp-query"><a class="anchor" href="#java-query-dsl-regexp-query"></a>Regexp Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-regexp-query.html">Regexp Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">regexpQuery(
+        "name.first", <i class="conum" data-value="1"></i><b>(1)</b>
+        "s.*y"); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>正则表达式</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-fuzzy-query"><a class="anchor" href="#java-query-dsl-fuzzy-query"></a>Fuzzy Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-fuzzy-query.html">Fuzzy Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">fuzzyQuery(
+        "name", <i class="conum" data-value="1"></i><b>(1)</b>
+        "kimchy"); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>text</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-type-query"><a class="anchor" href="#java-query-dsl-type-query"></a>Type Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-type-query.html">Type Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">typeQuery("my_type"); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>type</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-ids-query"><a class="anchor" href="#java-query-dsl-ids-query"></a>Ids Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-ids-query.html">Ids Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">idsQuery("my_type", "type2")
+        .addIds("1", "4", "100");
+
+idsQuery() <i class="conum" data-value="1"></i><b>(1)</b>
+        .addIds("1", "4", "100");</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>type 是可选项</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-compound-queries"><a class="anchor" href="#java-compound-queries"></a>Compound queries</h3>
+<div class="paragraph">
+<p>组合查询可以将其它组合查询，以及其它单独的查询语句合并到一起，并将结果和匹配分数组合起来。
+它可以改变它们的行为，或是将查询转换为filter context。</p>
+</div>
+<div class="paragraph">
+<p>这一组中的查询有：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#java-query-dsl-constant-score-query"><code>constant_score</code> query</a></dt>
+<dd>
+<p>包含其它查询的查询，但却以filter context的形式执行该语句。所有匹配到的文档都会分配相同的 "constant" <code>_score</code> 。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-bool-query"><code>bool</code> query</a></dt>
+<dd>
+<p>使用 <code>must</code>, <code>should</code>, <code>must_not</code>, 或 <code>filter</code> 可以将多个分支或组合查询语句组合到一起。
+其中 <code>must</code> 和 <code>should</code> 条件的得分会合并到一起，这是大多数时候使用的条件；
+而更好的办法是使用 <code>must_not</code> 和 <code>filter</code> ，这样它们会在 filter context 中执行。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-dis-max-query"><code>dis_max</code> query</a></dt>
+<dd>
+<p>一个接受多个查询语句的查询，匹配到任何查询子句的文档都会返回。
+虽然 <code>bool</code> 语句已经将所有匹配结果的得分组合了起来，但 <code>dis_max</code> 的得分却是单条语句匹配的最高得分。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-function-score-query"><code>function_score</code> query</a></dt>
+<dd>
+<p>使用函数修改主查询返回的分数，以考虑流行性、失效性、距离或使用脚本实现的自定义算法等因素。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-boosting-query"><code>boosting</code> query</a></dt>
+<dd>
+<p>查询条件将会分为正匹配和负匹配。 <code>positive</code> （正确）匹配到的文档将会加分，<code>negative</code> （负面）匹配得到的文档将会减分。</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-constant-score-query"><a class="anchor" href="#java-query-dsl-constant-score-query"></a>Constant Score Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-constant-score-query.html">Constant Score Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">constantScoreQuery(
+        termQuery("name","kimchy")) <i class="conum" data-value="1"></i><b>(1)</b>
+    .boost(2.0f); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>your query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>query score</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-bool-query"><a class="anchor" href="#java-query-dsl-bool-query"></a>Bool Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-bool-query.html">Bool Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">boolQuery()
+        .must(termQuery("content", "test1")) <i class="conum" data-value="1"></i><b>(1)</b>
+        .must(termQuery("content", "test4")) <i class="conum" data-value="1"></i><b>(1)</b>
+        .mustNot(termQuery("content", "test2")) <i class="conum" data-value="2"></i><b>(2)</b>
+        .should(termQuery("content", "test3")) <i class="conum" data-value="3"></i><b>(3)</b>
+        .filter(termQuery("content", "test5"));  <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>must query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>must not query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>should query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>绝对匹配，不参与评分。</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-dis-max-query"><a class="anchor" href="#java-query-dsl-dis-max-query"></a>Dis Max Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-dis-max-query.html">Dis Max Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">disMaxQuery()
+        .add(termQuery("name", "kimchy")) <i class="conum" data-value="1"></i><b>(1)</b>
+        .add(termQuery("name", "elasticsearch")) <i class="conum" data-value="2"></i><b>(2)</b>
+        .boost(1.2f) <i class="conum" data-value="3"></i><b>(3)</b>
+        .tieBreaker(0.7f); <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>add your queries</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>add your queries</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>boost factor</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>tie breaker</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-function-score-query"><a class="anchor" href="#java-query-dsl-function-score-query"></a>Function Score Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-function-score-query.html">Function Score Query</a>.</p>
+</div>
+<div class="paragraph">
+<p>想要使用 <code>ScoreFunctionBuilders</code> 只需要在类中引入:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders.*;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">FilterFunctionBuilder[] functions = {
+        new FunctionScoreQueryBuilder.FilterFunctionBuilder(
+                matchQuery("name", "kimchy"), <i class="conum" data-value="1"></i><b>(1)</b>
+                randomFunction()), <i class="conum" data-value="2"></i><b>(2)</b>
+        new FunctionScoreQueryBuilder.FilterFunctionBuilder(
+                exponentialDecayFunction("age", 0L, 1L)) <i class="conum" data-value="3"></i><b>(3)</b>
+};
+functionScoreQuery(functions);</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Add a first function based on a query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>And randomize the score based on a given seed</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Add another function based on the age field</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-boosting-query"><a class="anchor" href="#java-query-dsl-boosting-query"></a>Boosting Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-boosting-query.html">Boosting Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">boostingQuery(
+            termQuery("name","kimchy"), <i class="conum" data-value="1"></i><b>(1)</b>
+            termQuery("name","dadoonet")) <i class="conum" data-value="2"></i><b>(2)</b>
+        .negativeBoost(0.2f); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>query that will promote documents</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>query that will demote documents</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>negative boost</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-joining-queries"><a class="anchor" href="#java-joining-queries"></a>Joining queries</h3>
+<div class="paragraph">
+<p>在Elasticsearch这样的分布式系统中使用SQL风格的关联语句对性能的损耗是非常大的。
+作为替代，Elasticsearch设计了两种支持水平拓展的关联操作。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#java-query-dsl-nested-query"><code>nested</code> query</a></dt>
+<dd>
+<p>文档可能包含 <code>nested</code> 类型的字段。
+这些字段用于索引对象数组，其中每个对象都可以作为独立文档进行查询(使用 <code>nested</code> 查询)。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-has-child-query"><code>has_child</code></a> 和 <a href="#java-query-dsl-has-parent-query"><code>has_parent</code></a> 查询</dt>
+<dd>
+<p>同一索引之中的文档可以存在父子关系。
+<code>has_child</code> 查询会返回子文档匹配的父文档，而 <code>has_parent</code> 查询则会返回父文档匹配的子文档。</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-nested-query"><a class="anchor" href="#java-query-dsl-nested-query"></a>Nested Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-nested-query.html">Nested Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">nestedQuery(
+        "obj1", <i class="conum" data-value="1"></i><b>(1)</b>
+        boolQuery() <i class="conum" data-value="2"></i><b>(2)</b>
+                .must(matchQuery("obj1.name", "blue"))
+                .must(rangeQuery("obj1.count").gt(5)),
+        ScoreMode.Avg); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>嵌套文档的路径</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>查询中使用的所有字段都必须使用完整路径</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>评分模式支持: <code>ScoreMode.Max</code>, <code>ScoreMode.Min</code>, <code>ScoreMode.Total</code>, <code>ScoreMode.Avg</code> 或 <code>ScoreMode.None</code></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-has-child-query"><a class="anchor" href="#java-query-dsl-has-child-query"></a>Has Child Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-has-child-query.html">Has Child Query</a></p>
+</div>
+<div class="paragraph">
+<p>使用 <code>has_child</code> 查询的时候有一点很重要的就是使用 <code>PreBuiltTransportClient</code> 而不是普通的client。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Settings settings = Settings.builder().put("cluster.name", "elasticsearch").build();
+TransportClient client = new PreBuiltTransportClient(settings);
+client.addTransportAddress(new TransportAddress(new InetSocketAddress(InetAddresses.forString("127.0.0.1"), 9300)));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>否则父子链接模块将不会被加载，同样的 <code>transport client</code> 中也不能使用 <code>has_child</code> 查询语句。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">JoinQueryBuilders.hasChildQuery(
+        "blog_tag", <i class="conum" data-value="1"></i><b>(1)</b>
+        termQuery("tag","something"), <i class="conum" data-value="2"></i><b>(2)</b>
+        ScoreMode.None); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>child type to query against</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>评分模式支持: <code>ScoreMode.Avg</code>, <code>ScoreMode.Max</code>, <code>ScoreMode.Min</code>, <code>ScoreMode.None</code> 或 <code>ScoreMode.Total</code></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-has-parent-query"><a class="anchor" href="#java-query-dsl-has-parent-query"></a>Has Parent Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-has-parent-query.html">Has Parent</a></p>
+</div>
+<div class="paragraph">
+<p>使用 <code>has_parent</code> 查询的时候有一点很重要的就是使用 <code>PreBuiltTransportClient</code> 而不是普通的client:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Settings settings = Settings.builder().put("cluster.name", "elasticsearch").build();
+TransportClient client = new PreBuiltTransportClient(settings);
+client.addTransportAddress(new TransportAddress(new InetSocketAddress(InetAddresses.forString("127.0.0.1"), 9300)));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>否则父子链接模块将不会被加载，同样的 <code>transport client</code> 中也不能使用 <code>has_child</code> 查询语句。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">JoinQueryBuilders.hasParentQuery(
+    "blog", <i class="conum" data-value="1"></i><b>(1)</b>
+    termQuery("tag","something"), <i class="conum" data-value="2"></i><b>(2)</b>
+    false); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>parent type to query against</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>是否将父文档匹配分数传递给子文档</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-geo-queries"><a class="anchor" href="#java-geo-queries"></a>Geo queries</h3>
+<div class="paragraph">
+<p>Elasticsearch支持两种类型的地理位置数据：支持经纬度的 <code>geo_point</code> ，以及支持点、线、圆、多边形等的 <code>geo_shape</code> 。</p>
+</div>
+<div class="paragraph">
+<p>该组中的查询语句包括:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#java-query-dsl-geo-shape-query"><code>geo_shape</code></a> 查询</dt>
+<dd>
+<p>可以匹配坐标与指定区域相交、不相交或包含的地理位置。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-geo-bounding-box-query"><code>geo_bounding_box</code></a> 查询</dt>
+<dd>
+<p>可以匹配坐标在矩形区域的地理位置。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-geo-distance-query"><code>geo_distance</code></a> 查询</dt>
+<dd>
+<p>可以查询指定坐标为中心点指定距离内的地理位置。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-geo-polygon-query"><code>geo_polygon</code></a> 查询</dt>
+<dd>
+<p>可以查询坐标在多边形范围内的地理位置。</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-geo-shape-query"><a class="anchor" href="#java-query-dsl-geo-shape-query"></a>GeoShape Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-geo-shape-query.html">Geo Shape Query</a></p>
+</div>
+<div class="paragraph">
+<p>Note: <code>geo_shape</code> 类型使用 <code>Spatial4J</code> 和 <code>JTS</code> 两种依赖。
+因此，必须将 <code>Spatial4J</code> 和 <code>JTS</code> 添加到 classpath中才能使用这种类型:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.locationtech.spatial4j&lt;/groupId&gt;
+    &lt;artifactId&gt;spatial4j&lt;/artifactId&gt;
+    &lt;version&gt;0.7&lt;/version&gt;  <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/dependency&gt;
+
+&lt;dependency&gt;
+    &lt;groupId&gt;org.locationtech.jts&lt;/groupId&gt;
+    &lt;artifactId&gt;jts-core&lt;/artifactId&gt;
+    &lt;version&gt;1.15.0&lt;/version&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;exclusions&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;xerces&lt;/groupId&gt;
+            &lt;artifactId&gt;xercesImpl&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+    &lt;/exclusions&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>在 <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.locationtech.spatial4j%22%20AND%20a%3A%22spatial4j%22">Maven Central</a> 中查看更新</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>在 <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.locationtech.jts%22%20AND%20a%3A%22jts-core%22">Maven Central</a> 中查看更新</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Import ShapeRelation and ShapeBuilder
+import org.elasticsearch.common.geo.ShapeRelation;
+import org.elasticsearch.common.geo.builders.ShapeBuilder;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">GeoShapeQueryBuilder qb = geoShapeQuery(
+        "pin.location", <i class="conum" data-value="1"></i><b>(1)</b>
+        new MultiPointBuilder( <i class="conum" data-value="2"></i><b>(2)</b>
+                new CoordinatesBuilder()
+            .coordinate(0, 0)
+            .coordinate(0, 10)
+            .coordinate(10, 10)
+            .coordinate(10, 0)
+            .coordinate(0, 0)
+            .build()));
+qb.relation(ShapeRelation.WITHIN); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>shape</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>关系可以是 <code>ShapeRelation.CONTAINS</code>, <code>ShapeRelation.WITHIN</code>, <code>ShapeRelation.INTERSECTS</code> 或 <code>ShapeRelation.DISJOINT</code></td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Using pre-indexed shapes
+GeoShapeQueryBuilder qb = geoShapeQuery(
+            "pin.location", <i class="conum" data-value="1"></i><b>(1)</b>
+            "DEU", <i class="conum" data-value="2"></i><b>(2)</b>
+            "countries"); <i class="conum" data-value="3"></i><b>(3)</b>
+qb.relation(ShapeRelation.WITHIN) <i class="conum" data-value="4"></i><b>(4)</b>
+    .indexedShapeIndex("shapes") <i class="conum" data-value="5"></i><b>(5)</b>
+    .indexedShapePath("location");  <i class="conum" data-value="6"></i><b>(6)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>包含pre-indexed形状的文档ID</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>包含pre-indexed形状的index type</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>relation</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>包含pre-indexed形状的index名，默认是shapes</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>包含pre-indexed形状的字段名，默认是&#8217;shape'</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-geo-bounding-box-query"><a class="anchor" href="#java-query-dsl-geo-bounding-box-query"></a>Geo Bounding Box Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-geo-bounding-box-query.html">Geo Bounding Box Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">geoBoundingBoxQuery("pin.location") <i class="conum" data-value="1"></i><b>(1)</b>
+    .setCorners(40.73, -74.1, <i class="conum" data-value="2"></i><b>(2)</b>
+                40.717, -73.99); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>矩形左上角的坐标点</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>矩形右上角的坐标点</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-geo-distance-query"><a class="anchor" href="#java-query-dsl-geo-distance-query"></a>Geo Distance Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-geo-distance-query.html">Geo Distance Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">geoDistanceQuery("pin.location") <i class="conum" data-value="1"></i><b>(1)</b>
+    .point(40, -70) <i class="conum" data-value="2"></i><b>(2)</b>
+    .distance(200, DistanceUnit.KILOMETERS); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>中心点坐标</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>和中心点的距离</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-geo-polygon-query"><a class="anchor" href="#java-query-dsl-geo-polygon-query"></a>Geo Polygon Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-geo-polygon-query.html">Geo Polygon Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">List&lt;GeoPoint&gt; points = new ArrayList&lt;GeoPoint&gt;(); <i class="conum" data-value="1"></i><b>(1)</b>
+points.add(new GeoPoint(40, -70));
+points.add(new GeoPoint(30, -80));
+points.add(new GeoPoint(20, -90));
+geoPolygonQuery("pin.location", points); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>添加落在多边形上的点的坐标</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>通过字段和点初始化查询语句</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-specialized-queries"><a class="anchor" href="#java-specialized-queries"></a>Specialized queries</h3>
+<div class="paragraph">
+<p>该组查询中包含以下这些不适用于其它查询的语句:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#java-query-dsl-mlt-query"><code>more_like_this</code> query</a></dt>
+<dd>
+<p>这个查询语句可以检索出和指定的文本、文档或文档集合相似的文档。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-script-query"><code>script</code> query</a></dt>
+<dd>
+<p>这个查询语句可以将脚本作为过滤器来适用。请查看 <a href="#java-query-dsl-function-score-query"><code>function_score</code> query</a> 。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-percolate-query"><code>percolate</code> query</a></dt>
+<dd>
+<p>This query finds percolator queries based on documents.</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-wrapper-query"><code>wrapper</code> query</a></dt>
+<dd>
+<p>可以接受Json和Yaml类型语句的查询。</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-mlt-query"><a class="anchor" href="#java-query-dsl-mlt-query"></a>More Like This Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-mlt-query.html">More Like This Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String[] fields = {"name.first", "name.last"}; <i class="conum" data-value="1"></i><b>(1)</b>
+String[] texts = {"text like this one"}; <i class="conum" data-value="2"></i><b>(2)</b>
+
+moreLikeThisQuery(fields, texts, null)
+    .minTermFreq(1) <i class="conum" data-value="3"></i><b>(3)</b>
+    .maxQueryTerms(12); <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>fields</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>text</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>忽略阈值</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>生成语句条件的最大字数</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-script-query"><a class="anchor" href="#java-query-dsl-script-query"></a>Script Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-script-query.html">Script Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">scriptQuery(
+        new Script("doc['num1'].value &gt; 1") <i class="conum" data-value="1"></i><b>(1)</b>
+    );</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>定义脚本</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>如果数据节点上已经存储了脚本，例如叫 <code>myscript.painless</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-painless hljs" data-lang="painless">doc['num1'].value &gt; params.param1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>你就可以这样使用它:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Map&lt;String, Object&gt; parameters = new HashMap&lt;&gt;();
+parameters.put("param1", 5);
+scriptQuery(new Script(
+        ScriptType.STORED, <i class="conum" data-value="1"></i><b>(1)</b>
+        null, <i class="conum" data-value="2"></i><b>(2)</b>
+        "myscript", <i class="conum" data-value="3"></i><b>(3)</b>
+        singletonMap("param1", 5))); <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Script type: either <code>ScriptType.FILE</code>, <code>ScriptType.INLINE</code> or <code>ScriptType.INDEXED</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Scripting engine</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Script name</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Parameters as a <code>Map&lt;String, Object&gt;</code></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-percolate-query"><a class="anchor" href="#java-query-percolate-query"></a>Percolate Query</h4>
+<div class="paragraph">
+<p>查看:
+ * <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-percolate-query.html">Percolate Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Settings settings = Settings.builder().put("cluster.name", "elasticsearch").build();
+TransportClient client = new PreBuiltTransportClient(settings);
+client.addTransportAddress(new TransportAddress(new InetSocketAddress(InetAddresses.forString("127.0.0.1"), 9300)));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>在使用 <code>percolate</code> 查询之前，应该添加 <code>percolate</code> 的映射，并且应该对包含 <code>percolate</code> 查询的文档建立索引:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// create an index with a percolator field with the name 'query':
+client.admin().indices().prepareCreate("myIndexName")
+                        .addMapping("_doc", "query", "type=percolator", "content", "type=text")
+                        .get();
+
+//This is the query we're registering in the percolator
+QueryBuilder qb = termQuery("content", "amazing");
+
+//Index the query = register it in the percolator
+client.prepareIndex("myIndexName", "_doc", "myDesignatedQueryName")
+    .setSource(jsonBuilder()
+        .startObject()
+            .field("query", qb) // Register the query
+        .endObject())
+    .setRefreshPolicy(RefreshPolicy.IMMEDIATE) // Needed when the query shall be available immediately
+    .get();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>查询语句会在 <strong>myDesignatedQueryName</strong> 的下面建立索引。</p>
+</div>
+<div class="paragraph">
+<p>为了对照已注册的查询语句检查文档，可以使用如下代码:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//Build a document to check against the percolator
+XContentBuilder docBuilder = XContentFactory.jsonBuilder().startObject();
+docBuilder.field("content", "This is amazing!");
+docBuilder.endObject(); //End of the JSON root object
+
+PercolateQueryBuilder percolateQuery = new PercolateQueryBuilder("query", "_doc", BytesReference.bytes(docBuilder));
+
+// Percolate, by executing the percolator query in the query dsl:
+SearchResponse response = client().prepareSearch("myIndexName")
+        .setQuery(percolateQuery))
+        .get();
+//Iterate over the results
+for(SearchHit hit : response.getHits()) {
+    // Percolator queries as hit
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-wrapper-query"><a class="anchor" href="#java-query-dsl-wrapper-query"></a>Wrapper Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-wrapper-query.html">Wrapper Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String query = "{\"term\": {\"user\": \"kimchy\"}}"; <i class="conum" data-value="1"></i><b>(1)</b>
+wrapperQuery(query);</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>query defined as query builder</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-span-queries"><a class="anchor" href="#java-span-queries"></a>Span queries</h3>
+<div class="paragraph">
+<p>Span queries 是一种低级别的位置查询语句，它提供对排序和相似度更专业的控制。
+通常用在法律文件或专利这样非常具体的查询。</p>
+</div>
+<div class="paragraph">
+<p>Span queries不能和non-span queries(<code>span_multi</code> query 是个例外)混合使用。</p>
+</div>
+<div class="paragraph">
+<p>该组中包括以下查询:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#java-query-dsl-span-term-query"><code>span_term</code> query</a></dt>
+<dd>
+<p>等同于 <a href="#java-query-dsl-term-query"><code>term</code> query</a> ，但用于其它跨度查询。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-span-multi-term-query"><code>span_multi</code> query</a></dt>
+<dd>
+<p>包括 <a href="#java-query-dsl-term-query"><code>term</code></a>, <a href="#java-query-dsl-range-query"><code>range</code></a>,
+<a href="#java-query-dsl-prefix-query"><code>prefix</code></a>, <a href="#java-query-dsl-wildcard-query"><code>wildcard</code></a>,
+<a href="#java-query-dsl-regexp-query"><code>regexp</code></a>, 或 <a href="#java-query-dsl-fuzzy-query"><code>fuzzy</code></a> 这些查询语句。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-span-first-query"><code>span_first</code> query</a></dt>
+<dd>
+<p>接收另一个 span query，它的匹配项必须出现在该字段的前 N 个位置。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-span-near-query"><code>span_near</code> query</a></dt>
+<dd>
+<p>接受在指定距离内其它的span queries，并且可以是以相同的顺序。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-span-or-query"><code>span_or</code> query</a></dt>
+<dd>
+<p>将多个span queries组合起来，并返回任何匹配的文档。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-span-not-query"><code>span_not</code> query</a></dt>
+<dd>
+<p>包含其它span query，并排除匹配的文档。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-span-containing-query"><code>span_containing</code> query</a></dt>
+<dd>
+<p>接受一个span queries列表，但只返回两个条件都匹配的文档。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-span-within-query"><code>span_within</code> query</a></dt>
+<dd>
+<p>只要span query落在由其它span queries中，就会返回span query的结果。</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-span-term-query"><a class="anchor" href="#java-query-dsl-span-term-query"></a>Span Term Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-span-term-query.html">Span Term Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">spanTermQuery(
+        "user",  <i class="conum" data-value="1"></i><b>(1)</b>
+        "kimchy");  <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>value</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-span-multi-term-query"><a class="anchor" href="#java-query-dsl-span-multi-term-query"></a>Span Multi Term Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-span-multi-term-query.html">Span Multi Term Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">spanMultiTermQueryBuilder(
+        prefixQuery("user", "ki")); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>支持任何继承 <code>MultiTermQueryBuilder</code> 的类，比如 <code>FuzzyQueryBuilder</code> ,
+<code>PrefixQueryBuilder</code>, <code>RangeQueryBuilder</code>, <code>RegexpQueryBuilder</code> 或 <code>WildcardQueryBuilder</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-span-first-query"><a class="anchor" href="#java-query-dsl-span-first-query"></a>Span First Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-span-first-query.html">Span First Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">spanFirstQuery(
+        spanTermQuery("user", "kimchy"), <i class="conum" data-value="1"></i><b>(1)</b>
+        3 <i class="conum" data-value="2"></i><b>(2)</b>
+    );</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>最大结束点位置</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-span-near-query"><a class="anchor" href="#java-query-dsl-span-near-query"></a>Span Near Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-span-near-query.html">Span Near Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">spanNearQuery(
+        spanTermQuery("field","value1"), <i class="conum" data-value="1"></i><b>(1)</b>
+        12) <i class="conum" data-value="2"></i><b>(2)</b>
+            .addClause(spanTermQuery("field","value2")) <i class="conum" data-value="3"></i><b>(3)</b>
+            .addClause(spanTermQuery("field","value3")) <i class="conum" data-value="4"></i><b>(4)</b>
+            .inOrder(false); <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>span queries 条件</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>不匹配的最大数量</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>span queries 条件</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>span queries 条件</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>匹配之后是否需要排序</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-span-or-query"><a class="anchor" href="#java-query-dsl-span-or-query"></a>Span Or Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-span-or-query.html">Span Or Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">spanOrQuery(spanTermQuery("field","value1")) <i class="conum" data-value="1"></i><b>(1)</b>
+    .addClause(spanTermQuery("field","value2")) <i class="conum" data-value="2"></i><b>(2)</b>
+    .addClause(spanTermQuery("field","value3")); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>span queries 条件</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-span-not-query"><a class="anchor" href="#java-query-dsl-span-not-query"></a>Span Not Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-span-not-query.html">Span Not Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">spanNotQuery(
+        spanTermQuery("field","value1"), <i class="conum" data-value="1"></i><b>(1)</b>
+        spanTermQuery("field","value2")); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>需要进行过滤的 span query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>需要排除的 span query</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-span-containing-query"><a class="anchor" href="#java-query-dsl-span-containing-query"></a>Span Containing Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-span-containing-query.html">Span Containing Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">spanContainingQuery(
+        spanNearQuery(spanTermQuery("field1","bar"), 5) <i class="conum" data-value="1"></i><b>(1)</b>
+            .addClause(spanTermQuery("field1","baz"))
+            .inOrder(true),
+        spanTermQuery("field1","foo")); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>大</code> 的部分</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>小</code> 的部分</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-span-within-query"><a class="anchor" href="#java-query-dsl-span-within-query"></a>Span Within Query</h4>
+<div class="paragraph">
+<p>See <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-span-within-query.html">Span Within Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">spanWithinQuery(
+        spanNearQuery(spanTermQuery("field1", "bar"), 5) <i class="conum" data-value="1"></i><b>(1)</b>
+            .addClause(spanTermQuery("field1", "baz"))
+            .inOrder(true),
+        spanTermQuery("field1", "foo")); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>大</code> 的部分</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>小</code> 的部分</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

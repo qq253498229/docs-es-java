@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="7.16.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../../introduction.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../introduction.html">介绍</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../installation.html">安装</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../connecting.html">连接</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../migrate.html">从 High Level Rest Client 迁移到全新的库</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../api-conventions.html">API 规约</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Java 底层 REST 客户端</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="usage.html">快速入门</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">常用配置</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sniffer.html">嗅探</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../license.html">许可证</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">7.16.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../../introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../../6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../../6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../introduction.html">ES Java API Client</a></li>
+    <li><a href="index.html">Java 底层 REST 客户端</a></li>
+    <li><a href="usage.html">快速入门</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">7.16.0</button>
+  <div class="version-menu">
+    <a class="version is-current" href="usage.html">7.16.0</a>
+    <a class="version is-missing" href="../../../../6.8.0/preface.html">6.8.0</a>
+    <a class="version is-missing" href="../../../../6.2.2/1Preface/readme.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v7.16/modules/ROOT/pages/docs/java-rest/low-level/usage.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="java-rest-low-usage"><a class="anchor" href="#java-rest-low-usage"></a>快速入门</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>本章将向您介绍，如何快速的上手底层REST客户端，从获取artifact并在应用中使用它。</p>
+</div>
+<div class="sect2">
+<h3 id="java-rest-low-javadoc"><a class="anchor" href="#java-rest-low-javadoc"></a>Javadoc</h3>
+<div class="paragraph">
+<p>底层REST客户端的javadoc可以在这里找到 <a href="https://artifacts.elastic.co/javadoc/org/elasticsearch/client/elasticsearch-rest-client/7.16.3/index.html。" class="bare">https://artifacts.elastic.co/javadoc/org/elasticsearch/client/elasticsearch-rest-client/7.16.3/index.html。</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-rest-low-usage-maven"><a class="anchor" href="#java-rest-low-usage-maven"></a>Maven仓库</h3>
+<div class="paragraph">
+<p>底层Java REST客户端已经托管在
+<a href="https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.elasticsearch.client%22">Maven中央仓库</a>
+中。最低支持的Java版本为 <code>1.8</code>。</p>
+</div>
+<div class="paragraph">
+<p>底层REST客户端的发布周期与Elasticsearch相同。
+客户端版本根据Elasticsearch版本而来，第一个版本是 <code>5.0.0-alpha4</code>。
+客户端和它正在进行通讯的Elasticsearch版本之间没有关系。
+底层REST客户端与Elasticsearch的所有版本都兼容。</p>
+</div>
+<div class="paragraph">
+<p>如果您正在寻找SNAPSHOT版本，可以在 <a href="https://snapshots.elastic.co/maven/">Elastic Maven Snapshot仓库</a> 中找到。</p>
+</div>
+<div class="sect3">
+<h4 id="java-rest-low-usage-maven-maven"><a class="anchor" href="#java-rest-low-usage-maven-maven"></a>Maven 配置</h4>
+<div class="paragraph">
+<p>下面是在使用maven作为依赖管理器时的配置，将下面的内容添加到 <code>pom.xml</code> 文件中：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.elasticsearch.client&lt;/groupId&gt;
+    &lt;artifactId&gt;elasticsearch-rest-client&lt;/artifactId&gt;
+    &lt;version&gt;7.16.2&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-rest-low-usage-maven-gradle"><a class="anchor" href="#java-rest-low-usage-maven-gradle"></a>Gradle 配置</h4>
+<div class="paragraph">
+<p>如果您使用gradle作为依赖管理器的话，可以将下面的内容添加到 <code>build.gradle</code> 文件中：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
+    compile 'org.elasticsearch.client:elasticsearch-rest-client:7.16.2'
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-rest-low-usage-dependencies"><a class="anchor" href="#java-rest-low-usage-dependencies"></a>依赖</h3>
+<div class="paragraph">
+<p>底层Java REST客户端内部使用 <a href="https://hc.apache.org/httpcomponents-asyncclient-dev/">Apache Http Async Client</a> 来发送http请求。
+它会依赖下面这些包，也就是异步http客户端以及它自身传递过来的依赖项：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>org.apache.httpcomponents:httpasyncclient</p>
+</li>
+<li>
+<p>org.apache.httpcomponents:httpcore-nio</p>
+</li>
+<li>
+<p>org.apache.httpcomponents:httpclient</p>
+</li>
+<li>
+<p>org.apache.httpcomponents:httpcore</p>
+</li>
+<li>
+<p>commons-codec:commons-codec</p>
+</li>
+<li>
+<p>commons-logging:commons-logging</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-rest-low-usage-shading"><a class="anchor" href="#java-rest-low-usage-shading"></a>Shading</h3>
+<div class="paragraph">
+<p>为了防止版本冲突，可以对依赖进行shade处理，然后将其打包到单独的jar包中（有时称其为 "uber JAR" 或 "fat JAR"）。
+对依赖进行shade处理包括获取它的内容（资源文件以及java class文件）然后重命名后将其放入底层Java REST客户端相同的JAR包里。
+通过Gradle以及Maven的第三方插件都可以进行shade处理。</p>
+</div>
+<div class="paragraph">
+<p>需要注意的是，对JAR包进行的shade处理也有影响。比如，对Commons Logging进行shade处理，意味着第三方后台日志也需要进行shade处理。</p>
+</div>
+<div class="sect3">
+<h4 id="java-rest-low-usage-shading-maven"><a class="anchor" href="#java-rest-low-usage-shading-maven"></a>Maven 配置</h4>
+<div class="paragraph">
+<p>这里是一个使用maven时的
+<a href="https://maven.apache.org/plugins/maven-shade-plugin/index.html">Shade</a>
+插件配置，将下面的内容添加到 <code>pom.xml</code> 文件中：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.1.0&lt;/version&gt;
+            &lt;executions&gt;
+                &lt;execution&gt;
+                    &lt;phase&gt;package&lt;/phase&gt;
+                    &lt;goals&gt;&lt;goal&gt;shade&lt;/goal&gt;&lt;/goals&gt;
+                    &lt;configuration&gt;
+                        &lt;relocations&gt;
+                            &lt;relocation&gt;
+                                &lt;pattern&gt;org.apache.http&lt;/pattern&gt;
+                                &lt;shadedPattern&gt;hidden.org.apache.http&lt;/shadedPattern&gt;
+                            &lt;/relocation&gt;
+                            &lt;relocation&gt;
+                                &lt;pattern&gt;org.apache.logging&lt;/pattern&gt;
+                                &lt;shadedPattern&gt;hidden.org.apache.logging&lt;/shadedPattern&gt;
+                            &lt;/relocation&gt;
+                            &lt;relocation&gt;
+                                &lt;pattern&gt;org.apache.commons.codec&lt;/pattern&gt;
+                                &lt;shadedPattern&gt;hidden.org.apache.commons.codec&lt;/shadedPattern&gt;
+                            &lt;/relocation&gt;
+                            &lt;relocation&gt;
+                                &lt;pattern&gt;org.apache.commons.logging&lt;/pattern&gt;
+                                &lt;shadedPattern&gt;hidden.org.apache.commons.logging&lt;/shadedPattern&gt;
+                            &lt;/relocation&gt;
+                        &lt;/relocations&gt;
+                    &lt;/configuration&gt;
+                &lt;/execution&gt;
+            &lt;/executions&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-rest-low-usage-shading-gradle"><a class="anchor" href="#java-rest-low-usage-shading-gradle"></a>Gradle 配置</h4>
+<div class="paragraph">
+<p>这里是一个使用gradle时的
+<a href="https://github.com/johnrengelman/shadow">ShadowJar</a>
+插件配置，将下面的内容添加到 <code>build.gradle</code> 文件中：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">shadowJar {
+    relocate 'org.apache.http', 'hidden.org.apache.http'
+    relocate 'org.apache.logging', 'hidden.org.apache.logging'
+    relocate 'org.apache.commons.codec', 'hidden.org.apache.commons.codec'
+    relocate 'org.apache.commons.logging', 'hidden.org.apache.commons.logging'
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-rest-low-usage-initialization"><a class="anchor" href="#java-rest-low-usage-initialization"></a>初始化</h3>
+<div class="paragraph">
+<p><code>RestClient</code> 实例可以通过其对应的 <code>RestClientBuilder</code> 构建，使用 <code>RestClient#builder(HttpHost&#8230;&#8203;)</code> 静态方法即可。
+仅需要与之进行通讯的主机地址作为参数，以
+<a href="https://hc.apache.org/httpcomponents-core-ga/httpcore/apidocs/org/apache/http/HttpHost.html">HttpHost</a>
+实例来提供，如下所示：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RestClient restClient = RestClient.builder(
+    new HttpHost("localhost", 9200, "http"),
+    new HttpHost("localhost", 9201, "http")).build();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>RestClient</code> 类是县城安全的，理想情况下它的生命周期应该与使用它的应用相同。
+在你不再使用的时候，一定要及时关闭，这样才能释放它所占用的系统资源、底层http客户端实例及其线程。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">restClient.close();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>RestClientBuilder</code> 同时允许在构建 <code>RestClient</code> 实例的时候，配置下列可选参数：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200, "http"));
+Header[] defaultHeaders = new Header[]{new BasicHeader("header", "value")};
+builder.setDefaultHeaders(defaultHeaders); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>针对所有请求设置默认的请求头，避免在每一个请求中手动的设置它们</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RestClientBuilder builder = RestClient.builder(
+        new HttpHost("localhost", 9200, "http"));
+builder.setFailureListener(new RestClient.FailureListener() {
+    @Override
+    public void onFailure(Node node) {
+        <i class="conum" data-value="1"></i><b>(1)</b>
+    }
+});</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>设置一个监听器，在节点每次出现故障时收到通知，并做出相应的处理。需要启用故障嗅探功能。</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200, "http"));
+builder.setNodeSelector(NodeSelector.SKIP_DEDICATED_MASTERS); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>设置节点选择器来过滤客户端将要发送请求的节点，也包括客户端本身的节点。在嗅探功能开启时，这会有助于避免向主节点发送请求。默认情况下，客户端会向已配置的所有节点发送请求。</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RestClientBuilder builder = RestClient.builder(
+        new HttpHost("localhost", 9200, "http"));
+builder.setRequestConfigCallback(
+    new RestClientBuilder.RequestConfigCallback() {
+        @Override
+        public RequestConfig.Builder customizeRequestConfig(
+                RequestConfig.Builder requestConfigBuilder) {
+            return requestConfigBuilder.setSocketTimeout(10000); <i class="conum" data-value="1"></i><b>(1)</b>
+        }
+    });</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>设置针对默认请求配置修改后的回调函数（例如请求超时、身份认证、或者是其它在 <a href="https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/client/config/RequestConfig.Builder.html"><code>org.apache.http.client.config.RequestConfig.Builder</code></a> 中允许设置的值）</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200, "http"));
+builder.setHttpClientConfigCallback(new HttpClientConfigCallback() {
+        @Override
+        public HttpAsyncClientBuilder customizeHttpClient(
+                HttpAsyncClientBuilder httpClientBuilder) {
+            return httpClientBuilder.setProxy(
+                new HttpHost("proxy", 9000, "http"));  <i class="conum" data-value="1"></i><b>(1)</b>
+        }
+    });</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>设置针对http客户端配置修改后的回调函数（例如ssl的加密，或者是其它在 <a href="https://hc.apache.org/httpcomponents-asyncclient-dev/httpasyncclient/apidocs/org/apache/http/impl/nio/client/HttpAsyncClientBuilder.html"><code>org.apache.http.impl.nio.client.HttpAsyncClientBuilder</code></a> 中允许设置的值）</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-rest-low-usage-requests"><a class="anchor" href="#java-rest-low-usage-requests"></a>执行请求</h3>
+<div class="paragraph">
+<p>在 <code>RestClient</code> 被创建后，可以通过执行 <code>performRequest</code> 或 <code>performRequestAsync</code> 方法发送请求。
+<code>performRequest</code> 是同步的，当请求成功时会阻塞线程并返回 <code>Response</code>，当请求失败的时候会抛出异常。
+而 <code>performRequestAsync</code> 是异步的，可以提前传入一个 <code>ResponseListener</code> 参数，
+在请求成功后会用 <code>Response</code> 作为参数调用该函数，在失败后会用 <code>Exception</code> 作为参数调用。</p>
+</div>
+<div class="paragraph">
+<p>这是同步执行的代码：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Request request = new Request(
+    "GET",  <i class="conum" data-value="1"></i><b>(1)</b>
+    "/");   <i class="conum" data-value="2"></i><b>(2)</b>
+Response response = restClient.performRequest(request);</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>HTTP请求类型 (<code>GET</code>, <code>POST</code>, <code>HEAD</code>, 等等)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>服务器地址</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>然后这是异步的：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Request request = new Request(
+    "GET",  <i class="conum" data-value="1"></i><b>(1)</b>
+    "/");   <i class="conum" data-value="2"></i><b>(2)</b>
+Cancellable cancellable = restClient.performRequestAsync(request,
+    new ResponseListener() {
+        @Override
+        public void onSuccess(Response response) {
+            <i class="conum" data-value="3"></i><b>(3)</b>
+        }
+
+        @Override
+        public void onFailure(Exception exception) {
+            <i class="conum" data-value="4"></i><b>(4)</b>
+        }
+});</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>HTTP请求类型 (<code>GET</code>, <code>POST</code>, <code>HEAD</code>, 等等)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>服务器地址</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>响应处理</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>失败处理</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>你可以像这样向请求对象中添加参数：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">request.addParameter("pretty", "true");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>你可以像这样将请求参数设置为任意的 <code>HttpEntity</code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">request.setEntity(new NStringEntity(
+        "{\"json\":\"text\"}",
+        ContentType.APPLICATION_JSON));</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+为 <code>HttpEntity</code> 指定 <code>ContentType</code> 很重要，因为在设置请求头的时候会用到它，这样 Elasticsearch 才能正确的进行解析。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>你也可以将其设置成 <code>String</code> 类型，因为json的默认 <code>ContentType</code> 是 <code>application/json</code>。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">request.setJsonEntity("{\"json\":\"text\"}");</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-rest-low-usage-request-options"><a class="anchor" href="#java-rest-low-usage-request-options"></a>请求的可选配置</h4>
+<div class="paragraph">
+<p><code>RequestOptions</code> 类会将请求的部分内容保存下来，这些内容可以在同一应用下的多个请求之间共享。
+可以创建一个单例并在所有请求之间共享它：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private static final RequestOptions COMMON_OPTIONS;
+static {
+    RequestOptions.Builder builder = RequestOptions.DEFAULT.toBuilder();
+    builder.addHeader("Authorization", "Bearer " + TOKEN); <i class="conum" data-value="1"></i><b>(1)</b>
+    builder.setHttpAsyncResponseConsumerFactory(           <i class="conum" data-value="2"></i><b>(2)</b>
+        new HttpAsyncResponseConsumerFactory
+            .HeapBufferedResponseConsumerFactory(30 * 1024 * 1024 * 1024));
+    COMMON_OPTIONS = builder.build();
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>为所有请求统一的添加headers</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>定义响应的消费者</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><code>addHeader</code> 用于身份授权所需的headers，还有在Elasticsearch之前设置代理。
+这里不用设置 <code>Content-Type</code>，因为客户端会自动从 <code>HttpEntity</code> 中读取。</p>
+</div>
+<div class="paragraph">
+<p>你可以设置 <code>NodeSelector</code> 来控制哪些节点会接受哪些请求。
+推荐使用 <code>NodeSelector.SKIP_DEDICATED_MASTERS</code>。</p>
+</div>
+<div class="paragraph">
+<p>你还可以为异步响应的缓存来自定义消费者。
+默认情况下，消费者会对JVM堆上100MB大小响应进行缓存。
+如果响应超过了这个限制，则请求就会失败。
+当然，如果在你的环境中不允许像上面的示例（30G缓存）一样设置的话，你也可以降低这个最大值。</p>
+</div>
+<div class="paragraph">
+<p>在创建单例后，你就可以在请求的时候使用它了：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">request.setOptions(COMMON_OPTIONS);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>你也可以根据每个请求自定义这些选项。
+例如，下面就是一个添加header的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RequestOptions.Builder options = COMMON_OPTIONS.toBuilder();
+options.addHeader("cats", "knock things off of other things");
+request.setOptions(options);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_多个异步操作的并行处理"><a class="anchor" href="#_多个异步操作的并行处理"></a>多个异步操作的并行处理</h4>
+<div class="paragraph">
+<p>客户端更愿意并行的处理多个操作。
+下面的示例就并行的对很多文档进行索引。
+在真实项目中，你可以需要使用 <code>_bulk</code> API 替换它，这个例子仅仅是用来展示的。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">final CountDownLatch latch = new CountDownLatch(documents.length);
+for (int i = 0; i &lt; documents.length; i++) {
+    Request request = new Request("PUT", "/posts/doc/" + i);
+    //let's assume that the documents are stored in an HttpEntity array
+    request.setEntity(documents[i]);
+    restClient.performRequestAsync(
+            request,
+            new ResponseListener() {
+                @Override
+                public void onSuccess(Response response) {
+                    <i class="conum" data-value="1"></i><b>(1)</b>
+                    latch.countDown();
+                }
+
+                @Override
+                public void onFailure(Exception exception) {
+                    <i class="conum" data-value="2"></i><b>(2)</b>
+                    latch.countDown();
+                }
+            }
+    );
+}
+latch.await();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>处理返回的响应</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>处理由于通信异常，或者是响应码异常而返回的错误</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_取消异步请求"><a class="anchor" href="#_取消异步请求"></a>取消异步请求</h4>
+<div class="paragraph">
+<p><code>performRequestAsync</code> 方法会返回一个 <code>Cancellable</code>（可以取消）的对象，它会暴露一个名为 <code>cancel</code> 的方法。
+调用这个方法可以取消正在进行的请求。
+取消请求操作会在底层http客户端中取消http请求。
+而在服务器端，这一步操作不会自动地转换为取消操作，也就是说还需要通过API具体手动实现。</p>
+</div>
+<div class="paragraph">
+<p><code>Cancellable</code> 的实例是可选项，如果不需要的话，也可以忽略它，这不会影响安全。
+一个典型用例就是将它与类似 Rx Java 或者是 Kotlin 中的 <code>suspendCancellableCoRoutine</code> 一起使用。
+取消不再需要的请求可以避免 Elasticsearch 进行不必要的负担。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Request request = new Request("GET", "/posts/_search");
+Cancellable cancellable = restClient.performRequestAsync(
+    request,
+    new ResponseListener() {
+        @Override
+        public void onSuccess(Response response) {
+            <i class="conum" data-value="1"></i><b>(1)</b>
+        }
+
+        @Override
+        public void onFailure(Exception exception) {
+            <i class="conum" data-value="2"></i><b>(2)</b>
+        }
+    }
+);
+cancellable.cancel();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>处理返回的响应，防止在请求被取消之前就已经完成</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>处理返回的异常，很大可能是取消请求所引起的 <code>CancellationException</code></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-rest-low-usage-responses"><a class="anchor" href="#java-rest-low-usage-responses"></a>读取响应</h3>
+<div class="paragraph">
+<p><code>Response</code> 对象是执行同步 <code>performRequest</code> 方法或者是作为 <code>ResponseListener#onSuccess(Response)</code> 的参数所返回的，
+其中包含http客户端以及一些额外的信息。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Response response = restClient.performRequest(new Request("GET", "/"));
+RequestLine requestLine = response.getRequestLine(); <i class="conum" data-value="1"></i><b>(1)</b>
+HttpHost host = response.getHost(); <i class="conum" data-value="2"></i><b>(2)</b>
+int statusCode = response.getStatusLine().getStatusCode(); <i class="conum" data-value="3"></i><b>(3)</b>
+Header[] headers = response.getHeaders(); <i class="conum" data-value="4"></i><b>(4)</b>
+String responseBody = EntityUtils.toString(response.getEntity()); <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>关于已经执行的请求信息</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>响应返回的Host</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>响应状态行，你可以从中查看状态码</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>响应headers，也可以通过 <code>getHeader(String)</code> 方法根据header的名字查看</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>响应体被封装在 <a href="https://hc.apache.org/httpcomponents-core-ga/httpcore/apidocs/org/apache/http/HttpEntity.html"><code>org.apache.http.HttpEntity</code></a> 对象中</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>在执行请求的过程中，以下情况会抛出异常（或者是在 <code>ResponseListener#onFailure(Exception)</code> 中以参数的形式接受到）：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>IOException</code></dt>
+<dd>
+<p>通信问题 (例如 SocketTimeoutException)</p>
+</dd>
+<dt class="hdlist1"><code>ResponseException</code></dt>
+<dd>
+<p>接受到响应信息，但是状态码提示错误（非 <code>2xx</code>）。<code>ResponseException</code> 异常是从有效http响应中得到的，因此其中可以获取返回的 <code>Response</code> 对象，让你读取返回的响应信息。</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+对于 <code>404</code> 状态码的 <code>HEAD</code> 请求是 <strong>不会</strong> 抛出 <code>ResponseException</code> 异常的，因为这是一个预期的 <code>HEAD</code> 响应，只不过表示未找到资源。
+其它所有HTTP方法（比如 <code>GET</code>）针对 <code>404</code> 状态码的响应都会抛出 <code>ResponseException</code> 异常，除非使用 <code>ignore</code> 参数将 <code>404</code> 排除在外了。
+<code>ignore</code> 是一个特殊的客户端参数，它不会发送到 Elasticsearch，并且包含一个以逗号分割的错误状态码列表。
+它可以控制是否将某些错误状态码视为预期响应，而不是抛出异常。
+例如，有时候一些get api在返回 <code>404</code> 状态码的时候，代表这没有找到该文档，
+这时的响应体中不包含错误信息，而是正常返回的get api响应，只不过因为没有找到而没有带上文档。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>请注意，底层客户端不会暴露任何对json的构造以及解析工具。
+用户可以自由的选择他们喜欢的库来实现。</p>
+</div>
+<div class="paragraph">
+<p>底层的Apache Async Http Client根据不同的 <a href="https://hc.apache.org/httpcomponents-core-ga/httpcore/apidocs/org/apache/http/HttpEntity.html"><code>org.apache.http.HttpEntity</code></a> 实现而提供不同格式（流、字节数组、字符串等）的请求体。
+至于读取响应体，<code>HttpEntity#getContent</code> 方法可以非常方便的从之前返回的缓存响应体中读取 <code>InputStream</code>。
+作为替代方案，可以提供一个自定义的 <a href="https://hc.apache.org/httpcomponents-core-ga/httpcore-nio/apidocs/org/apache/http/nio/protocol/HttpAsyncResponseConsumer.html"><code>org.apache.http.nio.protocol.HttpAsyncResponseConsumer</code></a> 用来控制字节的读取和缓冲方式。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="java-rest-low-usage-logging"><a class="anchor" href="#java-rest-low-usage-logging"></a>日志</h3>
+<div class="paragraph">
+<p>Java REST 客户端使用的日志库和 Apache Async Http Client 使用的相同，都是 <a href="https://commons.apache.org/proper/commons-logging/">Apache Commons Logging</a>，同时它还支持许多流行的日志实现方案。
+启用Jar包中包含的日志，其中 <code>org.elasticsearch.client</code> 包对应客户端本身，<code>org.elasticsearch.client.sniffer</code> 包对应嗅探功能。</p>
+</div>
+<div class="paragraph">
+<p>还可以对请求启用日志追踪功能，以curl格式记录每个请求及其响应。
+这在debug的时候很方便，比如执行一个请求后，查看它和之前的响应是否相同。
+启用日志追踪 <code>tracer</code> 包来追踪日志记录，并将之打印出来。
+注意这种类型的日志对性能有影响，不建议在生产环境中启用，而是仅在需要的时候临时开启。</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

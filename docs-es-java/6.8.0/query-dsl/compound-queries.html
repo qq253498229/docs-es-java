@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="6.8.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../preface.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../preface.html">前言</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../java-doc.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../maven-repository.html">Maven仓库</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../client.html">Client</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../docs.html">文档 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../search.html">查询 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../aggs.html">聚合</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../query-dsl.html">Query DSL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../admin/index.html">Java API Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/indices/index.html">Indices Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/cluster/index.html">Cluster Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">6.8.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="../preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../7.16.0/introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.8.0</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../../7.16.0/introduction.html">7.16.0</a>
+    <a class="version is-current" href="compound-queries.html">6.8.0</a>
+    <a class="version is-missing" href="../../6.2.2/1Preface/readme.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v6.8/modules/ROOT/pages/query-dsl/compound-queries.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect2">
+<h3 id="java-compound-queries"><a class="anchor" href="#java-compound-queries"></a>Compound queries</h3>
+<div class="paragraph">
+<p>组合查询可以将其它组合查询，以及其它单独的查询语句合并到一起，并将结果和匹配分数组合起来。
+它可以改变它们的行为，或是将查询转换为filter context。</p>
+</div>
+<div class="paragraph">
+<p>这一组中的查询有：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#java-query-dsl-constant-score-query"><code>constant_score</code> query</a></dt>
+<dd>
+<p>包含其它查询的查询，但却以filter context的形式执行该语句。所有匹配到的文档都会分配相同的 "constant" <code>_score</code> 。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-bool-query"><code>bool</code> query</a></dt>
+<dd>
+<p>使用 <code>must</code>, <code>should</code>, <code>must_not</code>, 或 <code>filter</code> 可以将多个分支或组合查询语句组合到一起。
+其中 <code>must</code> 和 <code>should</code> 条件的得分会合并到一起，这是大多数时候使用的条件；
+而更好的办法是使用 <code>must_not</code> 和 <code>filter</code> ，这样它们会在 filter context 中执行。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-dis-max-query"><code>dis_max</code> query</a></dt>
+<dd>
+<p>一个接受多个查询语句的查询，匹配到任何查询子句的文档都会返回。
+虽然 <code>bool</code> 语句已经将所有匹配结果的得分组合了起来，但 <code>dis_max</code> 的得分却是单条语句匹配的最高得分。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-function-score-query"><code>function_score</code> query</a></dt>
+<dd>
+<p>使用函数修改主查询返回的分数，以考虑流行性、失效性、距离或使用脚本实现的自定义算法等因素。</p>
+</dd>
+<dt class="hdlist1"><a href="#java-query-dsl-boosting-query"><code>boosting</code> query</a></dt>
+<dd>
+<p>查询条件将会分为正匹配和负匹配。 <code>positive</code> （正确）匹配到的文档将会加分，<code>negative</code> （负面）匹配得到的文档将会减分。</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-constant-score-query"><a class="anchor" href="#java-query-dsl-constant-score-query"></a>Constant Score Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-constant-score-query.html">Constant Score Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">constantScoreQuery(
+        termQuery("name","kimchy")) <i class="conum" data-value="1"></i><b>(1)</b>
+    .boost(2.0f); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>your query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>query score</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-bool-query"><a class="anchor" href="#java-query-dsl-bool-query"></a>Bool Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-bool-query.html">Bool Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">boolQuery()
+        .must(termQuery("content", "test1")) <i class="conum" data-value="1"></i><b>(1)</b>
+        .must(termQuery("content", "test4")) <i class="conum" data-value="1"></i><b>(1)</b>
+        .mustNot(termQuery("content", "test2")) <i class="conum" data-value="2"></i><b>(2)</b>
+        .should(termQuery("content", "test3")) <i class="conum" data-value="3"></i><b>(3)</b>
+        .filter(termQuery("content", "test5"));  <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>must query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>must not query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>should query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>绝对匹配，不参与评分。</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-dis-max-query"><a class="anchor" href="#java-query-dsl-dis-max-query"></a>Dis Max Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-dis-max-query.html">Dis Max Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">disMaxQuery()
+        .add(termQuery("name", "kimchy")) <i class="conum" data-value="1"></i><b>(1)</b>
+        .add(termQuery("name", "elasticsearch")) <i class="conum" data-value="2"></i><b>(2)</b>
+        .boost(1.2f) <i class="conum" data-value="3"></i><b>(3)</b>
+        .tieBreaker(0.7f); <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>add your queries</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>add your queries</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>boost factor</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>tie breaker</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-function-score-query"><a class="anchor" href="#java-query-dsl-function-score-query"></a>Function Score Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-function-score-query.html">Function Score Query</a>.</p>
+</div>
+<div class="paragraph">
+<p>想要使用 <code>ScoreFunctionBuilders</code> 只需要在类中引入:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders.*;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">FilterFunctionBuilder[] functions = {
+        new FunctionScoreQueryBuilder.FilterFunctionBuilder(
+                matchQuery("name", "kimchy"), <i class="conum" data-value="1"></i><b>(1)</b>
+                randomFunction()), <i class="conum" data-value="2"></i><b>(2)</b>
+        new FunctionScoreQueryBuilder.FilterFunctionBuilder(
+                exponentialDecayFunction("age", 0L, 1L)) <i class="conum" data-value="3"></i><b>(3)</b>
+};
+functionScoreQuery(functions);</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Add a first function based on a query</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>And randomize the score based on a given seed</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Add another function based on the age field</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-query-dsl-boosting-query"><a class="anchor" href="#java-query-dsl-boosting-query"></a>Boosting Query</h4>
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/query-dsl-boosting-query.html">Boosting Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">boostingQuery(
+            termQuery("name","kimchy"), <i class="conum" data-value="1"></i><b>(1)</b>
+            termQuery("name","dadoonet")) <i class="conum" data-value="2"></i><b>(2)</b>
+        .negativeBoost(0.2f); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>query that will promote documents</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>query that will demote documents</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>negative boost</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

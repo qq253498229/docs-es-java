@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>指标聚合 :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="6.2.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../1Preface/readme.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../1Preface/readme.html">前言</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../2JavaDoc/readme.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../3MavenRepository/readme.html">Maven仓库</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../3MavenRepository/LuceneSnapshotRepository.html">Lucene Snapshot仓库</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../3MavenRepository/log4j2.html">Log4j 2 日志</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../3MavenRepository/UsingAnotherLogger.html">使用其它的日志</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../4Client/readme.html">Client</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../5DocumentAPIs/readme.html">Document接口</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../5DocumentAPIs/IndexAPI.html">Index接口</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../5DocumentAPIs/1IndexAPI/GenerateJSONDocument.html">生成JSON文档</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../5DocumentAPIs/1IndexAPI/IndexDocument.html">索引一个文档</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/GetAPI.html">Get接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/DeleteAPI.html">Delete接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/DeleteByQueryAPI.html">Delete By Query接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/UpdateAPI.html">Update接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/MultiGetAPI.html">Multi Get接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/BulkAPI.html">Bulk接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/UsingBulkProcessor.html">使用Bulk Processor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/UpdateByQueryAPI.html">通过脚本修改接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/ReindexAPI.html">重新索引接口</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../6SearchAPI/readme.html">Search接口</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/UsingScrollsInJava.html">使用游标查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/MultiSearchAPI.html">批量查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/UsingAggregations.html">使用聚合</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/TerminateAfter.html">设置终止标志</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/SearchTemplate.html">模版查询</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="readme.html">聚合</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="StructuringAggregations.html">构建聚合</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="MetricsAggregations.html">指标聚合</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="BucketAggregations.html">桶聚合</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../8QueryDSL/readme.html">领域查询</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/MatchAllQuery.html">匹配所有的查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/FullTextQueries.html">全文检索</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/TermLevelQueries.html">匹配查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/CompoundQueries.html">组合查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/JoiningQueries.html">关联关系查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/GeoQueries.html">地理位置查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/SpecializedQueries.html">特殊查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../8QueryDSL/SpanQueries.html">跨度查询</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../9JavaAPIAdministration/readme.html">管理员接口</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../9JavaAPIAdministration/IndicesAdministration.html">管理索引接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../9JavaAPIAdministration/ClusterAdministration.html">管理集群接口</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html">《Elasticsearch: 权威指南》中文版</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../0Remark/words.html">名词解释(对比关系型数据库)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">6.2.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="../1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../7.16.0/introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../1Preface/readme.html">ES Java API Client</a></li>
+    <li><a href="readme.html">聚合</a></li>
+    <li><a href="MetricsAggregations.html">指标聚合</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.2</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../../7.16.0/introduction.html">7.16.0</a>
+    <a class="version is-missing" href="../../6.8.0/preface.html">6.8.0</a>
+    <a class="version is-current" href="MetricsAggregations.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v6.2/modules/ROOT/pages/7Aggregations/MetricsAggregations.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">指标聚合</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_最小值聚合">最小值聚合</a></p>
+</li>
+<li>
+<p><a href="#_最大值聚合">最大值聚合</a></p>
+</li>
+<li>
+<p><a href="#_求和聚合">求和聚合</a></p>
+</li>
+<li>
+<p><a href="#_平均值聚合">平均值聚合</a></p>
+</li>
+<li>
+<p><a href="#_统计聚合">统计聚合</a></p>
+</li>
+<li>
+<p><a href="#_拓展统计聚合">拓展统计聚合</a></p>
+</li>
+<li>
+<p><a href="#_值计数聚合">值计数聚合</a></p>
+</li>
+<li>
+<p><a href="#_百分比聚合">百分比聚合</a></p>
+</li>
+<li>
+<p><a href="#_百分比等级聚合">百分比等级聚合</a></p>
+</li>
+<li>
+<p><a href="#_基数聚合">基数聚合</a></p>
+</li>
+<li>
+<p><a href="#_地理界限聚合">地理界限聚合</a></p>
+</li>
+<li>
+<p><a href="#_热门聚合">热门聚合</a></p>
+</li>
+<li>
+<p><a href="#_脚本指标聚合">脚本指标聚合</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_最小值聚合"><a class="anchor" href="#_最小值聚合"></a>最小值聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-min-aggregation.html">最小值聚合</a> 。</p>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求"><a class="anchor" href="#_准备聚合请求"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MinAggregationBuilder aggregation =
+        AggregationBuilders
+                .min("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应"><a class="anchor" href="#_获得聚合响应"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.min.Min;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// 这里的sr是SearchResponse对象
+Min agg = sr.getAggregations().get("agg");
+double value = agg.getValue();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_最大值聚合"><a class="anchor" href="#_最大值聚合"></a>最大值聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-max-aggregation.html">最大值聚合</a> 。</p>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求_2"><a class="anchor" href="#_准备聚合请求_2"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MaxAggregationBuilder aggregation =
+        AggregationBuilders
+                .max("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应_2"><a class="anchor" href="#_获得聚合响应_2"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.max.Max;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// 这里的sr是SearchResponse对象
+Max agg = sr.getAggregations().get("agg");
+double value = agg.getValue();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_求和聚合"><a class="anchor" href="#_求和聚合"></a>求和聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-sum-aggregation.html">求和聚合</a> 。</p>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求_3"><a class="anchor" href="#_准备聚合请求_3"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SumAggregationBuilder aggregation =
+        AggregationBuilders
+                .sum("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应_3"><a class="anchor" href="#_获得聚合响应_3"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.sum.Sum;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// 这里的sr是SearchResponse对象
+Sum agg = sr.getAggregations().get("agg");
+double value = agg.getValue();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_平均值聚合"><a class="anchor" href="#_平均值聚合"></a>平均值聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-avg-aggregation.html">平均值聚合</a> 。</p>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求_4"><a class="anchor" href="#_准备聚合请求_4"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AvgAggregationBuilder aggregation =
+        AggregationBuilders
+                .avg("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应_4"><a class="anchor" href="#_获得聚合响应_4"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.avg.Avg;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// 这里的sr是SearchResponse对象
+Avg agg = sr.getAggregations().get("agg");
+double value = agg.getValue();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_统计聚合"><a class="anchor" href="#_统计聚合"></a>统计聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-stats-aggregation.html">统计聚合</a> 。</p>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求_5"><a class="anchor" href="#_准备聚合请求_5"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">StatsAggregationBuilder aggregation =
+        AggregationBuilders
+                .stats("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应_5"><a class="anchor" href="#_获得聚合响应_5"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.stats.Stats;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// 这里的sr是SearchResponse对象
+Stats agg = sr.getAggregations().get("agg");
+//最小值
+double min = agg.getMin();
+//最大值
+double max = agg.getMax();
+//平均值
+double avg = agg.getAvg();
+//求和
+double sum = agg.getSum();
+//数量
+long count = agg.getCount();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_拓展统计聚合"><a class="anchor" href="#_拓展统计聚合"></a>拓展统计聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-extendedstats-aggregation.html">拓展统计聚合</a> 。</p>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求_6"><a class="anchor" href="#_准备聚合请求_6"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExtendedStatsAggregationBuilder aggregation =
+        AggregationBuilders
+                .extendedStats("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应_6"><a class="anchor" href="#_获得聚合响应_6"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.stats.extended.ExtendedStats;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// 这里的sr是SearchResponse对象
+ExtendedStats agg = sr.getAggregations().get("agg");
+double min = agg.getMin();
+double max = agg.getMax();
+double avg = agg.getAvg();
+double sum = agg.getSum();
+long count = agg.getCount();
+//标准偏差
+double stdDeviation = agg.getStdDeviation();
+//平方和
+double sumOfSquares = agg.getSumOfSquares();
+//方差
+double variance = agg.getVariance();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_值计数聚合"><a class="anchor" href="#_值计数聚合"></a>值计数聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-valuecount-aggregation.html">值计数(value count)聚合</a> 。</p>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求_7"><a class="anchor" href="#_准备聚合请求_7"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ValueCountAggregationBuilder aggregation =
+        AggregationBuilders
+                .count("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应_7"><a class="anchor" href="#_获得聚合响应_7"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.valuecount.ValueCount;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+ValueCount agg = sr.getAggregations().get("agg");
+long value = agg.getValue();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_百分比聚合"><a class="anchor" href="#_百分比聚合"></a>百分比聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-percentile-aggregation.html">百分比聚合</a> 。</p>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求_8"><a class="anchor" href="#_准备聚合请求_8"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">PercentilesAggregationBuilder aggregation =
+        AggregationBuilders
+                .percentiles("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>可以使用你自己的百分比数来代替默认的：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">PercentilesAggregationBuilder aggregation =
+        AggregationBuilders
+                .percentiles("agg")
+                .field("height")
+                .percentiles(1.0, 5.0, 10.0, 20.0, 30.0, 75.0, 95.0, 99.0);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应_8"><a class="anchor" href="#_获得聚合响应_8"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.percentiles.Percentile;
+import org.elasticsearch.search.aggregations.metrics.percentiles.Percentiles;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Percentiles agg = sr.getAggregations().get("agg");
+// For each entry
+for (Percentile entry : agg) {
+    double percent = entry.getPercent();    // Percent
+    double value = entry.getValue();        // Value
+
+    logger.info("percent [{}], value [{}]", percent, value);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>可能的返回结果：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">percent [1.0], value [0.814338896154595]
+percent [5.0], value [0.8761912455821302]
+percent [25.0], value [1.173346540141847]
+percent [50.0], value [1.5432023318692198]
+percent [75.0], value [1.923915462033674]
+percent [95.0], value [2.2273644908535335]
+percent [99.0], value [2.284989339108279]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_百分比等级聚合"><a class="anchor" href="#_百分比等级聚合"></a>百分比等级聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-percentile-rank-aggregation.html">百分比等级聚合</a> 。</p>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求_9"><a class="anchor" href="#_准备聚合请求_9"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">PercentileRanksAggregationBuilder aggregation =
+        AggregationBuilders
+                .percentileRanks("agg")
+                .field("height")
+                .values(1.24, 1.91, 2.22);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应_9"><a class="anchor" href="#_获得聚合响应_9"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.percentiles.Percentile;
+import org.elasticsearch.search.aggregations.metrics.percentiles.PercentileRanks;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+PercentileRanks agg = sr.getAggregations().get("agg");
+// For each entry
+for (Percentile entry : agg) {
+    double percent = entry.getPercent();    // Percent
+    double value = entry.getValue();        // Value
+
+    logger.info("percent [{}], value [{}]", percent, value);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>可能的返回结果：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">percent [29.664353095090945], value [1.24]
+percent [73.9335313461868], value [1.91]
+percent [94.40095147327283], value [2.22]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_基数聚合"><a class="anchor" href="#_基数聚合"></a>基数聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-cardinality-aggregation.html">基数聚合</a> 。</p>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求_10"><a class="anchor" href="#_准备聚合请求_10"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CardinalityAggregationBuilder aggregation =
+        AggregationBuilders
+                .cardinality("agg")
+                .field("tags");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应_10"><a class="anchor" href="#_获得聚合响应_10"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.cardinality.Cardinality;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Cardinality agg = sr.getAggregations().get("agg");
+long value = agg.getValue();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_地理界限聚合"><a class="anchor" href="#_地理界限聚合"></a>地理界限聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-geobounds-aggregation.html">地理界限聚合</a> 。</p>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求_11"><a class="anchor" href="#_准备聚合请求_11"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">GeoBoundsBuilder aggregation =
+        GeoBoundsAggregationBuilder
+                .geoBounds("agg")
+                .field("address.location")
+                .wrapLongitude(true);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应_11"><a class="anchor" href="#_获得聚合响应_11"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.geobounds.GeoBounds;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+GeoBounds agg = sr.getAggregations().get("agg");
+GeoPoint bottomRight = agg.bottomRight();
+GeoPoint topLeft = agg.topLeft();
+logger.info("bottomRight {}, topLeft {}", bottomRight, topLeft);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>可能的返回结果：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">bottomRight [40.70500764381921, 13.952946866893775], topLeft [53.49603022435221, -4.190029308156676]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_热门聚合"><a class="anchor" href="#_热门聚合"></a>热门聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-top-hits-aggregation.html">热门聚合</a> 。</p>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求_12"><a class="anchor" href="#_准备聚合请求_12"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+    AggregationBuilders
+        .terms("agg").field("gender")
+        .subAggregation(
+            AggregationBuilders.topHits("top")
+        );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>大多数在查询时使用的参数在这里都可以使用，比如 <strong>from</strong> , <strong>size</strong> , <strong>sort</strong> , <strong>highlight</strong> , <strong>explain</strong> &#8230;&#8203;</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+    AggregationBuilders
+        .terms("agg").field("gender")
+        .subAggregation(
+            AggregationBuilders.topHits("top")
+                .explain(true)
+                .size(1)
+                .from(10)
+        );</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应_12"><a class="anchor" href="#_获得聚合响应_12"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.terms.Terms;
+import org.elasticsearch.search.aggregations.metrics.tophits.TopHits;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Terms agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (Terms.Bucket entry : agg.getBuckets()) {
+    String key = entry.getKey();                    // bucket key
+    long docCount = entry.getDocCount();            // Doc count
+    logger.info("key [{}], doc_count [{}]", key, docCount);
+
+    // We ask for top_hits for each bucket
+    TopHits topHits = entry.getAggregations().get("top");
+    for (SearchHit hit : topHits.getHits().getHits()) {
+        logger.info(" -&gt; id [{}], _source [{}]", hit.getId(), hit.getSourceAsString());
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>可能的返回结果：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">key [male], doc_count [5107]
+ -&gt; id [AUnzSZze9k7PKXtq04x2], _source [{"gender":"male",...}]
+ -&gt; id [AUnzSZzj9k7PKXtq04x4], _source [{"gender":"male",...}]
+ -&gt; id [AUnzSZzl9k7PKXtq04x5], _source [{"gender":"male",...}]
+key [female], doc_count [4893]
+ -&gt; id [AUnzSZzM9k7PKXtq04xy], _source [{"gender":"female",...}]
+ -&gt; id [AUnzSZzp9k7PKXtq04x8], _source [{"gender":"female",...}]
+ -&gt; id [AUnzSZ0W9k7PKXtq04yS], _source [{"gender":"female",...}]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_脚本指标聚合"><a class="anchor" href="#_脚本指标聚合"></a>脚本指标聚合</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>你可以通过JavaAPI使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-aggregations-metrics-scripted-metric-aggregation.html">脚本指标聚合</a> 。</p>
+</div>
+<div class="paragraph">
+<p>如果你想在嵌入式数据节点(例如单元测试)中使用Groovy脚本都话，不要忘了在classpath中加入groovy。例如，在maven中，你可以将下面的依赖加入到 <strong>pom.xml</strong> 中：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.codehaus.groovy&lt;/groupId&gt;
+    &lt;artifactId&gt;groovy-all&lt;/artifactId&gt;
+    &lt;version&gt;2.3.2&lt;/version&gt;
+    &lt;classifier&gt;indy&lt;/classifier&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_准备聚合请求_13"><a class="anchor" href="#_准备聚合请求_13"></a>准备聚合请求</h3>
+<div class="paragraph">
+<p>下面是如何创建聚合请求的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ScriptedMetricAggregationBuilder aggregation = AggregationBuilders
+    .scriptedMetric("agg")
+    .initScript(new Script("params._agg.heights = []"))
+    .mapScript(new Script("params._agg.heights.add(doc.gender.value == 'male' ? doc.height.value : -1.0 * doc.height.value)"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>您还可以指定将在每个分片上执行的 <strong>combine</strong> 脚本：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ScriptedMetricAggregationBuilder aggregation = AggregationBuilders
+    .scriptedMetric("agg")
+    .initScript(new Script("params._agg.heights = []"))
+    .mapScript(new Script("params._agg.heights.add(doc.gender.value == 'male' ? doc.height.value : -1.0 * doc.height.value)"))
+    .combineScript(new Script("double heights_sum = 0.0; for (t in params._agg.heights) { heights_sum += t } return heights_sum"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>您还可以指定将在每个分片上执行的 <strong>reduce</strong> 脚本：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ScriptedMetricAggregationBuilder aggregation = AggregationBuilders
+    .scriptedMetric("agg")
+    .initScript(new Script("params._agg.heights = []"))
+    .mapScript(new Script("params._agg.heights.add(doc.gender.value == 'male' ? doc.height.value : -1.0 * doc.height.value)"))
+    .combineScript(new Script("double heights_sum = 0.0; for (t in params._agg.heights) { heights_sum += t } return heights_sum"))
+    .reduceScript(new Script("double heights_sum = 0.0; for (a in params._aggs) { heights_sum += a } return heights_sum"));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_获得聚合响应_13"><a class="anchor" href="#_获得聚合响应_13"></a>获得聚合响应</h3>
+<div class="paragraph">
+<p>在类中引入聚合定义类：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.terms.Terms;
+import org.elasticsearch.search.aggregations.metrics.tophits.TopHits;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+ScriptedMetric agg = sr.getAggregations().get("agg");
+Object scriptedResult = agg.aggregation();
+logger.info("scriptedResult [{}]", scriptedResult);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>请注意，聚合的结果取决于您构建的脚本。
+第一个例子可能的返回结果：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">scriptedResult object [ArrayList]
+scriptedResult [ {
+"heights" : [ 1.122218480146643, -1.8148918111233887, -1.7626731575142909, ... ]
+}, {
+"heights" : [ -0.8046067304119863, -2.0785486707864553, -1.9183567430207953, ... ]
+}, {
+"heights" : [ 2.092635728868694, 1.5697545960886536, 1.8826954461968808, ... ]
+}, {
+"heights" : [ -2.1863201099468403, 1.6328549117346856, -1.7078288405893842, ... ]
+}, {
+"heights" : [ 1.6043904836424177, -2.0736538674414025, 0.9898266674373053, ... ]
+} ]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>第二个例子可能的返回结果：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">scriptedResult object [ArrayList]
+scriptedResult [-41.279615707402876,
+                -60.88007362339038,
+                38.823270659734256,
+                14.840192739445632,
+                11.300902755741326]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>最后一个例子可能的返回结果：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">scriptedResult object [Double]
+scriptedResult [2.171917696507009]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

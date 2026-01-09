@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>匹配查询 :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="6.2.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../1Preface/readme.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../1Preface/readme.html">前言</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../2JavaDoc/readme.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../3MavenRepository/readme.html">Maven仓库</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../3MavenRepository/LuceneSnapshotRepository.html">Lucene Snapshot仓库</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../3MavenRepository/log4j2.html">Log4j 2 日志</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../3MavenRepository/UsingAnotherLogger.html">使用其它的日志</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../4Client/readme.html">Client</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../5DocumentAPIs/readme.html">Document接口</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../5DocumentAPIs/IndexAPI.html">Index接口</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../5DocumentAPIs/1IndexAPI/GenerateJSONDocument.html">生成JSON文档</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../5DocumentAPIs/1IndexAPI/IndexDocument.html">索引一个文档</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/GetAPI.html">Get接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/DeleteAPI.html">Delete接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/DeleteByQueryAPI.html">Delete By Query接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/UpdateAPI.html">Update接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/MultiGetAPI.html">Multi Get接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/BulkAPI.html">Bulk接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/UsingBulkProcessor.html">使用Bulk Processor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/UpdateByQueryAPI.html">通过脚本修改接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../5DocumentAPIs/ReindexAPI.html">重新索引接口</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../6SearchAPI/readme.html">Search接口</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/UsingScrollsInJava.html">使用游标查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/MultiSearchAPI.html">批量查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/UsingAggregations.html">使用聚合</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/TerminateAfter.html">设置终止标志</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../6SearchAPI/SearchTemplate.html">模版查询</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../7Aggregations/readme.html">聚合</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../7Aggregations/StructuringAggregations.html">构建聚合</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../7Aggregations/MetricsAggregations.html">指标聚合</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../7Aggregations/BucketAggregations.html">桶聚合</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="readme.html">领域查询</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="MatchAllQuery.html">匹配所有的查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="FullTextQueries.html">全文检索</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="TermLevelQueries.html">匹配查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="CompoundQueries.html">组合查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="JoiningQueries.html">关联关系查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="GeoQueries.html">地理位置查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="SpecializedQueries.html">特殊查询</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="SpanQueries.html">跨度查询</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../9JavaAPIAdministration/readme.html">管理员接口</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../9JavaAPIAdministration/IndicesAdministration.html">管理索引接口</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../9JavaAPIAdministration/ClusterAdministration.html">管理集群接口</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html">《Elasticsearch: 权威指南》中文版</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../0Remark/words.html">名词解释(对比关系型数据库)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">6.2.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="../1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../7.16.0/introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../1Preface/readme.html">ES Java API Client</a></li>
+    <li><a href="readme.html">领域查询</a></li>
+    <li><a href="TermLevelQueries.html">匹配查询</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.2</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../../7.16.0/introduction.html">7.16.0</a>
+    <a class="version is-missing" href="../../6.8.0/preface.html">6.8.0</a>
+    <a class="version is-current" href="TermLevelQueries.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v6.2/modules/ROOT/pages/8QueryDSL/TermLevelQueries.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">匹配查询</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>尽管全文查询将在执行之前分析查询语句，但匹配查询会按照存储在倒排索引中的确切词进行操作。</p>
+</div>
+<div class="paragraph">
+<p>这些查询语句通常使用数字、日期和枚举等结构化数据，而不是全字符串字段。并且也允许在分析过程之前使用低级查询。</p>
+</div>
+<div class="paragraph">
+<p>这一组中的查询有：</p>
+</div>
+<div class="paragraph">
+<p><a href="#_term查询">term查询</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>根据指定词查询文档。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="#_terms查询">terms查询</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>根据多个指定词查询文档。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="#_range查询">range查询</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>根据范围(日期、数字或字符串)查询文档。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="#_exists查询">exists查询</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>根据字段是否存在查询文档。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="#_prefix查询">prefix查询</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>根据前缀查询文档。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="#_wildcard查询">wildcard查询</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>根据通配符查询文档，支持单字符匹配(?)和多字符匹配(*)。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="#_regexp查询">regexp查询</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>根据正则表达式查询文档。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="#_fuzzy查询">fuzzy查询</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>根据模糊相似词查询文档，模糊度的标准是 <a href="https://baike.baidu.com/item/%E8%8E%B1%E6%96%87%E6%96%AF%E5%9D%A6%E8%B7%9D%E7%A6%BB/14448097?fr=aladdin">莱文斯坦距离</a> 1或2。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="#_type查询">type查询</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>根据type查询文档。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="#_ids查询">ids查询</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>根据type和IDs查询文档。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_term查询"><a class="anchor" href="#_term查询"></a>term查询</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-term-query.html">Term Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">QueryBuilder qb = termQuery(
+    //字段名
+    "name",
+    //查询值
+    "kimchy"
+);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_terms查询"><a class="anchor" href="#_terms查询"></a>terms查询</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-terms-query.html">Terms Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">QueryBuilder qb = termsQuery(
+    //字段名
+    "tags",
+    //查询值
+    "blue", "pill");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_range查询"><a class="anchor" href="#_range查询"></a>range查询</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-range-query.html">Range Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">QueryBuilder qb = rangeQuery(
+    //字段名
+    "price")
+    //最小值
+    .from(5)
+    //最大值
+    .to(10)
+    //是否包含最小值
+    .includeLower(true)
+    //是否包含最大值
+    .includeUpper(false);</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// 一个简单写法，lt小于，ltd小于等于；gt大于，gte大于等于
+QueryBuilder qb = rangeQuery("age")
+    .gte("10")
+    .lt("20");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exists查询"><a class="anchor" href="#_exists查询"></a>exists查询</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-exists-query.html">Exists Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">QueryBuilder qb = existsQuery("name");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prefix查询"><a class="anchor" href="#_prefix查询"></a>prefix查询</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-prefix-query.html">Prefix Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">QueryBuilder qb = prefixQuery(
+    //字段名
+    "brand",
+    //前缀
+    "heine"
+);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wildcard查询"><a class="anchor" href="#_wildcard查询"></a>wildcard查询</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-wildcard-query.html">Wildcard Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">QueryBuilder qb = wildcardQuery("user", "k?mc*");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_regexp查询"><a class="anchor" href="#_regexp查询"></a>regexp查询</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-regexp-query.html">Regexp Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">QueryBuilder qb = regexpQuery(
+    //字段名，允许类似JavsScript的层级关系
+    "name.first",
+    //正则表达式
+    "s.*y");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fuzzy查询"><a class="anchor" href="#_fuzzy查询"></a>fuzzy查询</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-fuzzy-query.html">Fuzzy Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">QueryBuilder qb = fuzzyQuery(
+    "name",
+    "kimzhy"
+);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_type查询"><a class="anchor" href="#_type查询"></a>type查询</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-type-query.html">Type Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">QueryBuilder qb = typeQuery("my_type");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ids查询"><a class="anchor" href="#_ids查询"></a>ids查询</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-ids-query.html">Ids Query</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">QueryBuilder qb = idsQuery("my_type", "type2")
+    .addIds("1", "4", "100");
+// type是可选项
+QueryBuilder qb = idsQuery()
+    .addIds("1", "4", "100");</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

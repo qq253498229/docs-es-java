@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="6.8.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../preface.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../preface.html">前言</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../java-doc.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../maven-repository.html">Maven仓库</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../client.html">Client</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../docs.html">文档 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../search.html">查询 API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../aggs.html">聚合</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../query-dsl.html">Query DSL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../admin/index.html">Java API Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/indices/index.html">Indices Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/cluster/index.html">Cluster Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">6.8.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../7.16.0/introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../7.16.0/introduction.html">7.16.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="../preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../7.16.0/introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.8.0</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../../7.16.0/introduction.html">7.16.0</a>
+    <a class="version is-current" href="metrics.html">6.8.0</a>
+    <a class="version is-missing" href="../../6.2.2/1Preface/readme.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v6.8/modules/ROOT/pages/aggregations/metrics.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect3">
+<h4 id="java-aggs-metrics-min"><a class="anchor" href="#java-aggs-metrics-min"></a>最小值聚合</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-min-aggregation.html">Min Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-min-pre"><a class="anchor" href="#agg-min-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MinAggregationBuilder aggregation =
+        AggregationBuilders
+                .min("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-min-res"><a class="anchor" href="#agg-min-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.min.Min;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Min agg = sr.getAggregations().get("agg");
+double value = agg.getValue();</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-metrics-max"><a class="anchor" href="#java-aggs-metrics-max"></a>最大值聚合</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-max-aggregation.html">Max Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-max-pre"><a class="anchor" href="#agg-max-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MaxAggregationBuilder aggregation =
+        AggregationBuilders
+                .max("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-max-res"><a class="anchor" href="#agg-max-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.max.Max;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Max agg = sr.getAggregations().get("agg");
+double value = agg.getValue();</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-metrics-sum"><a class="anchor" href="#java-aggs-metrics-sum"></a>求和聚合</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-sum-aggregation.html">Sum Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-sum-pre"><a class="anchor" href="#agg-sum-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SumAggregationBuilder aggregation =
+        AggregationBuilders
+                .sum("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-sum-res"><a class="anchor" href="#agg-sum-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.sum.Sum;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Sum agg = sr.getAggregations().get("agg");
+double value = agg.getValue();</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-metrics-avg"><a class="anchor" href="#java-aggs-metrics-avg"></a>平均值聚合</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-avg-aggregation.html">Avg Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-avg-pre"><a class="anchor" href="#agg-avg-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AvgAggregationBuilder aggregation =
+        AggregationBuilders
+                .avg("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-avg-res"><a class="anchor" href="#agg-avg-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.avg.Avg;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Avg agg = sr.getAggregations().get("agg");
+double value = agg.getValue();</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-metrics-stats"><a class="anchor" href="#java-aggs-metrics-stats"></a>统计聚合</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-stats-aggregation.html">Stats Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-stats-pre"><a class="anchor" href="#agg-stats-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">StatsAggregationBuilder aggregation =
+        AggregationBuilders
+                .stats("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-stats-res"><a class="anchor" href="#agg-stats-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.stats.Stats;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Stats agg = sr.getAggregations().get("agg");
+double min = agg.getMin();
+double max = agg.getMax();
+double avg = agg.getAvg();
+double sum = agg.getSum();
+long count = agg.getCount();</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-metrics-extendedstats"><a class="anchor" href="#java-aggs-metrics-extendedstats"></a>统计聚合拓展</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-extendedstats-aggregation.html">Extended Stats Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-stats-ext-pre"><a class="anchor" href="#agg-stats-ext-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExtendedStatsAggregationBuilder aggregation =
+        AggregationBuilders
+                .extendedStats("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-stats-ext-res"><a class="anchor" href="#agg-stats-ext-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.stats.extended.ExtendedStats;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+ExtendedStats agg = sr.getAggregations().get("agg");
+double min = agg.getMin();
+double max = agg.getMax();
+double avg = agg.getAvg();
+double sum = agg.getSum();
+long count = agg.getCount();
+double stdDeviation = agg.getStdDeviation();
+double sumOfSquares = agg.getSumOfSquares();
+double variance = agg.getVariance();</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-metrics-valuecount"><a class="anchor" href="#java-aggs-metrics-valuecount"></a>数量聚合</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-valuecount-aggregation.html">Value Count Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-valuecount-pre"><a class="anchor" href="#agg-valuecount-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ValueCountAggregationBuilder aggregation =
+        AggregationBuilders
+                .count("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-valuecount-res"><a class="anchor" href="#agg-valuecount-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.valuecount.ValueCount;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+ValueCount agg = sr.getAggregations().get("agg");
+long value = agg.getValue();</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-metrics-percentile"><a class="anchor" href="#java-aggs-metrics-percentile"></a>百分比聚合</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-percentile-aggregation.html">Percentile Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-percentile-pre"><a class="anchor" href="#agg-percentile-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">PercentilesAggregationBuilder aggregation =
+        AggregationBuilders
+                .percentiles("agg")
+                .field("height");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>当然你可以提供自己的数字，而不是使用默认值:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">PercentilesAggregationBuilder aggregation =
+        AggregationBuilders
+                .percentiles("agg")
+                .field("height")
+                .percentiles(1.0, 5.0, 10.0, 20.0, 30.0, 75.0, 95.0, 99.0);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-percentile-res"><a class="anchor" href="#agg-percentile-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.percentiles.Percentile;
+import org.elasticsearch.search.aggregations.metrics.percentiles.Percentiles;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Percentiles agg = sr.getAggregations().get("agg");
+// For each entry
+for (Percentile entry : agg) {
+    double percent = entry.getPercent();    // Percent
+    double value = entry.getValue();        // Value
+
+    logger.info("percent [{}], value [{}]", percent, value);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>上面的例子一般会返回这样的结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">percent [1.0], value [0.814338896154595]
+percent [5.0], value [0.8761912455821302]
+percent [25.0], value [1.173346540141847]
+percent [50.0], value [1.5432023318692198]
+percent [75.0], value [1.923915462033674]
+percent [95.0], value [2.2273644908535335]
+percent [99.0], value [2.284989339108279]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-metrics-percentile-rank"><a class="anchor" href="#java-aggs-metrics-percentile-rank"></a>百分比排名聚合</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-percentile-rank-aggregation.html">Percentile Ranks Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-percentile-rank-pre"><a class="anchor" href="#agg-percentile-rank-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">PercentileRanksAggregationBuilder aggregation =
+        AggregationBuilders
+                .percentileRanks("agg")
+                .field("height")
+                .values(1.24, 1.91, 2.22);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-percentile-rank-res"><a class="anchor" href="#agg-percentile-rank-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.percentiles.Percentile;
+import org.elasticsearch.search.aggregations.metrics.percentiles.PercentileRanks;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+PercentileRanks agg = sr.getAggregations().get("agg");
+// For each entry
+for (Percentile entry : agg) {
+    double percent = entry.getPercent();    // Percent
+    double value = entry.getValue();        // Value
+
+    logger.info("percent [{}], value [{}]", percent, value);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>一般会返回如下结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">percent [29.664353095090945], value [1.24]
+percent [73.9335313461868], value [1.91]
+percent [94.40095147327283], value [2.22]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-metrics-cardinality"><a class="anchor" href="#java-aggs-metrics-cardinality"></a>基数聚合</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-cardinality-aggregation.html">Cardinality Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-cardinality-pre"><a class="anchor" href="#agg-cardinality-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CardinalityAggregationBuilder aggregation =
+        AggregationBuilders
+                .cardinality("agg")
+                .field("tags");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-cardinality-res"><a class="anchor" href="#agg-cardinality-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.cardinality.Cardinality;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Cardinality agg = sr.getAggregations().get("agg");
+long value = agg.getValue();</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-metrics-geobounds"><a class="anchor" href="#java-aggs-metrics-geobounds"></a>地理范围聚合</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-geobounds-aggregation.html">Geo Bounds Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-geobounds-pre"><a class="anchor" href="#agg-geobounds-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">GeoBoundsBuilder aggregation =
+        GeoBoundsAggregationBuilder
+                .geoBounds("agg")
+                .field("address.location")
+                .wrapLongitude(true);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-geobounds-res"><a class="anchor" href="#agg-geobounds-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.metrics.geobounds.GeoBounds;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+GeoBounds agg = sr.getAggregations().get("agg");
+GeoPoint bottomRight = agg.bottomRight();
+GeoPoint topLeft = agg.topLeft();
+logger.info("bottomRight {}, topLeft {}", bottomRight, topLeft);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>一般会返回如下结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">bottomRight [40.70500764381921, 13.952946866893775], topLeft [53.49603022435221, -4.190029308156676]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-metrics-tophits"><a class="anchor" href="#java-aggs-metrics-tophits"></a>热门聚合</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-top-hits-aggregation.html">Top Hits Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-tophits-pre"><a class="anchor" href="#agg-tophits-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+    AggregationBuilders
+        .terms("agg").field("gender")
+        .subAggregation(
+            AggregationBuilders.topHits("top")
+        );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>大多数在查询时使用的参数在这里都可以使用，比如 <code>from</code>, <code>size</code>, <code>sort</code>, <code>highlight</code>, <code>explain</code>&#8230;&#8203;</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationBuilder aggregation =
+    AggregationBuilders
+        .terms("agg").field("gender")
+        .subAggregation(
+            AggregationBuilders.topHits("top")
+                .explain(true)
+                .size(1)
+                .from(10)
+        );</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-tophits-res"><a class="anchor" href="#agg-tophits-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.terms.Terms;
+import org.elasticsearch.search.aggregations.metrics.tophits.TopHits;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+Terms agg = sr.getAggregations().get("agg");
+
+// For each entry
+for (Terms.Bucket entry : agg.getBuckets()) {
+    String key = entry.getKey();                    // bucket key
+    long docCount = entry.getDocCount();            // Doc count
+    logger.info("key [{}], doc_count [{}]", key, docCount);
+
+    // We ask for top_hits for each bucket
+    TopHits topHits = entry.getAggregations().get("top");
+    for (SearchHit hit : topHits.getHits().getHits()) {
+        logger.info(" -&gt; id [{}], _source [{}]", hit.getId(), hit.getSourceAsString());
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>一般会返回如下结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">key [male], doc_count [5107]
+ -&gt; id [AUnzSZze9k7PKXtq04x2], _source [{"gender":"male",...}]
+ -&gt; id [AUnzSZzj9k7PKXtq04x4], _source [{"gender":"male",...}]
+ -&gt; id [AUnzSZzl9k7PKXtq04x5], _source [{"gender":"male",...}]
+key [female], doc_count [4893]
+ -&gt; id [AUnzSZzM9k7PKXtq04xy], _source [{"gender":"female",...}]
+ -&gt; id [AUnzSZzp9k7PKXtq04x8], _source [{"gender":"female",...}]
+ -&gt; id [AUnzSZ0W9k7PKXtq04yS], _source [{"gender":"female",...}]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="java-aggs-metrics-scripted-metric"><a class="anchor" href="#java-aggs-metrics-scripted-metric"></a>脚本指标聚合</h4>
+<div class="paragraph">
+<p>请查看
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-aggregations-metrics-scripted-metric-aggregation.html">Scripted Metric Aggregation</a>
+。</p>
+</div>
+<div class="sect4">
+<h5 id="agg-scripted-pre"><a class="anchor" href="#agg-scripted-pre"></a>准备聚合请求</h5>
+<div class="paragraph">
+<p>这里有一个创建聚合请求的例子:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ScriptedMetricAggregationBuilder aggregation = AggregationBuilders
+    .scriptedMetric("agg")
+    .initScript(new Script("state.heights = []"))
+    .mapScript(new Script("state.heights.add(doc.gender.value == 'male' ? doc.height.value : -1.0 * doc.height.value)"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>你也还可以指定将在每个shard上执行的 <code>combine</code> 脚本:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ScriptedMetricAggregationBuilder aggregation = AggregationBuilders
+    .scriptedMetric("agg")
+    .initScript(new Script("state.heights = []"))
+    .mapScript(new Script("state.heights.add(doc.gender.value == 'male' ? doc.height.value : -1.0 * doc.height.value)"))
+    .combineScript(new Script("double heights_sum = 0.0; for (t in state.heights) { heights_sum += t } return heights_sum"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>您还可以指定将在每个接收请求的节点上执行的 <code>reduce</code> 脚本:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ScriptedMetricAggregationBuilder aggregation = AggregationBuilders
+    .scriptedMetric("agg")
+    .initScript(new Script("state.heights = []"))
+    .mapScript(new Script("state.heights.add(doc.gender.value == 'male' ? doc.height.value : -1.0 * doc.height.value)"))
+    .combineScript(new Script("double heights_sum = 0.0; for (t in state.heights) { heights_sum += t } return heights_sum"))
+    .reduceScript(new Script("double heights_sum = 0.0; for (a in states) { heights_sum += a } return heights_sum"));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agg-scripted-res"><a class="anchor" href="#agg-scripted-res"></a>使用聚合响应</h5>
+<div class="paragraph">
+<p>导入聚合定义类:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.elasticsearch.search.aggregations.bucket.terms.Terms;
+import org.elasticsearch.search.aggregations.metrics.tophits.TopHits;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// sr is here your SearchResponse object
+ScriptedMetric agg = sr.getAggregations().get("agg");
+Object scriptedResult = agg.aggregation();
+logger.info("scriptedResult [{}]", scriptedResult);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>请注意，聚合的结果取决于你所构建的脚本。
+第一个例子一般会返回如下结果:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">scriptedResult object [ArrayList]
+scriptedResult [ {
+"heights" : [ 1.122218480146643, -1.8148918111233887, -1.7626731575142909, ... ]
+}, {
+"heights" : [ -0.8046067304119863, -2.0785486707864553, -1.9183567430207953, ... ]
+}, {
+"heights" : [ 2.092635728868694, 1.5697545960886536, 1.8826954461968808, ... ]
+}, {
+"heights" : [ -2.1863201099468403, 1.6328549117346856, -1.7078288405893842, ... ]
+}, {
+"heights" : [ 1.6043904836424177, -2.0736538674414025, 0.9898266674373053, ... ]
+} ]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>第二个例子会返回:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">scriptedResult object [ArrayList]
+scriptedResult [-41.279615707402876,
+                -60.88007362339038,
+                38.823270659734256,
+                14.840192739445632,
+                11.300902755741326]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>最后一个例子会返回:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">scriptedResult object [Double]
+scriptedResult [2.171917696507009]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

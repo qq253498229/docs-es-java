@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>API 规约 :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="7.16.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="introduction.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">介绍</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation.html">安装</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="connecting.html">连接</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="migrate.html">从 High Level Rest Client 迁移到全新的库</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="api-conventions.html">API 规约</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/java-rest/low-level/index.html">Java 底层 REST 客户端</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/java-rest/low-level/usage.html">快速入门</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/java-rest/low-level/configuration.html">常用配置</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/java-rest/low-level/sniffer.html">嗅探</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/java-rest/license.html">许可证</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">7.16.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="introduction.html">ES Java API Client</a></li>
+    <li><a href="api-conventions.html">API 规约</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">7.16.0</button>
+  <div class="version-menu">
+    <a class="version is-current" href="api-conventions.html">7.16.0</a>
+    <a class="version is-missing" href="../6.8.0/preface.html">6.8.0</a>
+    <a class="version is-missing" href="../6.2.2/1Preface/readme.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v7.16/modules/ROOT/pages/api-conventions.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">API 规约</h1>
+<div class="paragraph">
+<p>Java API Client 使用一致性非常强的代码结构，使用这种现代化的编码模式，可以更容易的编写复杂的请求，也可以更容易的处理更加复杂的响应。
+本章会向你详细解释，让您快速上手。</p>
+</div>
+<h2 id="_包结构和命名空间下的客户端" class="discrete">包结构和命名空间下的客户端</h2>
+<div class="paragraph">
+<p>Elasticsearch API 很庞大，它们被按功能分成多个组，可以在 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/rest-apis.html">Elasticsearch API 文档</a> 中查看。</p>
+</div>
+<div class="paragraph">
+<p>Java API Client 遵循这种结构：名为 “命名空间“ 的功能分组，还有所有命名空间都被放在 <code>co.elastic.clients.elasticsearch</code> 子包下。</p>
+</div>
+<div class="paragraph">
+<p>命名空间下的每个客户端都可以在顶级 Elasticsearch 客户端下被访问。
+唯一例外的是 “search” 和 “document” API， 它们放在 <code>core</code> 子包下，并可以在主 Elasticsearch 客户端对象中被访问。</p>
+</div>
+<div class="paragraph">
+<p>下面的代码片段展示了如何使用 indices 命名空间客户端来创建 index（lambda 语法 <a href="#builder-lambdas">解释在这里</a> ）：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Create the "products" index
+ElasticsearchClient client = ...
+client.indices().create(c -&gt; c.index("products"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>命名空间客户端是一个运行时创建的非常轻量级的对象。</p>
+</div>
+<h2 id="_方法命名规约" class="discrete">方法命名规约</h2>
+<div class="paragraph">
+<p>Java API Client 中的类包含两种方法和属性：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>方法和属性作为 API 的一部分，比如 <code>ElasticsearchClient.search()</code> 或 <code>SearchResponse.maxScore()</code> ，
+它们使用标准 Java <code>驼峰</code> 规约从 Elasticsearch JSON API 中各自的名称中派生而来。</p>
+</li>
+<li>
+<p>方法和属性作为构建 Java API 客户端框架的一部分，比如 <code>Query._kind()</code> ，
+这些方法使用下划线作为前缀，来避免与 API 的名称发生冲突，作为区分 API 和框架的简单方法。</p>
+</li>
+</ul>
+</div>
+<h2 id="builder-lambdas" class="discrete">不可变对象、构造器以及构造器的 lambda 表达式用法</h2>
+<div class="paragraph">
+<p>Java API Client 中的所有数据类型都是不可变的。
+对象的创建使用 <a href="https://www.informit.com/articles/article.aspx?p=1216151&amp;seqNum=2">构造器模式</a>，
+该模式于 2008 年出版的 <strong>Effective Java</strong> 一书中被广泛推广。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ElasticsearchClient client = ...
+        CreateIndexResponse createResponse = client.indices().create(
+            new CreateIndexRequest.Builder()
+                .index("my-index")
+                .aliases("foo",
+                    new Alias.Builder().isWriteIndex(true).build()
+                )
+                .build()
+        );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>需要注意的是，在 <code>build()</code> 方法被调用后，该构造器就不应该被再次使用了。</p>
+</div>
+<div class="paragraph">
+<p>虽然它可以正常执行，但是不难发现，实例化构造器并调用 <code>build()</code> 方法的代码稍微有点冗长。
+因此，Java API Client 中每个属性的 setter 方法也可以传递一个 lambda 表达式，这个表达式会使用新创建的构造器作为参数，并返回处理后的构造器。
+所以上面的代码片段也可以这样写：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ElasticsearchClient client = ...
+        CreateIndexResponse createResponse = client.indices()
+            .create(createIndexBuilder -&gt; createIndexBuilder
+                .index("my-index")
+                .aliases("foo", aliasBuilder -&gt; aliasBuilder
+                    .isWriteIndex(true)
+                )
+            );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这种方法可以以更简洁的代码，并且还能避开了导入类（甚至连它们的名字都不需要记住），因为这个类型是从方法参数签名中推断出来的。</p>
+</div>
+<div class="paragraph">
+<p>请注意，上面的示例代码中，构造器变量仅仅是为了链式调用所使用。
+因此这些变量的名称就不是很重要了，于是我们就可以缩短变量的命名来提高可读性：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ElasticsearchClient client = ...
+        CreateIndexResponse createResponse = client.indices()
+            .create(c -&gt; c
+                .index("my-index")
+                .aliases("foo", a -&gt; a
+                    .isWriteIndex(true)
+                )
+            );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>构造器的 lambda 对复杂嵌套查询语句很有用，比如下面的查询代码，它取自
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/query-dsl-intervals-query.html">intervals query API 文档</a>。</p>
+</div>
+<div class="paragraph">
+<p>这个示例还强调了在编写深层嵌套结构中，一个很有用的构造器参数命名规约。
+对于只有一个参数的 lambda 表达式，Kotlin 提供了一个隐式的 <code>it</code> 参数，并且 Scala 也允许使用 <code>_</code>。
+在 Java 中，可以使用下划线前缀，后面跟上代表深度级别的数字（例如 <code>_0</code> 、 <code>_1</code> 等等）。
+这样做不仅避免了多次命名一次性变量，而且也能极大地提高代码可读性。
+还有正确的缩进也可以突出查询语句的层级结构。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ElasticsearchClient client = ...
+        SearchResponse&lt;SomeApplicationData&gt; results = client
+            .search(_0 -&gt; _0
+                .query(_1 -&gt; _1
+                    .intervals(_2 -&gt; _2
+                        .field("my_text")
+                        .allOf(_3 -&gt; _3
+                            .ordered(true)
+                            .intervals(_4 -&gt; _4
+                                .match(_5 -&gt; _5
+                                    .query("my favorite food")
+                                    .maxGaps(0)
+                                    .ordered(true)
+                                )
+                            )
+                            .intervals(_4 -&gt; _4
+                                .anyOf(_5 -&gt; _5
+                                    .intervals(_6 -&gt; _6
+                                        .match(_7 -&gt; _7
+                                            .query("hot water")
+                                        )
+                                    )
+                                    .intervals(_6 -&gt; _6
+                                        .match(_7 -&gt; _7
+                                            .query("cold porridge")
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
+            SomeApplicationData.class <i class="conum" data-value="1"></i><b>(1)</b>
+        );</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>查询结果会映射到 <code>SomeApplicationData</code> 示例，以便应用随时使用。</td>
+</tr>
+</table>
+</div>
+<h2 id="_lists_和_maps" class="discrete">Lists 和 maps</h2>
+<h3 id="_构造器的链式方法" class="discrete">构造器的链式方法</h3>
+<div class="paragraph">
+<p>对象构造器将 <code>List</code> 和 <code>Map</code> 的属性以链式添加的方法暴露出来，这些方法通过向 lists 或 maps 添加新元素（或替换现有元素）来更新其属性值。</p>
+</div>
+<div class="paragraph">
+<p>对象构造器会创建一个不可变对象，并且在调用构造函数的时候同样应用到 list 和 map 属性。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Prepare a list of index names
+List&lt;String&gt; names = Arrays.asList("idx-a", "idx-b", "idx-c");
+
+// Prepare cardinality aggregations for fields "foo" and "bar"
+Map&lt;String, Aggregation&gt; cardinalities = new HashMap&lt;&gt;();
+cardinalities.put("foo-count", Aggregation.of(a -&gt; a.cardinality(c -&gt; c.field("foo"))));
+cardinalities.put("bar-count", Aggregation.of(a -&gt; a.cardinality(c -&gt; c.field("bar"))));
+
+// Prepare an aggregation that computes the average of the "size" field
+final Aggregation avgSize = Aggregation.of(a -&gt; a.avg(v -&gt; v.field("size")));
+
+SearchRequest search = SearchRequest.of(r -&gt; r
+    // Index list:
+    // - add all elements of a list
+    .index(names)
+    // - add a single element
+    .index("idx-d")
+    // - add a vararg list of elements
+    .index("idx-e", "idx-f", "idx-g")
+
+    // Sort order list: add elements defined by builder lambdas
+    .sort(s -&gt; s.field(f -&gt; f.field("foo").order(SortOrder.Asc)))
+    .sort(s -&gt; s.field(f -&gt; f.field("bar").order(SortOrder.Desc)))
+
+    // Aggregation map:
+    // - add all entries of an existing map
+    .aggregations(cardinalities)
+    // - add a key/value entry
+    .aggregations("avg-size", avgSize)
+    // - add a key/value defined by a builder lambda
+    .aggregations("price-histogram",
+        a -&gt; a.histogram(h -&gt; h.field("price")))
+);</code></pre>
+</div>
+</div>
+<h3 id="_list_和_map_的值从不为_null" class="discrete">List 和 map 的值从不为 <code>null</code></h3>
+<div class="paragraph">
+<p>Elasticsearch API 有很多可选属性。对于单独一个值的属性，Java API Client 默认设置其为 <code>null</code>。因此，应用在使用之前必须对其进行非空校验。</p>
+</div>
+<div class="paragraph">
+<p>但是对于 lists 和 maps，应用一般只会关心它们里面有没有包含值，甚至会对它们的内容进行迭代，这时如果使用 <code>null</code> 就很麻烦。
+为了避免这种情况，Java API Client 的集合属性从不为 <code>null</code>，未设置的值会作为空集合返回。</p>
+</div>
+<div class="paragraph">
+<p>如果你想要区分一个集合是缺省的（未定义的）还是 Elasticsearch 正常返回空集合，可以使用 <code>ApiTypeHelper</code> 类，该类提供了一个非常使用的方法来区分它们：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">NodeStatistics stats = NodeStatistics.of(b -&gt; b
+    .total(1)
+    .failed(0)
+    .successful(1)
+);
+
+// The `failures` list was not provided.
+// - it's not null
+assertNotNull(stats.failures());
+// - it's empty
+assertEquals(0, stats.failures().size());
+// - and if needed we can know it was actually not defined
+assertFalse(ApiTypeHelper.isDefined(stats.failures()));</code></pre>
+</div>
+</div>
+<h2 id="_可变类型" class="discrete">可变类型</h2>
+<div class="paragraph">
+<p>Elasticsearch API 有很多可变类型：查询（queries）、聚合（aggregations）、字段映射（field mappings）、分析器（analyzers）等等。
+在这么多的名字中找到正确的类名可能是一个挑战。</p>
+</div>
+<div class="paragraph">
+<p>Java API Client 构造器简化了这一过程：可变类型（如 <code>Query</code>）的构造器拥有其所有可用的方法。
+我们已经在上面代码中的 <code>intervals</code> （一种查询语句）和 <code>allOf</code> 、 <code>match</code> 以及 <code>anyOf</code>（各种类型的 intervals） 中看到这一点。</p>
+</div>
+<div class="paragraph">
+<p>这是因为 Java API Client 中的可变对象是 “标签联合“（tagged union） 的实现：它们包含了变量的 id（或标签）以及该变量的值。
+例如，<code>Query</code>（查询）对象就包含 <code>IntervalsQuery</code>（<code>intervals</code> 方法）、<code>TermQuery</code>（<code>term</code> 方法）等等。
+使用这种方法可以快速流畅地编写代码，让IDE自动提示的功能帮助您构建复杂的嵌套结构：</p>
+</div>
+<div class="paragraph">
+<p>所有可用的方法，可变类型的构造器都有其调用方法。
+它们与常规属性使用了相同的约定，并接受 lambda 表达式和内置的可变类型参数。
+下面是一个构造查询条件语句的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Query query = new Query.Builder()
+    .term(t -&gt; t                          <i class="conum" data-value="1"></i><b>(1)</b>
+        .field("name")                    <i class="conum" data-value="2"></i><b>(2)</b>
+        .value(v -&gt; v.stringValue("foo"))
+    )
+    .build();                             <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>使用 <code>term</code> 可变类型来构建条件语句。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>通过 lambda 表达式构建一个查询语句。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>构建 <code>Query</code>，其中包含一个 <code>term</code> 类型的 <code>TermQuery</code> 对象。</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>可变对象对所有可用的实现都有getter方法。这些方法会检测对象是否拥有该类型的可变类型，并返回正确的类型。
+否则会抛出 <code>IllegalStateException</code> 异常。使用这种方法可以更流畅的编写代码来遍历可变对象。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertEquals("foo", query.term().value().stringValue());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>可变对象还保存它们中变体类型的信息：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>所有可变类型都有其 <code>is</code> 方法： <code>isTerm()</code>、 <code>isIntervals()</code>、 <code>isFuzzy()</code> 等。</p>
+</li>
+<li>
+<p>带有 <code>Kind</code> 嵌套枚举的可变类型定义。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>在检查它们的实际类型后，可以使用这些信息找到指定的可变对象：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">if (query.isTerm()) { <i class="conum" data-value="1"></i><b>(1)</b>
+    doSomething(query.term());
+}
+
+switch(query._kind()) { <i class="conum" data-value="2"></i><b>(2)</b>
+    case Term:
+        doSomething(query.term());
+        break;
+    case Intervals:
+        doSomething(query.intervals());
+        break;
+    default:
+        doSomething(query._kind(), query._get()); <i class="conum" data-value="3"></i><b>(3)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>判断可变对象是指定类型。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>判断可变对象的可变类型定义。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>获取可变对象的 Kind 以及值。</td>
+</tr>
+</table>
+</div>
+<h3 id="_阻塞式客户端以及异步客户端" class="discrete">阻塞式客户端以及异步客户端</h3>
+<div class="paragraph">
+<p>API客户端有两种风格：阻塞式以及异步式。
+异步客户端的所有方法都会返回标准的 <code>CompletableFuture</code>。</p>
+</div>
+<div class="paragraph">
+<p>你可以根据你的需要选择你喜欢的方式，它们使用相同的传输对象：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ElasticsearchTransport transport = ...
+
+        // Synchronous blocking client
+        ElasticsearchClient client = new ElasticsearchClient(transport);
+
+        if (client.exists(b -&gt; b.index("products").id("foo")).value()) {
+            logger.info("product exists");
+        }
+
+        // Asynchronous non-blocking client
+        ElasticsearchAsyncClient asyncClient =
+            new ElasticsearchAsyncClient(transport);
+
+        asyncClient
+            .exists(b -&gt; b.index("products").id("foo"))
+            .thenAccept(response -&gt; {
+                if (response.value()) {
+                    logger.info("product exists");
+                }
+            });</code></pre>
+</div>
+</div>
+<h2 id="_异常" class="discrete">异常</h2>
+<div class="paragraph">
+<p>客户端方法会抛出下面两种类型的异常：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Elasticsearch 服务器接受但是拒绝的请求（比如验证错误、服务器内部超市等）会抛出 <code>ElasticsearchException</code> 异常。
+这个异常是由 Elasticsearch 提供的，其中包含错误的详情。</p>
+</li>
+<li>
+<p>没有发送到服务器的请求（网络错误、服务器无法访问等）会抛出 <code>TransportException</code> 这种异常，这个异常是底层实现方法抛出的。
+对于 <code>RestClientTransport</code> ，会包含底层HTTP响应的 <code>ResponseException</code>。</p>
+</li>
+</ul>
+</div>
+<h2 id="_对象的生命周期" class="discrete">对象的生命周期</h2>
+<div class="paragraph">
+<p>Java API Client 对象有五种不同的生命周期：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Object mapper</strong></dt>
+<dd>
+<p>无状态并且线程安全，但其创建所消耗的资源很高。
+通常在应用程序启动时会创建一个单例，用于传输层(transport)的创建。</p>
+</dd>
+<dt class="hdlist1"><strong>Transport</strong></dt>
+<dd>
+<p>线程安全，通过底层的HTTP客户端持有网络资源。
+Transport（传输对象）与 Elasticsearch 集群相关联，必须显式地将其关闭来释放底层资源，例如网络连接。</p>
+</dd>
+<dt class="hdlist1"><strong>Clients</strong></dt>
+<dd>
+<p>不可变、无状态以及线程安全。
+是非常轻量级的对象，其中包含传输层并提供API接口的调用方法。</p>
+</dd>
+<dt class="hdlist1"><strong>Builders</strong></dt>
+<dd>
+<p>可变的、非线程安全。
+Builders（构造器）是临时对象，在调用 <code>build()</code> 方法后就不应该再重用了。</p>
+</dd>
+<dt class="hdlist1"><strong>Requests &amp; other API objects</strong></dt>
+<dd>
+<p>不可变、线程安全。
+如果应用来来回回反复的使用相同的请求或请求的相同不分，则可以提前将这部分对象准备出来，并通过不同的传输对象来在多个客户端之间调用时进行重用。</p>
+</dd>
+</dl>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

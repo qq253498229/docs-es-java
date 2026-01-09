@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Docs ES</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Docs ES</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-es-java" data-version="7.16.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../../introduction.html">ES Java API Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../introduction.html">介绍</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../installation.html">安装</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../connecting.html">连接</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../migrate.html">从 High Level Rest Client 迁移到全新的库</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../api-conventions.html">API 规约</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Java 底层 REST 客户端</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="usage.html">快速入门</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="configuration.html">常用配置</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sniffer.html">嗅探</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../license.html">许可证</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ES Java API Client</span>
+    <span class="version">7.16.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../../introduction.html">ES Java API Client</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../introduction.html">7.16.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../../6.8.0/preface.html">6.8.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../../6.2.2/1Preface/readme.html">6.2.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../introduction.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../introduction.html">ES Java API Client</a></li>
+    <li><a href="index.html">Java 底层 REST 客户端</a></li>
+    <li><a href="configuration.html">常用配置</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">7.16.0</button>
+  <div class="version-menu">
+    <a class="version is-current" href="configuration.html">7.16.0</a>
+    <a class="version is-missing" href="../../../../6.8.0/preface.html">6.8.0</a>
+    <a class="version is-missing" href="../../../../6.2.2/1Preface/readme.html">6.2.2</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-es-java/edit/v7.16/modules/ROOT/pages/docs/java-rest/low-level/configuration.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="java-rest-low-config"><a class="anchor" href="#java-rest-low-config"></a>常用配置</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>如 <a href="usage.html#java-rest-low-usage-initialization" class="xref page">初始化</a> 中所述，<code>RestClientBuilder</code> 同时支持提供 <code>RequestConfigCallback</code> 和 <code>HttpClientConfigCallback</code>，允许 Apache Async Http Client 暴露的任何自定义内容。
+这些回调可以在不覆盖 <code>RestClient</code> 初始化配置的前提下，使修改客户端的特定行为成为可能。
+本章节表述了一些需要为底层Java Rest客户端进行额外配置的常见场景。</p>
+</div>
+<div class="sect2">
+<h3 id="_超时"><a class="anchor" href="#_超时"></a>超时</h3>
+<div class="paragraph">
+<p>通过构造器构建 <code>RestClient</code> 的时候，可以提供 <code>RequestConfigCallback</code> 的实例来配置请求的超时时间。
+该接口有一个方法接受参数
+<a href="https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/client/config/RequestConfig.Builder.html"><code>org.apache.http.client.config.RequestConfig.Builder</code></a>
+作为实例，然后返回相同的类型。
+请求配置构造器可以被修改然后返回。
+在下面的示例中，我们添加了一个连接超时（默认为1秒）的配置以及一个socket超时（默认30秒）配置。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200))
+    .setRequestConfigCallback(
+        new RestClientBuilder.RequestConfigCallback() {
+            @Override
+            public RequestConfig.Builder customizeRequestConfig(
+                    RequestConfig.Builder requestConfigBuilder) {
+                return requestConfigBuilder
+                    .setConnectTimeout(5000)
+                    .setSocketTimeout(60000);
+            }
+        });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>超时时间也可以在发送每个请求的时候配置，这样做会覆盖 RestClient customizeRequestConfig。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RequestConfig requestConfig = RequestConfig.custom()
+    .setConnectTimeout(5000)
+    .setSocketTimeout(60000)
+    .build();
+RequestOptions options = RequestOptions.DEFAULT.toBuilder()
+    .setRequestConfig(requestConfig)
+    .build();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_线程数量"><a class="anchor" href="#_线程数量"></a>线程数量</h3>
+<div class="paragraph">
+<p>Apache Http Async Client 在启动时默认情况会使用一个调度线程，连接管理器也会使用几个工作线程，这个数量相当于本地监测到的处理器数量
+（取决于 <code>Runtime.getRuntime().availableProcessors()</code> 返回的值）。
+这个数量可以修改，如下：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200))
+    .setHttpClientConfigCallback(new HttpClientConfigCallback() {
+        @Override
+        public HttpAsyncClientBuilder customizeHttpClient(
+                HttpAsyncClientBuilder httpClientBuilder) {
+            return httpClientBuilder.setDefaultIOReactorConfig(
+                IOReactorConfig.custom()
+                    .setIoThreadCount(1)
+                    .build());
+        }
+    });</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="basic-authentication"><a class="anchor" href="#basic-authentication"></a>基本身份认证</h3>
+<div class="paragraph">
+<p>在通过构造器构建 <code>RestClient</code> 的时候，可以提供一个 <code>HttpClientConfigCallback</code> 来配置基本身份认证。
+这个接口有一个方法接受
+<a href="https://hc.apache.org/httpcomponents-asyncclient-dev/httpasyncclient/apidocs/org/apache/http/impl/nio/client/HttpAsyncClientBuilder.html"><code>org.apache.http.impl.nio.client.HttpAsyncClientBuilder</code></a>
+示例作为参数，然后返回相同的类型。
+HTTP 客户端构造器可以被修改并返回。
+下面的示例中，我们为基本身份认证提供了一个默认的凭证。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">final CredentialsProvider credentialsProvider =
+    new BasicCredentialsProvider();
+credentialsProvider.setCredentials(AuthScope.ANY,
+    new UsernamePasswordCredentials("user", "test-user-password"));
+
+RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200))
+    .setHttpClientConfigCallback(new HttpClientConfigCallback() {
+        @Override
+        public HttpAsyncClientBuilder customizeHttpClient(
+                HttpAsyncClientBuilder httpClientBuilder) {
+            return httpClientBuilder
+                .setDefaultCredentialsProvider(credentialsProvider);
+        }
+    });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>抢占式身份认证可以禁用，禁用后每个请求都将在没有授权header的情况下发送，这样就能查看它是否被接受，在收到 401 HTTP 响应码后，
+它将使用基本身份认证header重新发送相同的请求。
+如果你想这样执行操作，可以通过 <code>HttpAsyncClientBuilder</code> 来禁用它：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">final CredentialsProvider credentialsProvider =
+    new BasicCredentialsProvider();
+credentialsProvider.setCredentials(AuthScope.ANY,
+    new UsernamePasswordCredentials("user", "test-user-password"));
+
+RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200))
+    .setHttpClientConfigCallback(new HttpClientConfigCallback() {
+        @Override
+        public HttpAsyncClientBuilder customizeHttpClient(
+                HttpAsyncClientBuilder httpClientBuilder) {
+            httpClientBuilder.disableAuthCaching(); <i class="conum" data-value="1"></i><b>(1)</b>
+            return httpClientBuilder
+                .setDefaultCredentialsProvider(credentialsProvider);
+        }
+    });</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>禁用抢占式身份认证</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_其它身份认证方法"><a class="anchor" href="#_其它身份认证方法"></a>其它身份认证方法</h3>
+<div class="sect3">
+<h4 id="_elasticsearch_访问令牌服务"><a class="anchor" href="#_elasticsearch_访问令牌服务"></a>Elasticsearch 访问令牌服务</h4>
+<div class="paragraph">
+<p>如果希望客户端使用Elasticsearch访问令牌来进行身份认证，请设置相关的HTTP请求头。
+如果客户端仅为一个用户发送请求，则可以一个必要的 <code>授权</code> header作为默认展示的请求header，如下所示：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200, "http"));
+Header[] defaultHeaders =
+    new Header[]{new BasicHeader("Authorization",
+        "Bearer u6iuAxZ0RG1Kcm5jVFI4eU4tZU9aVFEwT2F3")};
+builder.setDefaultHeaders(defaultHeaders);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_elasticsearch_api_密钥"><a class="anchor" href="#_elasticsearch_api_密钥"></a>Elasticsearch API 密钥</h4>
+<div class="paragraph">
+<p>如果希望客户端使用Elasticsearch API密钥来进行身份认证，请设置相关的HTTP请求头。
+如果客户端仅为一个用户发送请求，则可以一个必要的 <code>授权</code> header作为默认展示的请求header，如下所示：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String apiKeyId = "uqlEyn8B_gQ_jlvwDIvM";
+String apiKeySecret = "HxHWk2m4RN-V_qg9cDpuX";
+String apiKeyAuth =
+    Base64.getEncoder().encodeToString(
+        (apiKeyId + ":" + apiKeySecret)
+            .getBytes(StandardCharsets.UTF_8));
+RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200, "http"));
+Header[] defaultHeaders =
+    new Header[]{new BasicHeader("Authorization",
+        "ApiKey " + apiKeyAuth)};
+builder.setDefaultHeaders(defaultHeaders);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_加密通讯"><a class="anchor" href="#_加密通讯"></a>加密通讯</h3>
+<div class="paragraph">
+<p>您也可以通过配置 <code>HttpClientConfigCallback</code> 使用TLS加密通讯。
+<a href="https://hc.apache.org/httpcomponents-asyncclient-dev/httpasyncclient/apidocs/org/apache/http/impl/nio/client/HttpAsyncClientBuilder.html"><code>org.apache.http.impl.nio.client.HttpAsyncClientBuilder</code></a>
+会作为参数接受并暴露一些配置加密通讯的方法： <code>setSSLContext</code>, <code>setSSLSessionStrategy</code> 和 <code>setConnectionManager</code>，
+根据顺序越来越重要。</p>
+</div>
+<div class="paragraph">
+<p>当在HTTP层的基础上为Elasticsearch集群安装TLS时，客户端需要信任Elasticsearch正在使用的证书。
+下面的例子展示了，当PKCS#12密钥库中的CA证书可用时，将客户端设置为信任Elasticsearch正在使用的CA证书：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Path trustStorePath = Paths.get("/path/to/truststore.p12");
+KeyStore truststore = KeyStore.getInstance("pkcs12");
+try (InputStream is = Files.newInputStream(trustStorePath)) {
+    truststore.load(is, keyStorePass.toCharArray());
+}
+SSLContextBuilder sslBuilder = SSLContexts.custom()
+    .loadTrustMaterial(truststore, null);
+final SSLContext sslContext = sslBuilder.build();
+RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200, "https"))
+    .setHttpClientConfigCallback(new HttpClientConfigCallback() {
+        @Override
+        public HttpAsyncClientBuilder customizeHttpClient(
+                HttpAsyncClientBuilder httpClientBuilder) {
+            return httpClientBuilder.setSSLContext(sslContext);
+        }
+    });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>下面的例子展示了，当PEM编码文件可用时，将客户端设置为信任Elasticsearch正在使用的CA证书：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Path caCertificatePath = Paths.get("/path/to/ca.crt");
+CertificateFactory factory =
+    CertificateFactory.getInstance("X.509");
+Certificate trustedCa;
+try (InputStream is = Files.newInputStream(caCertificatePath)) {
+    trustedCa = factory.generateCertificate(is);
+}
+KeyStore trustStore = KeyStore.getInstance("pkcs12");
+trustStore.load(null, null);
+trustStore.setCertificateEntry("ca", trustedCa);
+SSLContextBuilder sslContextBuilder = SSLContexts.custom()
+    .loadTrustMaterial(trustStore, null);
+final SSLContext sslContext = sslContextBuilder.build();
+RestClient.builder(
+    new HttpHost("localhost", 9200, "https"))
+    .setHttpClientConfigCallback(new HttpClientConfigCallback() {
+        @Override
+        public HttpAsyncClientBuilder customizeHttpClient(
+            HttpAsyncClientBuilder httpClientBuilder) {
+            return httpClientBuilder.setSSLContext(sslContext);
+        }
+    });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>当Elasticsearch被配置为需要客户端TLS认证，例如当配置了PKI realm的时候，这时客户端需要在TLS握手期间提供证书来进行身份认证。
+下面的例子展示了，使用存储在PKCS#12密钥库中的证书和私钥为客户端配置TLS身份认证：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Path trustStorePath = Paths.get("/path/to/your/truststore.p12");
+Path keyStorePath = Paths.get("/path/to/your/keystore.p12");
+KeyStore trustStore = KeyStore.getInstance("pkcs12");
+KeyStore keyStore = KeyStore.getInstance("pkcs12");
+try (InputStream is = Files.newInputStream(trustStorePath)) {
+    trustStore.load(is, trustStorePass.toCharArray());
+}
+try (InputStream is = Files.newInputStream(keyStorePath)) {
+    keyStore.load(is, keyStorePass.toCharArray());
+}
+SSLContextBuilder sslBuilder = SSLContexts.custom()
+    .loadTrustMaterial(trustStore, null)
+    .loadKeyMaterial(keyStore, keyStorePass.toCharArray());
+final SSLContext sslContext = sslBuilder.build();
+RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200, "https"))
+    .setHttpClientConfigCallback(new HttpClientConfigCallback() {
+        @Override
+        public HttpAsyncClientBuilder customizeHttpClient(
+            HttpAsyncClientBuilder httpClientBuilder) {
+            return httpClientBuilder.setSSLContext(sslContext);
+        }
+    });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果客户端证书和密钥在密钥库中不可用，而是使用PEM编码的文件，这时候就不能直接使用它们来构建 SSLContext。
+你必须使用外部库来将PEM密钥解析为私有密钥实例。
+或者，你也可以使用外部工具用PEM文件构建密钥库，如下面的例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">openssl pkcs12 -export -in client.crt -inkey private_key.pem \
+        -name "client" -out client.p12</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果没有提供明确的配置，则会使用
+<a href="https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/JSSERefGuide.html#CustomizingStores">系统默认配置</a>。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_其它"><a class="anchor" href="#_其它"></a>其它</h3>
+<div class="paragraph">
+<p>如果您需要其它的配置，可以参考Apache HttpAsyncClient的文档： <a href="https://hc.apache.org/httpcomponents-asyncclient-4.1.x/" class="bare">https://hc.apache.org/httpcomponents-asyncclient-4.1.x/</a> 。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+如果你的应用运行在security manager下，则可能会收到JVM默认策略的约束，
+即针对解析成功的主机名进行无限期的缓存，针对解析失败的则缓存10秒。
+如果要将客户端连接到主机的的地址随时间的变化而变化，那么可能需要修改JVM的默认行为。
+如果需要对其进行修改的话，可以通过添加 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/net/properties.html"><code>networkaddress.cache.ttl=&lt;timeout&gt;</code></a> 以及
+<a href="https://docs.oracle.com/javase/8/docs/technotes/guides/net/properties.html"><code>networkaddress.cache.negative.ttl=&lt;timeout&gt;</code></a>
+选项到你的
+<a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/PolicyFiles.html">Java
+security policy</a>
+中。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_节点选择器"><a class="anchor" href="#_节点选择器"></a>节点选择器</h3>
+<div class="paragraph">
+<p>客户端以循环的方式，将每个请求发送到已配置的节点中的一个上面。
+在初始化客户端时，可以提供节点选择器来对节点进行筛选。
+在启用嗅探功能时，这一点非常有用，可以防止HTTP请求只命中专用主节点
+对每个请求，客户端都会运行最后一个配置的节点选择器对候选节点进行筛选，然后从剩余的节点中选择下一个。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RestClientBuilder builder = RestClient.builder(
+        new HttpHost("localhost", 9200, "http"));
+builder.setNodeSelector(new NodeSelector() { <i class="conum" data-value="1"></i><b>(1)</b>
+    @Override
+    public void select(Iterable&lt;Node&gt; nodes) {
+        /*
+         * Prefer any node that belongs to rack_one. If none is around
+         * we will go to another rack till it's time to try and revive
+         * some of the nodes that belong to rack_one.
+         */
+        boolean foundOne = false;
+        for (Node node : nodes) {
+            String rackId = node.getAttributes().get("rack_id").get(0);
+            if ("rack_one".equals(rackId)) {
+                foundOne = true;
+                break;
+            }
+        }
+        if (foundOne) {
+            Iterator&lt;Node&gt; nodesIt = nodes.iterator();
+            while (nodesIt.hasNext()) {
+                Node node = nodesIt.next();
+                String rackId = node.getAttributes().get("rack_id").get(0);
+                if ("rack_one".equals(rackId) == false) {
+                    nodesIt.remove();
+                }
+            }
+        }
+    }
+});</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Set an allocation aware node selector that allows to pick a node in the
+local rack if any available, otherwise go to any other node in any rack. It
+acts as a preference rather than a strict requirement, given that it goes to
+another rack if none of the local nodes are available, rather than returning
+no nodes in such case which would make the client forcibly revive a local node
+whenever none of the nodes from the preferred rack is available.</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Node selectors that do not consistently select the same set of nodes
+will make round-robin behaviour unpredictable and possibly unfair. The
+preference example above is fine as it reasons about availability of nodes
+which already affects the predictability of round-robin. Node selection should
+not depend on other external factors or round-robin will not work properly.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
