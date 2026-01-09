@@ -1,6 +1,6 @@
 name: docs-es-java
 title: ES Java API Client
-version: 7.16.0
+version: '7.16.0'
 start_page: ROOT:introduction.adoc
 nav:
   - modules/ROOT/nav.adoc
