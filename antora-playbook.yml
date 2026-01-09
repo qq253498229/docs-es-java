@@ -1,6 +1,6 @@
 site:
   title: Docs ES
-  start_page: 7.16.0@docs-es-java::introduction.adoc
+  start_page: v7.16@docs-es-java::introduction.adoc
 content:
   sources:
     - url: .
